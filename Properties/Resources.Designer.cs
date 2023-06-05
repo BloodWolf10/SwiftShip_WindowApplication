@@ -73,6 +73,16 @@ namespace SwiftShip_WindowApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap No_Horny {
+            get {
+                object obj = ResourceManager.GetObject("No Horny", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Swift_Ship_Logo_P {
             get {
                 object obj = ResourceManager.GetObject("Swift-Ship Logo P", resourceCulture);
