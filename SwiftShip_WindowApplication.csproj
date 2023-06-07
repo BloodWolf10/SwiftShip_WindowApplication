@@ -98,5 +98,35 @@
   <ItemGroup>
     <None Include="Resources\No Horny.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hamburger Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hamburger Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hamburger Icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cargo Tracking icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory Management icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vessel Scheduling icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account Management icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

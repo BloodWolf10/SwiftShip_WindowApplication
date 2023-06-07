@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pBoxAnimation = new System.Windows.Forms.PictureBox();
-            this.pBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblHello = new System.Windows.Forms.Label();
             this.txtBxUsername = new System.Windows.Forms.TextBox();
             this.txtBxPassword = new System.Windows.Forms.TextBox();
@@ -38,29 +36,11 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.pBoxAnimation = new System.Windows.Forms.PictureBox();
+            this.pBoxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAnimation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pBoxAnimation
-            // 
-            this.pBoxAnimation.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cargo_Ship_Gif;
-            this.pBoxAnimation.Location = new System.Drawing.Point(0, -2);
-            this.pBoxAnimation.Name = "pBoxAnimation";
-            this.pBoxAnimation.Size = new System.Drawing.Size(400, 472);
-            this.pBoxAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBoxAnimation.TabIndex = 1;
-            this.pBoxAnimation.TabStop = false;
-            // 
-            // pBoxLogo
-            // 
-            this.pBoxLogo.Image = global::SwiftShip_WindowApplication.Properties.Resources.Swift_Ship_Logo_P;
-            this.pBoxLogo.Location = new System.Drawing.Point(509, 27);
-            this.pBoxLogo.Name = "pBoxLogo";
-            this.pBoxLogo.Size = new System.Drawing.Size(156, 128);
-            this.pBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBoxLogo.TabIndex = 0;
-            this.pBoxLogo.TabStop = false;
             // 
             // lblHello
             // 
@@ -93,7 +73,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogin.Location = new System.Drawing.Point(610, 394);
@@ -106,7 +86,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnExit.Location = new System.Drawing.Point(491, 394);
@@ -146,6 +126,26 @@
             this.lblMessage.Size = new System.Drawing.Size(153, 13);
             this.lblMessage.TabIndex = 9;
             this.lblMessage.Text = "Managing your cargo the right way !";
+            // 
+            // pBoxAnimation
+            // 
+            this.pBoxAnimation.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cargo_Ship_Gif;
+            this.pBoxAnimation.Location = new System.Drawing.Point(0, -2);
+            this.pBoxAnimation.Name = "pBoxAnimation";
+            this.pBoxAnimation.Size = new System.Drawing.Size(400, 472);
+            this.pBoxAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBoxAnimation.TabIndex = 1;
+            this.pBoxAnimation.TabStop = false;
+            // 
+            // pBoxLogo
+            // 
+            this.pBoxLogo.Image = global::SwiftShip_WindowApplication.Properties.Resources.Swift_Ship_Logo_P;
+            this.pBoxLogo.Location = new System.Drawing.Point(509, 27);
+            this.pBoxLogo.Name = "pBoxLogo";
+            this.pBoxLogo.Size = new System.Drawing.Size(156, 128);
+            this.pBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxLogo.TabIndex = 0;
+            this.pBoxLogo.TabStop = false;
             // 
             // FormLogin
             // 

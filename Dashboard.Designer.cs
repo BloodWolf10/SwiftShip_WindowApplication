@@ -28,93 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.HomeMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoTrackingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vesselSchedulingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MainMenuStrip.SuspendLayout();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MainMenuStrip
+            // HomeMenuStrip
             // 
-            this.MainMenuStrip.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.MainMenuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.MainMenuStrip.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.HomeMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.HomeMenuStrip.Dock = System.Windows.Forms.DockStyle.Left;
+            this.HomeMenuStrip.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.HomeMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem,
             this.homeToolStripMenuItem,
             this.cargoTrackingToolStripMenuItem,
             this.inventoryManagementToolStripMenuItem,
             this.vesselSchedulingToolStripMenuItem,
             this.accountManagementToolStripMenuItem,
-            this.logoutToolStripMenuItem});
-            this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.MainMenuStrip.Name = "MainMenuStrip";
-            this.MainMenuStrip.Padding = new System.Windows.Forms.Padding(10);
-            this.MainMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MainMenuStrip.Size = new System.Drawing.Size(722, 47);
-            this.MainMenuStrip.TabIndex = 0;
+            this.logOutToolStripMenuItem});
+            this.HomeMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.HomeMenuStrip.Name = "HomeMenuStrip";
+            this.HomeMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.HomeMenuStrip.ShowItemToolTips = true;
+            this.HomeMenuStrip.Size = new System.Drawing.Size(213, 418);
+            this.HomeMenuStrip.TabIndex = 1;
+            this.HomeMenuStrip.Text = "HomeMenuStrip";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.menuToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Hamburger_Icon2;
+            this.menuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 12);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(200, 56);
+            this.menuToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.menuToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.menuToolStripMenuItem.ToolTipText = "Click to Expand / Collapse Menu";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.homeToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Home_Icon;
+            this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 0, 8, 0);
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(60, 27);
+            this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
             this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.homeToolStripMenuItem.ToolTipText = "Click to Return to Home Screen";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // cargoTrackingToolStripMenuItem
             // 
             this.cargoTrackingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cargoTrackingToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cargo_Tracking_icon;
+            this.cargoTrackingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cargoTrackingToolStripMenuItem.Name = "cargoTrackingToolStripMenuItem";
-            this.cargoTrackingToolStripMenuItem.Size = new System.Drawing.Size(118, 27);
-            this.cargoTrackingToolStripMenuItem.Text = "Cargo Tracking";
+            this.cargoTrackingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.cargoTrackingToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
+            this.cargoTrackingToolStripMenuItem.Text = "     Cargo Tracking";
+            this.cargoTrackingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cargoTrackingToolStripMenuItem.ToolTipText = "Click to Open Cargo Tracker";
+            this.cargoTrackingToolStripMenuItem.Click += new System.EventHandler(this.cargoTrackingToolStripMenuItem_Click);
             // 
             // inventoryManagementToolStripMenuItem
             // 
             this.inventoryManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inventoryManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Inventory_Management_icon;
             this.inventoryManagementToolStripMenuItem.Name = "inventoryManagementToolStripMenuItem";
-            this.inventoryManagementToolStripMenuItem.Size = new System.Drawing.Size(167, 27);
-            this.inventoryManagementToolStripMenuItem.Text = "Inventory Management";
+            this.inventoryManagementToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.inventoryManagementToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
+            this.inventoryManagementToolStripMenuItem.Text = "  Inventory Management";
+            this.inventoryManagementToolStripMenuItem.ToolTipText = "Click to open Inventory Manager";
+            this.inventoryManagementToolStripMenuItem.Click += new System.EventHandler(this.inventoryManagementToolStripMenuItem_Click);
             // 
             // vesselSchedulingToolStripMenuItem
             // 
             this.vesselSchedulingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.vesselSchedulingToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Vessel_Scheduling_icon;
+            this.vesselSchedulingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.vesselSchedulingToolStripMenuItem.Name = "vesselSchedulingToolStripMenuItem";
-            this.vesselSchedulingToolStripMenuItem.Size = new System.Drawing.Size(134, 27);
-            this.vesselSchedulingToolStripMenuItem.Text = "Vessel Scheduling";
+            this.vesselSchedulingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.vesselSchedulingToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
+            this.vesselSchedulingToolStripMenuItem.Text = "      Vessel Scheduling";
+            this.vesselSchedulingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.vesselSchedulingToolStripMenuItem.ToolTipText = "Click to Adjust Vessel Schedules";
+            this.vesselSchedulingToolStripMenuItem.Click += new System.EventHandler(this.vesselSchedulingToolStripMenuItem_Click);
             // 
             // accountManagementToolStripMenuItem
             // 
             this.accountManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.accountManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Account_Management_icon;
             this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
-            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(158, 27);
-            this.accountManagementToolStripMenuItem.Text = "Account Management";
+            this.accountManagementToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
+            this.accountManagementToolStripMenuItem.Text = "    Account Management";
+            this.accountManagementToolStripMenuItem.ToolTipText = "Click to Manage Accounts";
+            this.accountManagementToolStripMenuItem.Click += new System.EventHandler(this.accountManagementToolStripMenuItem_Click);
             // 
-            // logoutToolStripMenuItem
+            // logOutToolStripMenuItem
             // 
-            this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            this.logOutToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.logOutToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.logout_icon1;
+            this.logOutToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(200, 52);
+            this.logOutToolStripMenuItem.Text = "LogOut";
+            this.logOutToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 418);
-            this.Controls.Add(this.MainMenuStrip);
+            this.ClientSize = new System.Drawing.Size(853, 418);
+            this.Controls.Add(this.HomeMenuStrip);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.MainMenuStrip;
+            this.MainMenuStrip = this.HomeMenuStrip;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
-            this.MainMenuStrip.ResumeLayout(false);
-            this.MainMenuStrip.PerformLayout();
+            this.Load += new System.EventHandler(this.Dashboard_Load);
+            this.HomeMenuStrip.ResumeLayout(false);
+            this.HomeMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,12 +171,13 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip MainMenuStrip;
+        private System.Windows.Forms.MenuStrip HomeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem homeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cargoTrackingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inventoryManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vesselSchedulingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountManagementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
     }
 }
