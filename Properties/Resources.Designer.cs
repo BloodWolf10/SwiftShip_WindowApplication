@@ -73,6 +73,16 @@ namespace SwiftShip_WindowApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cargo_On_Sea {
+            get {
+                object obj = ResourceManager.GetObject("Cargo On Sea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cargo_Ship_Gif {
             get {
                 object obj = ResourceManager.GetObject("Cargo Ship Gif", resourceCulture);
@@ -86,6 +96,16 @@ namespace SwiftShip_WindowApplication.Properties {
         internal static System.Drawing.Bitmap Cargo_Tracking_icon {
             get {
                 object obj = ResourceManager.GetObject("Cargo Tracking icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cool_Ship {
+            get {
+                object obj = ResourceManager.GetObject("Cool Ship", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,36 @@ namespace SwiftShip_WindowApplication.Properties {
         internal static System.Drawing.Bitmap Home_Icon {
             get {
                 object obj = ResourceManager.GetObject("Home Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_account_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-account-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_arrow_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-arrow-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_back_arrow_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-arrow-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

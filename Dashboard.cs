@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.LinkLabel;
 
 namespace SwiftShip_WindowApplication
 {
@@ -21,33 +13,33 @@ namespace SwiftShip_WindowApplication
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormLogin log =new FormLogin();
+            FormLogin log = new FormLogin();
             log.ShowDialog();
             this.Close();
         }
 
         private void menuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
 
 
-            foreach (ToolStripMenuItem item in  HomeMenuStrip.Items)
+
+            foreach (ToolStripMenuItem item in HomeMenuStrip.Items)
             {
-               
+
                 if (item != menuToolStripMenuItem)
                 {
                     item.Visible = !item.Visible;
-                  
-                }              
-                
+
+                }
+
 
             }
-            
+
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,8 +65,30 @@ namespace SwiftShip_WindowApplication
         private void accountManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            if (Application.OpenForms["AddAccount"] == null)
+            {
+                // Create a new instance of Form1
+                AddAccount acc = new AddAccount();
+
+                // Setting  the MDI parent of the form
+                acc.MdiParent = this;
+
+                // Showing  the form
+                acc.Show();
+
+                // Aligning the Form in the MDI Window
+                acc.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["AddAccount"].Activate();
+            }
+            
+            
+           
         }
 
-        
+
     }
 }
