@@ -54,6 +54,25 @@ namespace SwiftShip_WindowApplication
 
         private void inventoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["InventoryManagement"] == null)
+            {
+                // Create a new instance of Form1
+                InventoryManagment inven = new InventoryManagment();
+
+                // Setting  the MDI parent of the form
+                inven.MdiParent = this;
+
+                // Showing  the form
+                inven.Show();
+
+                // Aligning the Form in the MDI Window
+                inven.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["InventoryManagement"].Activate();
+            }
 
         }
 

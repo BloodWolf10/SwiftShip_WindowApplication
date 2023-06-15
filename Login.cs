@@ -24,10 +24,22 @@ namespace SwiftShip_WindowApplication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Dashboard dash = new Dashboard();
-            dash.ShowDialog();
-            this.Close();
+            string User = txtBxUsername.Text;
+            string password = txtBxPassword.Text;
+
+            if (User == "Admin" && password == "@dmin1")
+            {
+
+                this.Hide();
+                Dashboard dash = new Dashboard();
+                dash.ShowDialog();
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show(" Incorrect Password or Username entered", "Warning", MessageBoxButtons.OK , MessageBoxIcon.Warning);
+            }
         }
     }
 }
