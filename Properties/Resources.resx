@@ -124,11 +124,17 @@
   <data name="Hamburger Icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hamburger Icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Swiftship2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Swiftship2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Cargo Tracking icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cargo Tracking icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inventory Management icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inventory Management icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cargo Ship Gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cargo Ship Gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-account-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-account-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +145,14 @@
   <data name="No Horny" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\No Horny.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vessel Scheduling icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vessel Scheduling icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UpdateAccount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UpdateAccount.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boat2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-update.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Swift-Ship Logo P" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Swift-Ship Logo P.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -150,6 +162,12 @@
   </data>
   <data name="icons8-back-arrow-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-back-arrow-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-update-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-update-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-update-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-update-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hamburger Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hamburger Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +187,10 @@
   <data name="Cargo On Sea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cargo On Sea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cargo Ship Gif" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cargo Ship Gif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Vessel Scheduling icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vessel Scheduling icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Swiftship2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Swiftship2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-delete-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-delete-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

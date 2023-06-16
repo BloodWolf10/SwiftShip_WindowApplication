@@ -35,6 +35,9 @@
             this.inventoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vesselSchedulingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +130,10 @@
             // 
             // accountManagementToolStripMenuItem
             // 
+            this.accountManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addAccountToolStripMenuItem,
+            this.updateAccountToolStripMenuItem,
+            this.deleteAccountToolStripMenuItem});
             this.accountManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.accountManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Account_Management_icon;
             this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
@@ -135,6 +142,39 @@
             this.accountManagementToolStripMenuItem.Text = "    Account Management";
             this.accountManagementToolStripMenuItem.ToolTipText = "Click to Manage Accounts";
             this.accountManagementToolStripMenuItem.Click += new System.EventHandler(this.accountManagementToolStripMenuItem_Click);
+            // 
+            // addAccountToolStripMenuItem
+            // 
+            this.addAccountToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.addAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_account_24;
+            this.addAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addAccountToolStripMenuItem.Name = "addAccountToolStripMenuItem";
+            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.addAccountToolStripMenuItem.Text = "Add Account";
+            this.addAccountToolStripMenuItem.Click += new System.EventHandler(this.addAccountToolStripMenuItem_Click);
+            // 
+            // updateAccountToolStripMenuItem
+            // 
+            this.updateAccountToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.updateAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.updateAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_update_30;
+            this.updateAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updateAccountToolStripMenuItem.Name = "updateAccountToolStripMenuItem";
+            this.updateAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.updateAccountToolStripMenuItem.Text = "Update Account";
+            this.updateAccountToolStripMenuItem.Click += new System.EventHandler(this.updateAccountToolStripMenuItem_Click);
+            // 
+            // deleteAccountToolStripMenuItem
+            // 
+            this.deleteAccountToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteAccountToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.deleteAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delete_30;
+            this.deleteAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.deleteAccountToolStripMenuItem.Text = "Delete Account";
+            this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
@@ -179,5 +219,8 @@
         private System.Windows.Forms.ToolStripMenuItem accountManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
     }
 }
