@@ -130,6 +130,12 @@
     <Compile Include="UpdateAccount.Designer.cs">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="VesselScheduling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VesselScheduling.Designer.cs">
+      <DependentUpon>VesselScheduling.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddAccount.resx">
       <DependentUpon>AddAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +166,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateAccount.resx">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VesselScheduling.resx">
+      <DependentUpon>VesselScheduling.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
