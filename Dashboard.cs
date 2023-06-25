@@ -49,7 +49,25 @@ namespace SwiftShip_WindowApplication
 
         private void cargoTrackingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["CargoTracking"] == null)
+            {
+                // Create a new instance of CargoTracking Form
+                CargoTracking tracker = new CargoTracking();
 
+                // Setting  the MDI parent of the form
+                tracker.MdiParent = this;
+
+                // Showing  the form
+                tracker.Show();
+
+                // Aligning the Form in the MDI Window
+                tracker.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["CargoTracking"].Activate();
+            }
         }
 
         private void inventoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,7 +84,7 @@ namespace SwiftShip_WindowApplication
                 inven.Show();
 
                 // Aligning the Form in the MDI Window
-                inven.Dock = DockStyle.Left;
+                inven.Dock = DockStyle.Fill;
             }
             else
             {
@@ -78,6 +96,25 @@ namespace SwiftShip_WindowApplication
 
         private void vesselSchedulingToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["VesselScheduling"] == null)
+            {
+                // Create a new instance of Form1
+                VesselScheduling vessel = new VesselScheduling();
+
+                // Setting  the MDI parent of the form
+                vessel.MdiParent = this;
+
+                // Showing  the form
+                vessel.Show();
+
+                // Aligning the Form in the MDI Window
+                vessel.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["VesselScheduling"].Activate();
+            }
 
         }
 
@@ -101,7 +138,7 @@ namespace SwiftShip_WindowApplication
                 acc.Show();
 
                 // Aligning the Form in the MDI Window
-                acc.Dock = DockStyle.Left;
+                acc.Dock = DockStyle.Fill;
             }
             else
             {
