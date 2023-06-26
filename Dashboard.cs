@@ -44,6 +44,25 @@ namespace SwiftShip_WindowApplication
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["Home"] == null)
+            {
+                // Create a new instance of Home Form
+                Home home = new Home();
+
+                // Setting  the MDI parent of the form
+                home.MdiParent = this;
+
+                // Showing  the form
+                home.Show();
+
+                // Aligning the Form in the MDI Window
+                home.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["Home"].Activate();
+            }
 
         }
 
@@ -74,7 +93,7 @@ namespace SwiftShip_WindowApplication
         {
             if (Application.OpenForms["InventoryManagement"] == null)
             {
-                // Create a new instance of Form1
+                // Create a new instance of Inventory Management form
                 InventoryManagment inven = new InventoryManagment();
 
                 // Setting  the MDI parent of the form
@@ -98,7 +117,7 @@ namespace SwiftShip_WindowApplication
         {
             if (Application.OpenForms["VesselScheduling"] == null)
             {
-                // Create a new instance of Form1
+                // Create a new instance of Vessel Scheduling Form
                 VesselScheduling vessel = new VesselScheduling();
 
                 // Setting  the MDI parent of the form
@@ -174,7 +193,7 @@ namespace SwiftShip_WindowApplication
         {
             if (Application.OpenForms["DeleteAccount"] == null)
             {
-                // Create a new instance of Update Account Form
+                // Create a new instance of Delete Account Form
                 DeleteAccount Dacc = new DeleteAccount();
 
                 // Setting  the MDI parent of the form

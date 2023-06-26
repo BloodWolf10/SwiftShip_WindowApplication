@@ -39,7 +39,11 @@
             this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateBackPanel = new System.Windows.Forms.Panel();
+            this.lblCatchPhrase = new System.Windows.Forms.Label();
+            this.lblUpdateAccount = new System.Windows.Forms.Label();
             this.HomeMenuStrip.SuspendLayout();
+            this.UpdateBackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HomeMenuStrip
@@ -150,7 +154,7 @@
             this.addAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_account_24;
             this.addAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addAccountToolStripMenuItem.Name = "addAccountToolStripMenuItem";
-            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.addAccountToolStripMenuItem.Size = new System.Drawing.Size(194, 38);
             this.addAccountToolStripMenuItem.Text = "Add Account";
             this.addAccountToolStripMenuItem.Click += new System.EventHandler(this.addAccountToolStripMenuItem_Click);
             // 
@@ -161,7 +165,7 @@
             this.updateAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_update_30;
             this.updateAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.updateAccountToolStripMenuItem.Name = "updateAccountToolStripMenuItem";
-            this.updateAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.updateAccountToolStripMenuItem.Size = new System.Drawing.Size(194, 38);
             this.updateAccountToolStripMenuItem.Text = "Update Account";
             this.updateAccountToolStripMenuItem.Click += new System.EventHandler(this.updateAccountToolStripMenuItem_Click);
             // 
@@ -172,7 +176,7 @@
             this.deleteAccountToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delete_30;
             this.deleteAccountToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteAccountToolStripMenuItem.Name = "deleteAccountToolStripMenuItem";
-            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(196, 38);
+            this.deleteAccountToolStripMenuItem.Size = new System.Drawing.Size(194, 38);
             this.deleteAccountToolStripMenuItem.Text = "Delete Account";
             this.deleteAccountToolStripMenuItem.Click += new System.EventHandler(this.deleteAccountToolStripMenuItem_Click);
             // 
@@ -189,11 +193,45 @@
             this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // UpdateBackPanel
+            // 
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
+            this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
+            this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpdateBackPanel.Location = new System.Drawing.Point(213, 0);
+            this.UpdateBackPanel.Name = "UpdateBackPanel";
+            this.UpdateBackPanel.Size = new System.Drawing.Size(1036, 63);
+            this.UpdateBackPanel.TabIndex = 4;
+            // 
+            // lblCatchPhrase
+            // 
+            this.lblCatchPhrase.AutoSize = true;
+            this.lblCatchPhrase.Font = new System.Drawing.Font("Barber Street light_PersonalUse", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
+            this.lblCatchPhrase.Location = new System.Drawing.Point(355, 35);
+            this.lblCatchPhrase.Name = "lblCatchPhrase";
+            this.lblCatchPhrase.Size = new System.Drawing.Size(286, 24);
+            this.lblCatchPhrase.TabIndex = 1;
+            this.lblCatchPhrase.Text = "The port management system for you !!";
+            // 
+            // lblUpdateAccount
+            // 
+            this.lblUpdateAccount.AutoSize = true;
+            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
+            this.lblUpdateAccount.Location = new System.Drawing.Point(389, 0);
+            this.lblUpdateAccount.Name = "lblUpdateAccount";
+            this.lblUpdateAccount.Size = new System.Drawing.Size(229, 35);
+            this.lblUpdateAccount.TabIndex = 0;
+            this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 418);
+            this.ClientSize = new System.Drawing.Size(1249, 418);
+            this.Controls.Add(this.UpdateBackPanel);
             this.Controls.Add(this.HomeMenuStrip);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
@@ -204,6 +242,8 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.HomeMenuStrip.ResumeLayout(false);
             this.HomeMenuStrip.PerformLayout();
+            this.UpdateBackPanel.ResumeLayout(false);
+            this.UpdateBackPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +262,8 @@
         private System.Windows.Forms.ToolStripMenuItem addAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
+        private System.Windows.Forms.Panel UpdateBackPanel;
+        private System.Windows.Forms.Label lblCatchPhrase;
+        private System.Windows.Forms.Label lblUpdateAccount;
     }
 }

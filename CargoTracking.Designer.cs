@@ -30,6 +30,12 @@
         {
             this.UpdateBackPanel = new System.Windows.Forms.Panel();
             this.lblCargoTracking = new System.Windows.Forms.Label();
+            this.CargoMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateCargoInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCargoID = new System.Windows.Forms.Label();
             this.lblSenderName = new System.Windows.Forms.Label();
             this.lblReceiverName = new System.Windows.Forms.Label();
@@ -56,14 +62,8 @@
             this.txtBxLocation = new System.Windows.Forms.TextBox();
             this.DropListCargoStatus = new System.Windows.Forms.ComboBox();
             this.txtBxAdditionalInfo = new System.Windows.Forms.TextBox();
-            this.CargoMenuStrip = new System.Windows.Forms.MenuStrip();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtBxDimension = new System.Windows.Forms.TextBox();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCargoInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
             this.UpdateBackPanel.SuspendLayout();
             this.CargoMenuStrip.SuspendLayout();
@@ -90,6 +90,68 @@
             this.lblCargoTracking.Size = new System.Drawing.Size(207, 46);
             this.lblCargoTracking.TabIndex = 0;
             this.lblCargoTracking.Text = "Cargo Tracking";
+            // 
+            // CargoMenuStrip
+            // 
+            this.CargoMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.CargoMenuStrip.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CargoMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.closeToolStripMenuItem,
+            this.saveInfoToolStripMenuItem,
+            this.trackCargoToolStripMenuItem,
+            this.updateCargoInfoToolStripMenuItem});
+            this.CargoMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.CargoMenuStrip.Name = "CargoMenuStrip";
+            this.CargoMenuStrip.Padding = new System.Windows.Forms.Padding(6, 10, 0, 10);
+            this.CargoMenuStrip.Size = new System.Drawing.Size(1012, 61);
+            this.CargoMenuStrip.TabIndex = 1;
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.editToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_edit_30;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 18, 50, 0);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(148, 41);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.closeToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_close_30;
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(138, 41);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // saveInfoToolStripMenuItem
+            // 
+            this.saveInfoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.saveInfoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_save_30;
+            this.saveInfoToolStripMenuItem.Name = "saveInfoToolStripMenuItem";
+            this.saveInfoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
+            this.saveInfoToolStripMenuItem.Size = new System.Drawing.Size(192, 41);
+            this.saveInfoToolStripMenuItem.Text = "Save Cargo Info";
+            // 
+            // trackCargoToolStripMenuItem
+            // 
+            this.trackCargoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.trackCargoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_tracking_50__1_;
+            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
+            this.trackCargoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
+            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(172, 41);
+            this.trackCargoToolStripMenuItem.Text = "Track Cargo";
+            // 
+            // updateCargoInfoToolStripMenuItem
+            // 
+            this.updateCargoInfoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.updateCargoInfoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delivery_tracking_30;
+            this.updateCargoInfoToolStripMenuItem.Name = "updateCargoInfoToolStripMenuItem";
+            this.updateCargoInfoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
+            this.updateCargoInfoToolStripMenuItem.Size = new System.Drawing.Size(202, 41);
+            this.updateCargoInfoToolStripMenuItem.Text = "Update Cargo Info";
             // 
             // lblCargoID
             // 
@@ -318,35 +380,30 @@
             // 
             // DropListCargoStatus
             // 
+            this.DropListCargoStatus.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DropListCargoStatus.FormattingEnabled = true;
+            this.DropListCargoStatus.Items.AddRange(new object[] {
+            "Delivered",
+            "Out For Delivery",
+            "On Hold",
+            "Lost ",
+            "Damaged ",
+            "In Transit",
+            "Cancelled ",
+            "Returned"});
             this.DropListCargoStatus.Location = new System.Drawing.Point(113, 572);
             this.DropListCargoStatus.Name = "DropListCargoStatus";
-            this.DropListCargoStatus.Size = new System.Drawing.Size(227, 21);
+            this.DropListCargoStatus.Size = new System.Drawing.Size(227, 27);
             this.DropListCargoStatus.TabIndex = 31;
             // 
             // txtBxAdditionalInfo
             // 
+            this.txtBxAdditionalInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxAdditionalInfo.Location = new System.Drawing.Point(1074, 472);
             this.txtBxAdditionalInfo.Multiline = true;
             this.txtBxAdditionalInfo.Name = "txtBxAdditionalInfo";
             this.txtBxAdditionalInfo.Size = new System.Drawing.Size(243, 205);
             this.txtBxAdditionalInfo.TabIndex = 32;
-            // 
-            // CargoMenuStrip
-            // 
-            this.CargoMenuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.CargoMenuStrip.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CargoMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.closeToolStripMenuItem,
-            this.saveInfoToolStripMenuItem,
-            this.trackCargoToolStripMenuItem,
-            this.updateCargoInfoToolStripMenuItem});
-            this.CargoMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.CargoMenuStrip.Name = "CargoMenuStrip";
-            this.CargoMenuStrip.Padding = new System.Windows.Forms.Padding(6, 10, 0, 10);
-            this.CargoMenuStrip.Size = new System.Drawing.Size(1012, 61);
-            this.CargoMenuStrip.TabIndex = 1;
             // 
             // lblDescription
             // 
@@ -361,57 +418,12 @@
             // 
             // txtBxDimension
             // 
+            this.txtBxDimension.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxDimension.Location = new System.Drawing.Point(1069, 202);
             this.txtBxDimension.Multiline = true;
             this.txtBxDimension.Name = "txtBxDimension";
             this.txtBxDimension.Size = new System.Drawing.Size(248, 148);
             this.txtBxDimension.TabIndex = 34;
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_edit_30;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 18, 50, 0);
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(148, 41);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // closeToolStripMenuItem
-            // 
-            this.closeToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.closeToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_close_30;
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(138, 41);
-            this.closeToolStripMenuItem.Text = "Close";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
-            // 
-            // saveInfoToolStripMenuItem
-            // 
-            this.saveInfoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.saveInfoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_save_30;
-            this.saveInfoToolStripMenuItem.Name = "saveInfoToolStripMenuItem";
-            this.saveInfoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.saveInfoToolStripMenuItem.Size = new System.Drawing.Size(192, 41);
-            this.saveInfoToolStripMenuItem.Text = "Save Cargo Info";
-            // 
-            // trackCargoToolStripMenuItem
-            // 
-            this.trackCargoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.trackCargoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_tracking_50__1_;
-            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
-            this.trackCargoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(172, 41);
-            this.trackCargoToolStripMenuItem.Text = "Track Cargo";
-            // 
-            // updateCargoInfoToolStripMenuItem
-            // 
-            this.updateCargoInfoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.updateCargoInfoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delivery_tracking_30;
-            this.updateCargoInfoToolStripMenuItem.Name = "updateCargoInfoToolStripMenuItem";
-            this.updateCargoInfoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.updateCargoInfoToolStripMenuItem.Size = new System.Drawing.Size(202, 41);
-            this.updateCargoInfoToolStripMenuItem.Text = "Update Cargo Info";
             // 
             // LeftPBox
             // 
