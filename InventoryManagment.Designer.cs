@@ -53,13 +53,12 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TopPanel.Controls.Add(this.lblInventoryManagement);
-            this.TopPanel.Location = new System.Drawing.Point(556, 0);
+            this.TopPanel.Location = new System.Drawing.Point(742, 0);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(696, 152);
+            this.TopPanel.Size = new System.Drawing.Size(922, 137);
             this.TopPanel.TabIndex = 2;
             // 
             // lblInventoryManagement
@@ -67,7 +66,7 @@
             this.lblInventoryManagement.AutoSize = true;
             this.lblInventoryManagement.Font = new System.Drawing.Font("Bahnschrift Condensed", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInventoryManagement.ForeColor = System.Drawing.Color.White;
-            this.lblInventoryManagement.Location = new System.Drawing.Point(161, 43);
+            this.lblInventoryManagement.Location = new System.Drawing.Point(251, 47);
             this.lblInventoryManagement.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInventoryManagement.Name = "lblInventoryManagement";
             this.lblInventoryManagement.Size = new System.Drawing.Size(454, 68);
@@ -81,7 +80,7 @@
             this.LeftPBox.Location = new System.Drawing.Point(0, 0);
             this.LeftPBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LeftPBox.Name = "LeftPBox";
-            this.LeftPBox.Size = new System.Drawing.Size(556, 823);
+            this.LeftPBox.Size = new System.Drawing.Size(741, 727);
             this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPBox.TabIndex = 3;
             this.LeftPBox.TabStop = false;
@@ -91,7 +90,7 @@
             this.lbladditem.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbladditem.AutoSize = true;
             this.lbladditem.Font = new System.Drawing.Font("Bahnschrift Condensed", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladditem.Location = new System.Drawing.Point(828, 158);
+            this.lbladditem.Location = new System.Drawing.Point(939, 122);
             this.lbladditem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbladditem.Name = "lbladditem";
             this.lbladditem.Size = new System.Drawing.Size(138, 48);
@@ -103,7 +102,7 @@
             this.lblitemname.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblitemname.AutoSize = true;
             this.lblitemname.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblitemname.Location = new System.Drawing.Point(655, 224);
+            this.lblitemname.Location = new System.Drawing.Point(759, 226);
             this.lblitemname.Name = "lblitemname";
             this.lblitemname.Size = new System.Drawing.Size(118, 34);
             this.lblitemname.TabIndex = 5;
@@ -112,7 +111,7 @@
             // txtbxItemname
             // 
             this.txtbxItemname.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtbxItemname.Location = new System.Drawing.Point(777, 232);
+            this.txtbxItemname.Location = new System.Drawing.Point(891, 226);
             this.txtbxItemname.Name = "txtbxItemname";
             this.txtbxItemname.Size = new System.Drawing.Size(326, 26);
             this.txtbxItemname.TabIndex = 6;
@@ -122,7 +121,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(655, 289);
+            this.label1.Location = new System.Drawing.Point(759, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 34);
             this.label1.TabIndex = 5;
@@ -131,7 +130,7 @@
             // txtBxItemType
             // 
             this.txtBxItemType.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBxItemType.Location = new System.Drawing.Point(777, 297);
+            this.txtBxItemType.Location = new System.Drawing.Point(891, 279);
             this.txtBxItemType.Name = "txtBxItemType";
             this.txtBxItemType.Size = new System.Drawing.Size(326, 26);
             this.txtBxItemType.TabIndex = 6;
@@ -141,7 +140,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(667, 349);
+            this.label2.Location = new System.Drawing.Point(832, 336);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 34);
             this.label2.TabIndex = 5;
@@ -150,7 +149,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Location = new System.Drawing.Point(777, 352);
+            this.numericUpDown1.Location = new System.Drawing.Point(947, 339);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 26);
             this.numericUpDown1.TabIndex = 7;
@@ -160,7 +159,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(716, 424);
+            this.label3.Location = new System.Drawing.Point(789, 404);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 34);
             this.label3.TabIndex = 5;
@@ -171,7 +170,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(873, 424);
+            this.label4.Location = new System.Drawing.Point(946, 404);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 34);
             this.label4.TabIndex = 5;
@@ -182,7 +181,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1029, 424);
+            this.label5.Location = new System.Drawing.Point(1102, 404);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 34);
             this.label5.TabIndex = 5;
@@ -193,7 +192,7 @@
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.BackColor = System.Drawing.Color.SpringGreen;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Location = new System.Drawing.Point(903, 349);
+            this.btnAdd.Location = new System.Drawing.Point(1073, 336);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 35);
             this.btnAdd.TabIndex = 8;
@@ -204,7 +203,7 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(722, 489);
+            this.dataGridView1.Location = new System.Drawing.Point(795, 450);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -217,7 +216,7 @@
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBack.Location = new System.Drawing.Point(926, 746);
+            this.btnBack.Location = new System.Drawing.Point(1219, 513);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 65);
@@ -231,7 +230,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSubmit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmit.Location = new System.Drawing.Point(1082, 746);
+            this.btnSubmit.Location = new System.Drawing.Point(1219, 599);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(129, 65);
@@ -243,8 +242,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 823);
+            this.ClientSize = new System.Drawing.Size(1665, 727);
             this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lbladditem);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAdd);
@@ -257,10 +257,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblitemname);
-            this.Controls.Add(this.lbladditem);
             this.Controls.Add(this.LeftPBox);
             this.Controls.Add(this.TopPanel);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InventoryManagment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "InventoryManagment";
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
