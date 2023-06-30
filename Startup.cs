@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace SwiftShip_WindowApplication
 {
-    public partial class VesselScheduling : Form
+    public partial class Startup : Form
     {
-        public VesselScheduling()
+        public Startup()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void StartupTimer_Tick(object sender, EventArgs e)
         {
-            this.Close();
+            StartupTimer.Stop();
+            Hide();
+            Loadingscreen load = new Loadingscreen();
+            load.ShowDialog();
         }
     }
 }

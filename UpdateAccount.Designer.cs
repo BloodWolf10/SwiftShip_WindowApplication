@@ -52,10 +52,10 @@
             // 
             this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
-            this.UpdateBackPanel.Location = new System.Drawing.Point(501, 3);
+            this.UpdateBackPanel.Location = new System.Drawing.Point(768, 3);
             this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(520, 142);
+            this.UpdateBackPanel.Size = new System.Drawing.Size(892, 142);
             this.UpdateBackPanel.TabIndex = 1;
             // 
             // lblUpdateAccount
@@ -63,7 +63,7 @@
             this.lblUpdateAccount.AutoSize = true;
             this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateAccount.Location = new System.Drawing.Point(105, 45);
+            this.lblUpdateAccount.Location = new System.Drawing.Point(291, 25);
             this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUpdateAccount.Name = "lblUpdateAccount";
             this.lblUpdateAccount.Size = new System.Drawing.Size(317, 68);
@@ -74,7 +74,7 @@
             // 
             this.lblUserIDUpd.AutoSize = true;
             this.lblUserIDUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIDUpd.Location = new System.Drawing.Point(500, 168);
+            this.lblUserIDUpd.Location = new System.Drawing.Point(1004, 181);
             this.lblUserIDUpd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserIDUpd.Name = "lblUserIDUpd";
             this.lblUserIDUpd.Size = new System.Drawing.Size(85, 35);
@@ -84,7 +84,7 @@
             // txtBxUserIdUpd
             // 
             this.txtBxUserIdUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxUserIdUpd.Location = new System.Drawing.Point(507, 208);
+            this.txtBxUserIdUpd.Location = new System.Drawing.Point(1010, 234);
             this.txtBxUserIdUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBxUserIdUpd.Name = "txtBxUserIdUpd";
             this.txtBxUserIdUpd.Size = new System.Drawing.Size(506, 36);
@@ -94,7 +94,7 @@
             // 
             this.lblEmailUpd.AutoSize = true;
             this.lblEmailUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailUpd.Location = new System.Drawing.Point(501, 275);
+            this.lblEmailUpd.Location = new System.Drawing.Point(1004, 301);
             this.lblEmailUpd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmailUpd.Name = "lblEmailUpd";
             this.lblEmailUpd.Size = new System.Drawing.Size(74, 35);
@@ -104,7 +104,7 @@
             // txtBxEmailUpd
             // 
             this.txtBxEmailUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxEmailUpd.Location = new System.Drawing.Point(507, 315);
+            this.txtBxEmailUpd.Location = new System.Drawing.Point(1010, 341);
             this.txtBxEmailUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBxEmailUpd.Name = "txtBxEmailUpd";
             this.txtBxEmailUpd.Size = new System.Drawing.Size(506, 36);
@@ -114,7 +114,7 @@
             // 
             this.lblUsernameUpd.AutoSize = true;
             this.lblUsernameUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsernameUpd.Location = new System.Drawing.Point(501, 380);
+            this.lblUsernameUpd.Location = new System.Drawing.Point(1004, 406);
             this.lblUsernameUpd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsernameUpd.Name = "lblUsernameUpd";
             this.lblUsernameUpd.Size = new System.Drawing.Size(114, 35);
@@ -124,7 +124,7 @@
             // txtBxUsernameUpd
             // 
             this.txtBxUsernameUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxUsernameUpd.Location = new System.Drawing.Point(507, 420);
+            this.txtBxUsernameUpd.Location = new System.Drawing.Point(1010, 446);
             this.txtBxUsernameUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBxUsernameUpd.Name = "txtBxUsernameUpd";
             this.txtBxUsernameUpd.Size = new System.Drawing.Size(500, 36);
@@ -133,7 +133,7 @@
             // txtBxPasswordUpd
             // 
             this.txtBxPasswordUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxPasswordUpd.Location = new System.Drawing.Point(501, 538);
+            this.txtBxPasswordUpd.Location = new System.Drawing.Point(1004, 563);
             this.txtBxPasswordUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBxPasswordUpd.Name = "txtBxPasswordUpd";
             this.txtBxPasswordUpd.PasswordChar = '*';
@@ -144,7 +144,7 @@
             // 
             this.lblPasswordUpd.AutoSize = true;
             this.lblPasswordUpd.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordUpd.Location = new System.Drawing.Point(501, 498);
+            this.lblPasswordUpd.Location = new System.Drawing.Point(1004, 514);
             this.lblPasswordUpd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPasswordUpd.Name = "lblPasswordUpd";
             this.lblPasswordUpd.Size = new System.Drawing.Size(112, 35);
@@ -155,7 +155,7 @@
             // 
             this.lblConPassword.AutoSize = true;
             this.lblConPassword.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConPassword.Location = new System.Drawing.Point(501, 612);
+            this.lblConPassword.Location = new System.Drawing.Point(1004, 617);
             this.lblConPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConPassword.Name = "lblConPassword";
             this.lblConPassword.Size = new System.Drawing.Size(193, 35);
@@ -165,7 +165,7 @@
             // txtBxConfirmPassword
             // 
             this.txtBxConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxConfirmPassword.Location = new System.Drawing.Point(501, 652);
+            this.txtBxConfirmPassword.Location = new System.Drawing.Point(1004, 657);
             this.txtBxConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBxConfirmPassword.Name = "txtBxConfirmPassword";
             this.txtBxConfirmPassword.Size = new System.Drawing.Size(506, 36);
@@ -177,7 +177,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.linkLabel1.Location = new System.Drawing.Point(909, 698);
+            this.linkLabel1.Location = new System.Drawing.Point(1453, 725);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(57, 28);
@@ -192,7 +192,7 @@
             this.btnUpdateAccount.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnUpdateAccount.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_update_30;
             this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(730, 783);
+            this.btnUpdateAccount.Location = new System.Drawing.Point(1227, 791);
             this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
             this.btnUpdateAccount.Size = new System.Drawing.Size(270, 65);
@@ -207,7 +207,7 @@
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBack.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_back_arrow_32;
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(507, 783);
+            this.btnBack.Location = new System.Drawing.Point(1004, 791);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBack.Name = "btnBack";
             this.btnBack.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -220,10 +220,10 @@
             // LeftPBoxUpd
             // 
             this.LeftPBoxUpd.Image = global::SwiftShip_WindowApplication.Properties.Resources.Boat2;
-            this.LeftPBoxUpd.Location = new System.Drawing.Point(2, 3);
+            this.LeftPBoxUpd.Location = new System.Drawing.Point(-1, 3);
             this.LeftPBoxUpd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LeftPBoxUpd.Name = "LeftPBoxUpd";
-            this.LeftPBoxUpd.Size = new System.Drawing.Size(490, 872);
+            this.LeftPBoxUpd.Size = new System.Drawing.Size(772, 1006);
             this.LeftPBoxUpd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPBoxUpd.TabIndex = 0;
             this.LeftPBoxUpd.TabStop = false;
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 866);
+            this.ClientSize = new System.Drawing.Size(1665, 986);
             this.Controls.Add(this.btnUpdateAccount);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.linkLabel1);
