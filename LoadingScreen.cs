@@ -19,15 +19,16 @@ namespace SwiftShip_WindowApplication
 
         private void timerStartup_Tick(object sender, EventArgs e)
         {
-            loadingTimer.Stop();
-            Hide(); // this will hide the loading screen
-            FormLogin login = new FormLogin(); // creating object of the login class to show login form
-            login.Show();
+           
         }
 
         private void Startup_Load(object sender, EventArgs e)
         {
-
+            loadingTimer.Start();
+            this.Hide(); // this will hide the loading screen
+            FormLogin login = new FormLogin(); // creating object of the login class to show login form
+            login.ShowDialog();
+            this.Close();
         }
     }
 }

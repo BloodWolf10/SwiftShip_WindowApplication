@@ -20,7 +20,7 @@ namespace SwiftShip_WindowApplication
         {
              
             InitializeComponent();
-            ChromiumWebBrowser webBrowser1;
+            
         }
 
 

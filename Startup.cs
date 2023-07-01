@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SwiftShip_WindowApplication
 {
     public partial class Startup : Form
@@ -22,12 +23,15 @@ namespace SwiftShip_WindowApplication
 
         }
 
-        private void StartupTimer_Tick(object sender, EventArgs e)
+      
+
+        private void Startup_Load(object sender, EventArgs e)
         {
-            StartupTimer.Stop();
-            Hide();
-            Loadingscreen load = new Loadingscreen();
-            load.ShowDialog();
+            timerStartup.Start();
+            this.Hide();
+            Loadingscreen loader = new Loadingscreen();
+            loader.ShowDialog();
+            this.Close();
         }
     }
 }
