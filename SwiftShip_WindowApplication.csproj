@@ -161,6 +161,11 @@
     <Compile Include="Startup.Designer.cs">
       <DependentUpon>Startup.cs</DependentUpon>
     </Compile>
+    <Compile Include="SwiftShipDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SwiftShipDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +231,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SwiftShipDataSet.xsc">
+      <DependentUpon>SwiftShipDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SwiftShipDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SwiftShipDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SwiftShipDataSet.xss">
+      <DependentUpon>SwiftShipDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

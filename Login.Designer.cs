@@ -46,10 +46,9 @@
             // 
             this.lblHello.AutoSize = true;
             this.lblHello.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHello.Location = new System.Drawing.Point(750, 263);
-            this.lblHello.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHello.Location = new System.Drawing.Point(500, 171);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(263, 61);
+            this.lblHello.Size = new System.Drawing.Size(171, 39);
             this.lblHello.TabIndex = 2;
             this.lblHello.Text = "Ship Swift";
             // 
@@ -57,21 +56,19 @@
             // 
             this.txtBxUsername.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtBxUsername.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxUsername.Location = new System.Drawing.Point(722, 418);
-            this.txtBxUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBxUsername.Location = new System.Drawing.Point(481, 272);
             this.txtBxUsername.Name = "txtBxUsername";
-            this.txtBxUsername.Size = new System.Drawing.Size(320, 40);
+            this.txtBxUsername.Size = new System.Drawing.Size(215, 29);
             this.txtBxUsername.TabIndex = 3;
             // 
             // txtBxPassword
             // 
             this.txtBxPassword.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtBxPassword.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxPassword.Location = new System.Drawing.Point(722, 522);
-            this.txtBxPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBxPassword.Location = new System.Drawing.Point(481, 339);
             this.txtBxPassword.Name = "txtBxPassword";
             this.txtBxPassword.PasswordChar = '*';
-            this.txtBxPassword.Size = new System.Drawing.Size(320, 40);
+            this.txtBxPassword.Size = new System.Drawing.Size(215, 29);
             this.txtBxPassword.TabIndex = 4;
             // 
             // btnLogin
@@ -79,10 +76,9 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLogin.Location = new System.Drawing.Point(915, 606);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(610, 394);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 65);
+            this.btnLogin.Size = new System.Drawing.Size(86, 42);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -93,10 +89,9 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.Location = new System.Drawing.Point(736, 606);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExit.Location = new System.Drawing.Point(491, 394);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(129, 65);
+            this.btnExit.Size = new System.Drawing.Size(86, 42);
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -106,10 +101,9 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(722, 385);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(481, 250);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(97, 29);
+            this.lblUsername.Size = new System.Drawing.Size(66, 19);
             this.lblUsername.TabIndex = 7;
             this.lblUsername.Text = "Username:";
             // 
@@ -117,10 +111,9 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(722, 488);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Location = new System.Drawing.Point(481, 317);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(95, 29);
+            this.lblPassword.Size = new System.Drawing.Size(64, 19);
             this.lblPassword.TabIndex = 8;
             this.lblPassword.Text = "Password:";
             // 
@@ -128,20 +121,18 @@
             // 
             this.lblMessage.AutoSize = true;
             this.lblMessage.Font = new System.Drawing.Font("Monotype Corsiva", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMessage.Location = new System.Drawing.Point(759, 338);
-            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMessage.Location = new System.Drawing.Point(506, 220);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(234, 20);
+            this.lblMessage.Size = new System.Drawing.Size(153, 13);
             this.lblMessage.TabIndex = 9;
             this.lblMessage.Text = "Managing your cargo the right way !";
             // 
             // pBoxAnimation
             // 
             this.pBoxAnimation.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cargo_Ship_Gif;
-            this.pBoxAnimation.Location = new System.Drawing.Point(0, -3);
-            this.pBoxAnimation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pBoxAnimation.Location = new System.Drawing.Point(0, -2);
             this.pBoxAnimation.Name = "pBoxAnimation";
-            this.pBoxAnimation.Size = new System.Drawing.Size(600, 726);
+            this.pBoxAnimation.Size = new System.Drawing.Size(400, 472);
             this.pBoxAnimation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBoxAnimation.TabIndex = 1;
             this.pBoxAnimation.TabStop = false;
@@ -149,20 +140,19 @@
             // pBoxLogo
             // 
             this.pBoxLogo.Image = global::SwiftShip_WindowApplication.Properties.Resources.Swift_Ship_Logo_P;
-            this.pBoxLogo.Location = new System.Drawing.Point(764, 42);
-            this.pBoxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pBoxLogo.Location = new System.Drawing.Point(509, 27);
             this.pBoxLogo.Name = "pBoxLogo";
-            this.pBoxLogo.Size = new System.Drawing.Size(234, 197);
+            this.pBoxLogo.Size = new System.Drawing.Size(156, 128);
             this.pBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBoxLogo.TabIndex = 0;
             this.pBoxLogo.TabStop = false;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1126, 718);
+            this.ClientSize = new System.Drawing.Size(751, 467);
             this.ControlBox = false;
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblPassword);
@@ -175,10 +165,10 @@
             this.Controls.Add(this.pBoxAnimation);
             this.Controls.Add(this.pBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pBoxAnimation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBoxLogo)).EndInit();
             this.ResumeLayout(false);

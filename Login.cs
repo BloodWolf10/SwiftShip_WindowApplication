@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SwiftShip_WindowApplication
 {
@@ -17,29 +18,65 @@ namespace SwiftShip_WindowApplication
             InitializeComponent();
         }
 
+        
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-PNOUHJE4;Initial Catalog=SwiftShip;Integrated Security=True");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string User = txtBxUsername.Text;
             string password = txtBxPassword.Text;
 
-            if (User == "Admin" && password == "@dmin1")
+            try
             {
 
-                this.Hide();
-                Dashboard dash = new Dashboard();
-                dash.ShowDialog();
-                this.Close();
+                string query = "SELECT * FROM LoginInfo WHERE Username = '" + txtBxUsername.Text + "' AND UPassword = '" + txtBxPassword.Text+"'";
+                SqlDataAdapter sda = new SqlDataAdapter(query,conn);
+                DataTable dtable = new DataTable();
+
+                sda.Fill(dtable);
+
+                if (dtable.Rows.Count >0)
+                {
+                    User = txtBxUsername.Text;
+                    password = txtBxPassword.Text;
+
+                    this.Hide();
+                    Dashboard dash = new Dashboard();
+                    dash.ShowDialog();
+                    this.Close();
+                }
+
+                else if (txtBxUsername.Text == "" || txtBxPassword.Text == "")
+                    {
+                    MessageBox.Show(" Invalid parameters entered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
+                else
+                {
+                    MessageBox.Show(" Incorrect Password or Username entered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            else
-            {
-                MessageBox.Show(" Incorrect Password or Username entered", "Warning", MessageBoxButtons.OK , MessageBoxIcon.Warning);
+            catch (Exception) {
+                MessageBox.Show("Error Occured While Attepting to Login", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBxUsername.Clear();
+                txtBxPassword.Clear();
             }
+
+           
+
+          
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
