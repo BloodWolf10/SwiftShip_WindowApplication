@@ -32,5 +32,16 @@ namespace SwiftShip_WindowApplication.Properties {
                 return ((string)(this["SwiftShipConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CODEBLACK\\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=Tr" +
+            "ue")]
+        public string SwiftShipConnectionString1 {
+            get {
+                return ((string)(this["SwiftShipConnectionString1"]));
+            }
+        }
     }
 }

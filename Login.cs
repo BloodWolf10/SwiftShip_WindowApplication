@@ -24,7 +24,8 @@ namespace SwiftShip_WindowApplication
         {
             this.Close();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-PNOUHJE4;Initial Catalog=SwiftShip;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
