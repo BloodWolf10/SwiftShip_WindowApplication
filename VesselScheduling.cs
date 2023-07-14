@@ -29,7 +29,37 @@ namespace SwiftShip_WindowApplication
 
         private void txtbxVesselName_TextChanged(object sender, EventArgs e)
         {
+            txtbxVesselName.BackColor = Color.White;
+        }
 
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (txtbxvesseltype.Text == "")
+            {
+                txtbxvesseltype.BackColor = Color.LightPink;
+                MessageBox.Show("Please Enter Vessel Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtbxvesseltype.Focus();
+                return;
+            }
+
+            if (txtbxVesselName.Text == "")
+            {
+                txtbxVesselName.BackColor = Color.LightPink;
+                MessageBox.Show("Please Enter Vessel Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtbxVesselName.Focus();
+                return;
+            }
+
+        }
+
+        private void VesselScheduling_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxvesseltype_TextChanged(object sender, EventArgs e)
+        {
+            txtbxvesseltype.BackColor = Color.White;
         }
     }
 }

@@ -126,6 +126,8 @@
             this.txtBxEmail.Name = "txtBxEmail";
             this.txtBxEmail.Size = new System.Drawing.Size(596, 36);
             this.txtBxEmail.TabIndex = 6;
+            this.txtBxEmail.TextChanged += new System.EventHandler(this.txtBxEmail_TextChanged);
+            this.txtBxEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtBxEmail_Validating);
             // 
             // txtBxUsername
             // 
@@ -135,6 +137,7 @@
             this.txtBxUsername.Name = "txtBxUsername";
             this.txtBxUsername.Size = new System.Drawing.Size(596, 36);
             this.txtBxUsername.TabIndex = 7;
+            this.txtBxUsername.TextChanged += new System.EventHandler(this.txtBxUsername_TextChanged);
             // 
             // txtBxPassword
             // 
@@ -145,6 +148,7 @@
             this.txtBxPassword.PasswordChar = '*';
             this.txtBxPassword.Size = new System.Drawing.Size(596, 36);
             this.txtBxPassword.TabIndex = 8;
+            this.txtBxPassword.TextChanged += new System.EventHandler(this.txtBxPassword_TextChanged);
             this.txtBxPassword.MouseHover += new System.EventHandler(this.txtBxPassword_MouseHover);
             // 
             // txtBxConfirmPassword
@@ -155,6 +159,7 @@
             this.txtBxConfirmPassword.Name = "txtBxConfirmPassword";
             this.txtBxConfirmPassword.Size = new System.Drawing.Size(596, 36);
             this.txtBxConfirmPassword.TabIndex = 9;
+            this.txtBxConfirmPassword.TextChanged += new System.EventHandler(this.txtBxConfirmPassword_TextChanged);
             this.txtBxConfirmPassword.MouseHover += new System.EventHandler(this.txtBxConfirmPassword_MouseHover);
             // 
             // linkLabel1
@@ -191,6 +196,7 @@
             this.txtBxUserId.Name = "txtBxUserId";
             this.txtBxUserId.Size = new System.Drawing.Size(596, 36);
             this.txtBxUserId.TabIndex = 14;
+            this.txtBxUserId.TextChanged += new System.EventHandler(this.txtBxUserId_TextChanged);
             // 
             // accountsDataGrid
             // 
@@ -242,6 +248,7 @@
             this.btnCreateAccount.TabIndex = 11;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnCancel
             // 

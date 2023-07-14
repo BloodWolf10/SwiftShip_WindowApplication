@@ -130,6 +130,7 @@
             this.btnSubmit.TabIndex = 9;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnBack
             // 
@@ -186,6 +187,7 @@
             this.txtbxvesseltype.Name = "txtbxvesseltype";
             this.txtbxvesseltype.Size = new System.Drawing.Size(332, 41);
             this.txtbxvesseltype.TabIndex = 12;
+            this.txtbxvesseltype.TextChanged += new System.EventHandler(this.txtbxvesseltype_TextChanged);
             // 
             // lblcargotype
             // 
@@ -237,6 +239,7 @@
             this.Name = "VesselScheduling";
             this.Padding = new System.Windows.Forms.Padding(4, 5, 4, 6);
             this.Text = "VesselScheduling";
+            this.Load += new System.EventHandler(this.VesselScheduling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
