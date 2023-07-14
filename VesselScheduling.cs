@@ -26,5 +26,10 @@ namespace SwiftShip_WindowApplication
         {
             this.Close();
         }
+
+        private void txtbxVesselName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
