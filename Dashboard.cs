@@ -1,14 +1,33 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 
 namespace SwiftShip_WindowApplication
 {
     public partial class Dashboard : Form
     {
+
+        class DashUser : LoggedPerson
+        {
+            public LoggedPerson loged = new LoggedPerson();
+            public string UserID;
+
+            public DashUser()
+            {
+                loged.LoggedName = UserID;
+            }
+
+        }
+
         public Dashboard()
         {
             InitializeComponent();
+
+            DashUser dashUser = new DashUser();
+            lblUserlog.Text = dashUser.UserID;
         }
+
+
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -211,5 +230,14 @@ namespace SwiftShip_WindowApplication
                 Application.OpenForms["DeleteAccount"].Activate();
             }
         }
+
+        
+
+       
+
+
+
+
+     
     }
 }

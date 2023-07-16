@@ -139,6 +139,7 @@
     <Compile Include="InventoryManagment.Designer.cs">
       <DependentUpon>InventoryManagment.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoggedPerson.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -40,6 +40,7 @@
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UpdateBackPanel = new System.Windows.Forms.Panel();
+            this.lblUserlog = new System.Windows.Forms.Label();
             this.lblCatchPhrase = new System.Windows.Forms.Label();
             this.lblUpdateAccount = new System.Windows.Forms.Label();
             this.HomeMenuStrip.SuspendLayout();
@@ -64,7 +65,7 @@
             this.HomeMenuStrip.Name = "HomeMenuStrip";
             this.HomeMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HomeMenuStrip.ShowItemToolTips = true;
-            this.HomeMenuStrip.Size = new System.Drawing.Size(257, 514);
+            this.HomeMenuStrip.Size = new System.Drawing.Size(255, 514);
             this.HomeMenuStrip.TabIndex = 1;
             this.HomeMenuStrip.Text = "HomeMenuStrip";
             // 
@@ -76,7 +77,7 @@
             this.menuToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 12);
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(240, 56);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(242, 56);
             this.menuToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.menuToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.menuToolStripMenuItem.ToolTipText = "Click to Expand / Collapse Menu";
@@ -89,7 +90,7 @@
             this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.homeToolStripMenuItem.Text = "Home";
             this.homeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.homeToolStripMenuItem.ToolTipText = "Click to Return to Home Screen";
@@ -102,7 +103,7 @@
             this.cargoTrackingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cargoTrackingToolStripMenuItem.Name = "cargoTrackingToolStripMenuItem";
             this.cargoTrackingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.cargoTrackingToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.cargoTrackingToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.cargoTrackingToolStripMenuItem.Text = "     Cargo Tracking";
             this.cargoTrackingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cargoTrackingToolStripMenuItem.ToolTipText = "Click to Open Cargo Tracker";
@@ -114,7 +115,7 @@
             this.inventoryManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Inventory_Management_icon;
             this.inventoryManagementToolStripMenuItem.Name = "inventoryManagementToolStripMenuItem";
             this.inventoryManagementToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.inventoryManagementToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.inventoryManagementToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.inventoryManagementToolStripMenuItem.Text = "  Inventory Management";
             this.inventoryManagementToolStripMenuItem.ToolTipText = "Click to open Inventory Manager";
             this.inventoryManagementToolStripMenuItem.Click += new System.EventHandler(this.inventoryManagementToolStripMenuItem_Click);
@@ -126,7 +127,7 @@
             this.vesselSchedulingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.vesselSchedulingToolStripMenuItem.Name = "vesselSchedulingToolStripMenuItem";
             this.vesselSchedulingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.vesselSchedulingToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.vesselSchedulingToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.vesselSchedulingToolStripMenuItem.Text = "      Vessel Scheduling";
             this.vesselSchedulingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.vesselSchedulingToolStripMenuItem.ToolTipText = "Click to Adjust Vessel Schedules";
@@ -142,7 +143,7 @@
             this.accountManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Account_Management_icon;
             this.accountManagementToolStripMenuItem.Name = "accountManagementToolStripMenuItem";
             this.accountManagementToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.accountManagementToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.accountManagementToolStripMenuItem.Text = "    Account Management";
             this.accountManagementToolStripMenuItem.ToolTipText = "Click to Manage Accounts";
             this.accountManagementToolStripMenuItem.Click += new System.EventHandler(this.accountManagementToolStripMenuItem_Click);
@@ -187,7 +188,7 @@
             this.logOutToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(240, 52);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
             this.logOutToolStripMenuItem.Text = "LogOut";
             this.logOutToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
@@ -196,14 +197,26 @@
             // UpdateBackPanel
             // 
             this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.Controls.Add(this.lblUserlog);
             this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UpdateBackPanel.Location = new System.Drawing.Point(257, 0);
-            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
+            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(1408, 92);
+            this.UpdateBackPanel.Size = new System.Drawing.Size(1410, 92);
             this.UpdateBackPanel.TabIndex = 4;
+            // 
+            // lblUserlog
+            // 
+            this.lblUserlog.AutoSize = true;
+            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserlog.ForeColor = System.Drawing.Color.White;
+            this.lblUserlog.Location = new System.Drawing.Point(1183, 34);
+            this.lblUserlog.Name = "lblUserlog";
+            this.lblUserlog.Size = new System.Drawing.Size(45, 28);
+            this.lblUserlog.TabIndex = 2;
+            this.lblUserlog.Text = "User";
             // 
             // lblCatchPhrase
             // 
@@ -213,7 +226,7 @@
             this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
             this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCatchPhrase.Name = "lblCatchPhrase";
-            this.lblCatchPhrase.Size = new System.Drawing.Size(436, 45);
+            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
             this.lblCatchPhrase.TabIndex = 1;
             this.lblCatchPhrase.Text = "The port management system for you !!";
             // 
@@ -239,7 +252,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.HomeMenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -269,5 +282,6 @@
         private System.Windows.Forms.Panel UpdateBackPanel;
         private System.Windows.Forms.Label lblCatchPhrase;
         private System.Windows.Forms.Label lblUpdateAccount;
+        private System.Windows.Forms.Label lblUserlog;
     }
 }

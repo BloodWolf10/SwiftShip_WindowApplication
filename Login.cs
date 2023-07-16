@@ -16,19 +16,39 @@ namespace SwiftShip_WindowApplication
         public FormLogin()
         {
             InitializeComponent();
+
+       
+    }
+
+
+       
+
+      class Member:LoggedPerson
+        {
+            LoggedPerson loged = new LoggedPerson();
+
+            public string Useridentity;
+           public Member()
+                {
+                loged.LoggedName= Useridentity;
+            }
+
         }
 
-        
+       
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        //SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-82BV177\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-82BV177\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+             Member mem = new Member();
+            
+
             string User = txtBxUsername.Text;
             string password = txtBxPassword.Text;
 
@@ -47,8 +67,10 @@ namespace SwiftShip_WindowApplication
                     password = txtBxPassword.Text;
 
                     this.Hide();
+                    
                     Dashboard dash = new Dashboard();
                     dash.ShowDialog();
+                    mem.Useridentity = User;
                     this.Close();
                 }
 
