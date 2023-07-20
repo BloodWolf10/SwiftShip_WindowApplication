@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,8 +18,16 @@ namespace SwiftShip_WindowApplication
             InitializeComponent();
         }
 
+        DBAccess objDbAccess = new DBAccess();
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            string itemName = txtbxItemname.Text;
+            string itemType = txtBxItemType.Text;
+            decimal quantity = numericSelector.Value;
+            string Location = txtbxLocation.Text;
+
+
             if (txtbxItemname.Text == "")
             {
                 txtbxItemname.BackColor = Color.LightPink;
@@ -28,13 +37,50 @@ namespace SwiftShip_WindowApplication
             }
 
 
-            if (txtBxItemType.Text == "")
+          else if (txtBxItemType.Text == "")
             {
                 txtBxItemType.BackColor = Color.LightPink;
                 MessageBox.Show("Please Enter Item Type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtBxItemType.Focus();
                 return;
             }
+
+            else if(numericSelector.Value==0)
+            {
+                numericSelector.BackColor = Color.LightPink;
+                MessageBox.Show("Quantity of an item cannot be zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            else
+            {
+                SqlCommand insertCommand = new SqlCommand("insert into InventoryManagement(Itemtype,ItemName,Quantity,Location) Values(@itemType,@itemName,@quantity,@Location)");
+
+
+                insertCommand.Parameters.AddWithValue("@itemType", itemType);
+                insertCommand.Parameters.AddWithValue("@itemName", itemName);
+                insertCommand.Parameters.AddWithValue("@quantity", quantity);
+                insertCommand.Parameters.AddWithValue("@Location", Location);
+
+
+                int row = objDbAccess.executeQuery(insertCommand);
+
+                if (row == 1)
+                {
+                    MessageBox.Show("Item Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtbxItemname.Clear();
+                    txtBxItemType.Clear();
+                    txtbxLocation.Clear();
+                    numericSelector.Value = 0;
+
+                }
+
+                else if (row == 0)
+                {
+                    MessageBox.Show("Operation failed");
+                }
+            }
+
 
 
 
@@ -49,6 +95,11 @@ namespace SwiftShip_WindowApplication
         private void txtBxItemType_TextChanged(object sender, EventArgs e)
         {
             txtBxItemType.BackColor = Color.White;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

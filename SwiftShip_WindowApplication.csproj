@@ -121,6 +121,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbAccess.cs" />
     <Compile Include="DeleteAccount.cs">
       <SubType>Form</SubType>
     </Compile>

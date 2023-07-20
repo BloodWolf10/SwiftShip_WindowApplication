@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxVesselName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DepartureDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbxEstimatedTime = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.lblvesseltype = new System.Windows.Forms.Label();
             this.txtbxvesseltype = new System.Windows.Forms.TextBox();
             this.lblcargotype = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.CargoTypeList = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             this.UpdateBackPanel.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.LeftPBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftPBox.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cool_Ship;
             this.LeftPBox.Location = new System.Drawing.Point(4, 4);
-            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4);
             this.LeftPBox.Name = "LeftPBox";
             this.LeftPBox.Size = new System.Drawing.Size(659, 780);
             this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,14 +90,14 @@
             this.label2.Text = "Departure Date:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dateTimePicker1
+            // DepartureDatePicker
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(1006, 454);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(292, 35);
-            this.dateTimePicker1.TabIndex = 7;
+            this.DepartureDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartureDatePicker.Location = new System.Drawing.Point(1006, 454);
+            this.DepartureDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
+            this.DepartureDatePicker.Name = "DepartureDatePicker";
+            this.DepartureDatePicker.Size = new System.Drawing.Size(292, 35);
+            this.DepartureDatePicker.TabIndex = 7;
             // 
             // label3
             // 
@@ -124,7 +124,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSubmit.Location = new System.Drawing.Point(1254, 618);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(115, 52);
             this.btnSubmit.TabIndex = 9;
@@ -138,7 +138,7 @@
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBack.Location = new System.Drawing.Point(1080, 618);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 52);
             this.btnBack.TabIndex = 9;
@@ -152,7 +152,7 @@
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UpdateBackPanel.Location = new System.Drawing.Point(663, 4);
-            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateBackPanel.Name = "UpdateBackPanel";
             this.UpdateBackPanel.Size = new System.Drawing.Size(788, 114);
             this.UpdateBackPanel.TabIndex = 10;
@@ -199,35 +199,35 @@
             this.lblcargotype.TabIndex = 13;
             this.lblcargotype.Text = "Cargo Type:";
             // 
-            // listBox1
+            // CargoTypeList
             // 
-            this.listBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 24;
-            this.listBox1.Items.AddRange(new object[] {
+            this.CargoTypeList.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CargoTypeList.FormattingEnabled = true;
+            this.CargoTypeList.ItemHeight = 24;
+            this.CargoTypeList.Items.AddRange(new object[] {
             "General Cargo",
             "Bulk Cargo",
             "Chemical Tanker",
             "Reefer ship"});
-            this.listBox1.Location = new System.Drawing.Point(1006, 394);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(292, 28);
-            this.listBox1.TabIndex = 14;
+            this.CargoTypeList.Location = new System.Drawing.Point(1006, 394);
+            this.CargoTypeList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CargoTypeList.Name = "CargoTypeList";
+            this.CargoTypeList.Size = new System.Drawing.Size(292, 28);
+            this.CargoTypeList.TabIndex = 14;
             // 
             // VesselScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 789);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.CargoTypeList);
             this.Controls.Add(this.lblcargotype);
             this.Controls.Add(this.txtbxvesseltype);
             this.Controls.Add(this.lblvesseltype);
             this.Controls.Add(this.UpdateBackPanel);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DepartureDatePicker);
             this.Controls.Add(this.txtbxEstimatedTime);
             this.Controls.Add(this.txtbxVesselName);
             this.Controls.Add(this.label2);
@@ -254,7 +254,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxVesselName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DepartureDatePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtbxEstimatedTime;
         private System.Windows.Forms.Button btnSubmit;
@@ -264,6 +264,6 @@
         private System.Windows.Forms.Label lblvesseltype;
         private System.Windows.Forms.TextBox txtbxvesseltype;
         private System.Windows.Forms.Label lblcargotype;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox CargoTypeList;
     }
 }
