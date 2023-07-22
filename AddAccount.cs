@@ -26,6 +26,7 @@ namespace SwiftShip_WindowApplication
             txtBxUsername.Clear();
             txtBxPassword.Clear();
             txtBxConfirmPassword.Clear();
+            txtBxUserRole.Clear();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -48,7 +49,12 @@ namespace SwiftShip_WindowApplication
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             
-
+            int userId = Int32.Parse(txtBxUserId.Text);
+            string email = txtBxEmail.Text;
+            string Username = txtBxUsername.Text;
+            string Password = txtBxPassword.Text;
+            string ConPassword = txtBxConfirmPassword.Text;
+            string UserRole = txtBxUserRole.Text;
 
 
             if (txtBxUserId.Text == "")
@@ -59,7 +65,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            if (txtBxEmail.Text == "")
+           else if (txtBxEmail.Text == "")
             {
                 txtBxEmail.BackColor = Color.LightPink;
                 MessageBox.Show("Please Enter Your Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -67,7 +73,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            if (txtBxUsername.Text == "")
+           else if (txtBxUsername.Text == "")
             {
                 txtBxUsername.BackColor = Color.LightPink;
                 MessageBox.Show("Please Enter Your Username", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -75,7 +81,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            if (txtBxPassword.Text == "")
+           else if (txtBxPassword.Text == "")
             {
                 txtBxPassword.BackColor = Color.LightPink;
                 MessageBox.Show("Please Enter a Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -83,7 +89,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            if (txtBxConfirmPassword.Text == "")
+           else if (txtBxConfirmPassword.Text == "")
             {
                 txtBxConfirmPassword.BackColor = Color.LightPink;
                 MessageBox.Show("Please Confirm Your Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -91,7 +97,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            if (txtBxConfirmPassword.Text != txtBxPassword.Text)
+           else if (txtBxConfirmPassword.Text != txtBxPassword.Text)
             {
                 txtBxConfirmPassword.BackColor = Color.LightPink;
                 MessageBox.Show("Passwords Do Not Match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -100,37 +106,48 @@ namespace SwiftShip_WindowApplication
             }
 
 
-            /*
+          else  if (txtBxUserRole.Text == "")
+            {
+                txtBxConfirmPassword.BackColor = Color.LightPink;
+                MessageBox.Show("Please enter a user role", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBxConfirmPassword.Focus();
+                return;
+            }
+
+
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into VesselSchedule(VesselType,VesselName,CargoType,DepartureDate,EstimatedTime) Values(@VesselType,@VesselName,@CargoType,@DepartureDate,@EstimatedTime)");
+                SqlCommand insertCommand = new SqlCommand("insert into LoginInfo(UserId, Email, Username, UPassword,ConfirmPassword, UserRole) Values(@userId,@email,@Username,@Password,@ConPassword,@UserRole)");
 
 
-                insertCommand.Parameters.AddWithValue("@VesselType", VesselType);
-                insertCommand.Parameters.AddWithValue("@VesselName", VesseName);
-                insertCommand.Parameters.AddWithValue("@CargoType", CargoType);
-                insertCommand.Parameters.AddWithValue("@DepartureDate", DepartureDate);
-                insertCommand.Parameters.AddWithValue("@EstimatedTime", Estimatedtime);
-
+                insertCommand.Parameters.AddWithValue("@userId", userId);
+                insertCommand.Parameters.AddWithValue("@email", email);
+                insertCommand.Parameters.AddWithValue("@Username", Username);
+                insertCommand.Parameters.AddWithValue("@Password", Password);
+                insertCommand.Parameters.AddWithValue("@ConPassword", ConPassword);
+                insertCommand.Parameters.AddWithValue("@UserRole",UserRole);
 
                 int row = ObjdBAccess.executeQuery(insertCommand);
 
                 if (row == 1)
                 {
-                    MessageBox.Show("Vessel Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtbxEstimatedTime.Clear();
-                    txtbxVesselName.Clear();
-                    txtbxvesseltype.Clear();
-                    CargoTypeList.ClearSelected();
+                    MessageBox.Show("User Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBxUserId.Clear();
+                    txtBxConfirmPassword.Clear() ; 
+                    txtBxEmail.Clear();
+                    txtBxUserRole.Clear();
+                    txtBxPassword.Clear();
+                    txtBxUsername.Clear();
+
 
                 }
 
                 else if (row == 0)
                 {
-                    MessageBox.Show("Operation failed");
+                    MessageBox.Show("Failed to Add account");
                 }
             }
-            */
+            
 
         }
 
@@ -161,6 +178,7 @@ namespace SwiftShip_WindowApplication
 
         private void txtBxEmail_Validating(object sender, CancelEventArgs e)
         {
+            /*
             string email = txtBxEmail.Text.Trim();
             if (string.IsNullOrEmpty(email))
             {
@@ -169,7 +187,7 @@ namespace SwiftShip_WindowApplication
                 return;
             }
 
-            /*
+            
             Regex emailRegex = new Regex(@"^[^@\s]+@[^@\s]+\.[^@\s]+$");
             if (!emailRegex.IsMatch(email))
             {

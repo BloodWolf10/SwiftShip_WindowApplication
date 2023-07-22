@@ -101,5 +101,19 @@ namespace SwiftShip_WindowApplication
         {
             
         }
+
+        private void lblShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (lblShowPassword.Checked)
+            {
+                // When the checkbox is checked, show the password by changing the PasswordChar property.
+                txtBxPassword.PasswordChar = '\0'; // Setting it to '\0' will make the password visible.
+            }
+            else
+            {
+                // When the checkbox is unchecked, mask the password again.
+                txtBxPassword.PasswordChar = '*'; // Set it back to the original masking character.
+            }
+        }
     }
 }
