@@ -405,6 +405,12 @@
   <ItemGroup>
     <None Include="Resources\Startup.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administrator-male-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

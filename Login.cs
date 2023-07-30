@@ -13,6 +13,7 @@ namespace SwiftShip_WindowApplication
 {
     public partial class FormLogin : Form
     {
+        public static string userlog;
         public FormLogin()
         {
             InitializeComponent();
@@ -63,11 +64,12 @@ namespace SwiftShip_WindowApplication
 
                 if (dtable.Rows.Count >0)
                 {
+                    userlog = txtBxUsername.Text.Trim();
                     User = txtBxUsername.Text;
                     password = txtBxPassword.Text;
 
                     this.Hide();
-                    
+                    conn.Close();
                     Dashboard dash = new Dashboard();
                     dash.ShowDialog();
                     mem.Useridentity = User;
@@ -83,6 +85,8 @@ namespace SwiftShip_WindowApplication
                 else
                 {
                     MessageBox.Show(" Incorrect Password or Username entered", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtBxUsername.Clear();
+                    txtBxPassword.Clear();
                 }
             }
 

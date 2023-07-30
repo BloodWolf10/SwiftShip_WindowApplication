@@ -58,7 +58,7 @@ namespace SwiftShip_WindowApplication
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            lblUserlog.Text = FormLogin.userlog;
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -231,13 +231,9 @@ namespace SwiftShip_WindowApplication
             }
         }
 
-        
+        private void lblUserlog_Click(object sender, EventArgs e)
+        {
 
-       
-
-
-
-
-     
+        }
     }
 }

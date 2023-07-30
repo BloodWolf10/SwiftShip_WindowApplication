@@ -243,6 +243,26 @@ namespace SwiftShip_WindowApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrator-male-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_administrator_male_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-administrator-male-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_back_arrow_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-back-arrow-32", resourceCulture);

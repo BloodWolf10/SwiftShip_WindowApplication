@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.HomeMenuStrip = new System.Windows.Forms.MenuStrip();
+            this.UpdateBackPanel = new System.Windows.Forms.Panel();
+            this.lblCatchPhrase = new System.Windows.Forms.Label();
+            this.lblUpdateAccount = new System.Windows.Forms.Label();
+            this.lblUserlog = new System.Windows.Forms.Label();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoTrackingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,12 +43,10 @@
             this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.UpdateBackPanel = new System.Windows.Forms.Panel();
-            this.lblUserlog = new System.Windows.Forms.Label();
-            this.lblCatchPhrase = new System.Windows.Forms.Label();
-            this.lblUpdateAccount = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HomeMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HomeMenuStrip
@@ -65,9 +67,62 @@
             this.HomeMenuStrip.Name = "HomeMenuStrip";
             this.HomeMenuStrip.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.HomeMenuStrip.ShowItemToolTips = true;
-            this.HomeMenuStrip.Size = new System.Drawing.Size(255, 514);
+            this.HomeMenuStrip.Size = new System.Drawing.Size(255, 624);
             this.HomeMenuStrip.TabIndex = 1;
             this.HomeMenuStrip.Text = "HomeMenuStrip";
+            // 
+            // UpdateBackPanel
+            // 
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.Controls.Add(this.pictureBox1);
+            this.UpdateBackPanel.Controls.Add(this.lblUserlog);
+            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
+            this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
+            this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
+            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.UpdateBackPanel.Name = "UpdateBackPanel";
+            this.UpdateBackPanel.Size = new System.Drawing.Size(1456, 92);
+            this.UpdateBackPanel.TabIndex = 4;
+            // 
+            // lblCatchPhrase
+            // 
+            this.lblCatchPhrase.AutoSize = true;
+            this.lblCatchPhrase.Font = new System.Drawing.Font("Pristina", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
+            this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
+            this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCatchPhrase.Name = "lblCatchPhrase";
+            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
+            this.lblCatchPhrase.TabIndex = 1;
+            this.lblCatchPhrase.Text = "The port management system for you !!";
+            // 
+            // lblUpdateAccount
+            // 
+            this.lblUpdateAccount.AutoSize = true;
+            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
+            this.lblUpdateAccount.Location = new System.Drawing.Point(519, 0);
+            this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUpdateAccount.Name = "lblUpdateAccount";
+            this.lblUpdateAccount.Size = new System.Drawing.Size(289, 45);
+            this.lblUpdateAccount.TabIndex = 0;
+            this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
+            // 
+            // lblUserlog
+            // 
+            this.lblUserlog.AutoSize = true;
+            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserlog.ForeColor = System.Drawing.Color.White;
+            this.lblUserlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUserlog.Location = new System.Drawing.Point(1264, 27);
+            this.lblUserlog.Name = "lblUserlog";
+            this.lblUserlog.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.lblUserlog.Size = new System.Drawing.Size(75, 38);
+            this.lblUserlog.TabIndex = 2;
+            this.lblUserlog.Text = "User";
+            this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
             // 
             // menuToolStripMenuItem
             // 
@@ -194,59 +249,20 @@
             this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
-            // UpdateBackPanel
+            // pictureBox1
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UpdateBackPanel.Controls.Add(this.lblUserlog);
-            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
-            this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
-            this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
-            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(1410, 92);
-            this.UpdateBackPanel.TabIndex = 4;
-            // 
-            // lblUserlog
-            // 
-            this.lblUserlog.AutoSize = true;
-            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserlog.ForeColor = System.Drawing.Color.White;
-            this.lblUserlog.Location = new System.Drawing.Point(1183, 34);
-            this.lblUserlog.Name = "lblUserlog";
-            this.lblUserlog.Size = new System.Drawing.Size(45, 28);
-            this.lblUserlog.TabIndex = 2;
-            this.lblUserlog.Text = "User";
-            // 
-            // lblCatchPhrase
-            // 
-            this.lblCatchPhrase.AutoSize = true;
-            this.lblCatchPhrase.Font = new System.Drawing.Font("Pristina", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
-            this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
-            this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCatchPhrase.Name = "lblCatchPhrase";
-            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
-            this.lblCatchPhrase.TabIndex = 1;
-            this.lblCatchPhrase.Text = "The port management system for you !!";
-            // 
-            // lblUpdateAccount
-            // 
-            this.lblUpdateAccount.AutoSize = true;
-            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateAccount.Location = new System.Drawing.Point(519, 0);
-            this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUpdateAccount.Name = "lblUpdateAccount";
-            this.lblUpdateAccount.Size = new System.Drawing.Size(289, 45);
-            this.lblUpdateAccount.TabIndex = 0;
-            this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
+            this.pictureBox1.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_administrator_male_32;
+            this.pictureBox1.Location = new System.Drawing.Point(1237, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1665, 514);
+            this.ClientSize = new System.Drawing.Size(1711, 624);
             this.Controls.Add(this.UpdateBackPanel);
             this.Controls.Add(this.HomeMenuStrip);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -261,6 +277,7 @@
             this.HomeMenuStrip.PerformLayout();
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +300,6 @@
         private System.Windows.Forms.Label lblCatchPhrase;
         private System.Windows.Forms.Label lblUpdateAccount;
         private System.Windows.Forms.Label lblUserlog;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
