@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.lblCreateAccount = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -43,7 +43,6 @@
             this.lblUserId = new System.Windows.Forms.Label();
             this.txtBxUserId = new System.Windows.Forms.TextBox();
             this.accountsDataGrid = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
@@ -59,7 +58,7 @@
             this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TopPanel.Controls.Add(this.lblCreateAccount);
             this.TopPanel.Location = new System.Drawing.Point(424, 2);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TopPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(541, 110);
             this.TopPanel.TabIndex = 1;
@@ -124,7 +123,7 @@
             // 
             this.txtBxEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxEmail.Location = new System.Drawing.Point(424, 251);
-            this.txtBxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxEmail.Name = "txtBxEmail";
             this.txtBxEmail.Size = new System.Drawing.Size(530, 32);
             this.txtBxEmail.TabIndex = 6;
@@ -135,7 +134,7 @@
             // 
             this.txtBxUsername.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxUsername.Location = new System.Drawing.Point(424, 343);
-            this.txtBxUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxUsername.Name = "txtBxUsername";
             this.txtBxUsername.Size = new System.Drawing.Size(530, 32);
             this.txtBxUsername.TabIndex = 7;
@@ -145,7 +144,7 @@
             // 
             this.txtBxPassword.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxPassword.Location = new System.Drawing.Point(424, 426);
-            this.txtBxPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxPassword.Name = "txtBxPassword";
             this.txtBxPassword.Size = new System.Drawing.Size(530, 32);
             this.txtBxPassword.TabIndex = 8;
@@ -156,7 +155,7 @@
             // 
             this.txtBxConfirmPassword.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxConfirmPassword.Location = new System.Drawing.Point(424, 507);
-            this.txtBxConfirmPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxConfirmPassword.Name = "txtBxConfirmPassword";
             this.txtBxConfirmPassword.Size = new System.Drawing.Size(530, 32);
             this.txtBxConfirmPassword.TabIndex = 9;
@@ -193,7 +192,7 @@
             // 
             this.txtBxUserId.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxUserId.Location = new System.Drawing.Point(424, 169);
-            this.txtBxUserId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxUserId.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxUserId.Name = "txtBxUserId";
             this.txtBxUserId.Size = new System.Drawing.Size(530, 32);
             this.txtBxUserId.TabIndex = 14;
@@ -203,37 +202,21 @@
             // 
             this.accountsDataGrid.BackgroundColor = System.Drawing.Color.White;
             this.accountsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.accountsDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.accountsDataGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.accountsDataGrid.Location = new System.Drawing.Point(973, 2);
-            this.accountsDataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accountsDataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.accountsDataGrid.Name = "accountsDataGrid";
             this.accountsDataGrid.RowHeadersWidth = 62;
             this.accountsDataGrid.RowTemplate.Height = 30;
             this.accountsDataGrid.Size = new System.Drawing.Size(499, 668);
             this.accountsDataGrid.TabIndex = 15;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delete_button_30;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(637, 644);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnDelete.Size = new System.Drawing.Size(148, 52);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "      Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnCreateAccount
             // 
@@ -243,7 +226,7 @@
             this.btnCreateAccount.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_account_24;
             this.btnCreateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCreateAccount.Location = new System.Drawing.Point(417, 644);
-            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateAccount.Name = "btnCreateAccount";
             this.btnCreateAccount.Size = new System.Drawing.Size(212, 52);
             this.btnCreateAccount.TabIndex = 11;
@@ -259,7 +242,7 @@
             this.btnCancel.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_back_arrow_32;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(793, 644);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnCancel.Size = new System.Drawing.Size(148, 52);
@@ -272,7 +255,7 @@
             // 
             this.LeftPBox.Image = global::SwiftShip_WindowApplication.Properties.Resources.Boat2;
             this.LeftPBox.Location = new System.Drawing.Point(-4, 14);
-            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4);
             this.LeftPBox.Name = "LeftPBox";
             this.LeftPBox.Size = new System.Drawing.Size(421, 772);
             this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,7 +289,6 @@
             this.ClientSize = new System.Drawing.Size(1480, 789);
             this.Controls.Add(this.lblUserRole);
             this.Controls.Add(this.txtBxUserRole);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.accountsDataGrid);
             this.Controls.Add(this.txtBxUserId);
             this.Controls.Add(this.lblUserId);
@@ -323,11 +305,12 @@
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.LeftPBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddAccount";
             this.Text = "Add Account";
+            this.Load += new System.EventHandler(this.AddAccount_Load);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataGrid)).EndInit();
@@ -356,7 +339,6 @@
         private System.Windows.Forms.Label lblUserId;
         private System.Windows.Forms.TextBox txtBxUserId;
         private System.Windows.Forms.DataGridView accountsDataGrid;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtBxUserRole;
         private System.Windows.Forms.Label lblUserRole;
     }

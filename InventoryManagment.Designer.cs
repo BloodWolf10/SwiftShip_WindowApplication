@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TopPanel = new System.Windows.Forms.Panel();
+            this.Inventory = new System.Windows.Forms.Panel();
             this.lblInventoryManagement = new System.Windows.Forms.Label();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
             this.lbladditem = new System.Windows.Forms.Label();
@@ -41,26 +41,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InventoryDataGrid = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblLocation = new System.Windows.Forms.Label();
             this.txtbxLocation = new System.Windows.Forms.TextBox();
-            this.TopPanel.SuspendLayout();
+            this.Inventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSelector)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // TopPanel
+            // Inventory
             // 
-            this.TopPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.TopPanel.Controls.Add(this.lblInventoryManagement);
-            this.TopPanel.Location = new System.Drawing.Point(660, 0);
-            this.TopPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(820, 110);
-            this.TopPanel.TabIndex = 2;
+            this.Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Inventory.Controls.Add(this.lblInventoryManagement);
+            this.Inventory.Location = new System.Drawing.Point(660, 0);
+            this.Inventory.Margin = new System.Windows.Forms.Padding(4);
+            this.Inventory.Name = "Inventory";
+            this.Inventory.Size = new System.Drawing.Size(820, 110);
+            this.Inventory.TabIndex = 2;
             // 
             // lblInventoryManagement
             // 
@@ -79,7 +79,7 @@
             this.LeftPBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.LeftPBox.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cool_Ship;
             this.LeftPBox.Location = new System.Drawing.Point(0, 0);
-            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4);
             this.LeftPBox.Name = "LeftPBox";
             this.LeftPBox.Size = new System.Drawing.Size(659, 721);
             this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -196,17 +196,17 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Quantity";
             // 
-            // dataGridView1
+            // InventoryDataGrid
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(707, 483);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 211);
-            this.dataGridView1.TabIndex = 9;
+            this.InventoryDataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InventoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InventoryDataGrid.Location = new System.Drawing.Point(707, 483);
+            this.InventoryDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.InventoryDataGrid.Name = "InventoryDataGrid";
+            this.InventoryDataGrid.RowHeadersWidth = 62;
+            this.InventoryDataGrid.RowTemplate.Height = 28;
+            this.InventoryDataGrid.Size = new System.Drawing.Size(464, 211);
+            this.InventoryDataGrid.TabIndex = 9;
             // 
             // btnBack
             // 
@@ -215,7 +215,7 @@
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBack.Location = new System.Drawing.Point(1211, 461);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 52);
             this.btnBack.TabIndex = 10;
@@ -230,7 +230,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSubmit.Location = new System.Drawing.Point(1211, 548);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(115, 52);
             this.btnSubmit.TabIndex = 11;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lbladditem);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.InventoryDataGrid);
             this.Controls.Add(this.numericSelector);
             this.Controls.Add(this.txtBxItemType);
             this.Controls.Add(this.txtbxItemname);
@@ -280,18 +280,19 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblitemname);
             this.Controls.Add(this.LeftPBox);
-            this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.Inventory);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InventoryManagment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "InventoryManagment";
-            this.TopPanel.ResumeLayout(false);
-            this.TopPanel.PerformLayout();
+            this.Load += new System.EventHandler(this.InventoryManagment_Load);
+            this.Inventory.ResumeLayout(false);
+            this.Inventory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSelector)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +300,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel TopPanel;
+        private System.Windows.Forms.Panel Inventory;
         private System.Windows.Forms.Label lblInventoryManagement;
         private System.Windows.Forms.PictureBox LeftPBox;
         private System.Windows.Forms.Label lbladditem;
@@ -312,7 +313,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView InventoryDataGrid;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblLocation;

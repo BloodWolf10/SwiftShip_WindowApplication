@@ -30,9 +30,10 @@
         {
             this.HomeMenuStrip = new System.Windows.Forms.MenuStrip();
             this.UpdateBackPanel = new System.Windows.Forms.Panel();
+            this.lblUserlog = new System.Windows.Forms.Label();
             this.lblCatchPhrase = new System.Windows.Forms.Label();
             this.lblUpdateAccount = new System.Windows.Forms.Label();
-            this.lblUserlog = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoTrackingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HomeMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -85,6 +85,21 @@
             this.UpdateBackPanel.Size = new System.Drawing.Size(1456, 92);
             this.UpdateBackPanel.TabIndex = 4;
             // 
+            // lblUserlog
+            // 
+            this.lblUserlog.AutoSize = true;
+            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserlog.ForeColor = System.Drawing.Color.White;
+            this.lblUserlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUserlog.Location = new System.Drawing.Point(1360, 27);
+            this.lblUserlog.Name = "lblUserlog";
+            this.lblUserlog.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.lblUserlog.Size = new System.Drawing.Size(75, 38);
+            this.lblUserlog.TabIndex = 2;
+            this.lblUserlog.Text = "User";
+            this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
+            // 
             // lblCatchPhrase
             // 
             this.lblCatchPhrase.AutoSize = true;
@@ -109,20 +124,14 @@
             this.lblUpdateAccount.TabIndex = 0;
             this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
             // 
-            // lblUserlog
+            // pictureBox1
             // 
-            this.lblUserlog.AutoSize = true;
-            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserlog.ForeColor = System.Drawing.Color.White;
-            this.lblUserlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUserlog.Location = new System.Drawing.Point(1264, 27);
-            this.lblUserlog.Name = "lblUserlog";
-            this.lblUserlog.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
-            this.lblUserlog.Size = new System.Drawing.Size(75, 38);
-            this.lblUserlog.TabIndex = 2;
-            this.lblUserlog.Text = "User";
-            this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
+            this.pictureBox1.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_administrator_male_32;
+            this.pictureBox1.Location = new System.Drawing.Point(1318, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // menuToolStripMenuItem
             // 
@@ -141,14 +150,14 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.homeToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Home_Icon;
+            this.homeToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_satelite_64;
             this.homeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
             this.homeToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.homeToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
-            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Text = "Live Ship Tracking";
             this.homeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.homeToolStripMenuItem.ToolTipText = "Click to Return to Home Screen";
+            this.homeToolStripMenuItem.ToolTipText = "Click to View Live Tracking";
             this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // cargoTrackingToolStripMenuItem
@@ -248,15 +257,6 @@
             this.logOutToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_administrator_male_32;
-            this.pictureBox1.Location = new System.Drawing.Point(1237, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 

@@ -32,12 +32,12 @@
             this.lblDeleteAccount = new System.Windows.Forms.Label();
             this.lblUserIdDel = new System.Windows.Forms.Label();
             this.txtBxUserIdDel = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUpdateAccount = new System.Windows.Forms.Button();
+            this.dataGridDelete = new System.Windows.Forms.DataGridView();
+            this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnBackDel = new System.Windows.Forms.Button();
             this.LeftPBoxDel = new System.Windows.Forms.PictureBox();
             this.UpdateBackPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBoxDel)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +45,10 @@
             // 
             this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.UpdateBackPanel.Controls.Add(this.lblDeleteAccount);
-            this.UpdateBackPanel.Location = new System.Drawing.Point(490, 3);
-            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.UpdateBackPanel.Location = new System.Drawing.Point(436, 2);
+            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(690, 157);
+            this.UpdateBackPanel.Size = new System.Drawing.Size(613, 126);
             this.UpdateBackPanel.TabIndex = 2;
             // 
             // lblDeleteAccount
@@ -56,10 +56,10 @@
             this.lblDeleteAccount.AutoSize = true;
             this.lblDeleteAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteAccount.ForeColor = System.Drawing.Color.White;
-            this.lblDeleteAccount.Location = new System.Drawing.Point(204, 45);
+            this.lblDeleteAccount.Location = new System.Drawing.Point(181, 36);
             this.lblDeleteAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeleteAccount.Name = "lblDeleteAccount";
-            this.lblDeleteAccount.Size = new System.Drawing.Size(306, 68);
+            this.lblDeleteAccount.Size = new System.Drawing.Size(256, 57);
             this.lblDeleteAccount.TabIndex = 0;
             this.lblDeleteAccount.Text = "Delete Account";
             // 
@@ -67,49 +67,51 @@
             // 
             this.lblUserIdDel.AutoSize = true;
             this.lblUserIdDel.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserIdDel.Location = new System.Drawing.Point(501, 183);
+            this.lblUserIdDel.Location = new System.Drawing.Point(445, 146);
             this.lblUserIdDel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserIdDel.Name = "lblUserIdDel";
-            this.lblUserIdDel.Size = new System.Drawing.Size(85, 35);
+            this.lblUserIdDel.Size = new System.Drawing.Size(73, 29);
             this.lblUserIdDel.TabIndex = 14;
             this.lblUserIdDel.Text = "User Id:";
             // 
             // txtBxUserIdDel
             // 
             this.txtBxUserIdDel.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxUserIdDel.Location = new System.Drawing.Point(586, 182);
-            this.txtBxUserIdDel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBxUserIdDel.Location = new System.Drawing.Point(521, 146);
+            this.txtBxUserIdDel.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxUserIdDel.Name = "txtBxUserIdDel";
-            this.txtBxUserIdDel.Size = new System.Drawing.Size(580, 36);
+            this.txtBxUserIdDel.Size = new System.Drawing.Size(516, 32);
             this.txtBxUserIdDel.TabIndex = 15;
             // 
-            // dataGridView1
+            // dataGridDelete
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(507, 272);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(662, 366);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridDelete.AllowUserToAddRows = false;
+            this.dataGridDelete.AllowUserToDeleteRows = false;
+            this.dataGridDelete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDelete.Location = new System.Drawing.Point(451, 218);
+            this.dataGridDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridDelete.Name = "dataGridDelete";
+            this.dataGridDelete.ReadOnly = true;
+            this.dataGridDelete.RowHeadersWidth = 62;
+            this.dataGridDelete.Size = new System.Drawing.Size(588, 293);
+            this.dataGridDelete.TabIndex = 16;
+            this.dataGridDelete.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridDelete_CellContentClick);
             // 
-            // btnUpdateAccount
+            // btnDeleteAccount
             // 
-            this.btnUpdateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateAccount.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUpdateAccount.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delete_30;
-            this.btnUpdateAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(890, 703);
-            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnUpdateAccount.Name = "btnUpdateAccount";
-            this.btnUpdateAccount.Size = new System.Drawing.Size(270, 65);
-            this.btnUpdateAccount.TabIndex = 27;
-            this.btnUpdateAccount.Text = "Delete Account";
-            this.btnUpdateAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDeleteAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAccount.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteAccount.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delete_30;
+            this.btnDeleteAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteAccount.Location = new System.Drawing.Point(791, 562);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteAccount.Name = "btnDeleteAccount";
+            this.btnDeleteAccount.Size = new System.Drawing.Size(240, 52);
+            this.btnDeleteAccount.TabIndex = 27;
+            this.btnDeleteAccount.Text = "Delete Account";
+            this.btnDeleteAccount.UseVisualStyleBackColor = false;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // btnBackDel
             // 
@@ -118,11 +120,11 @@
             this.btnBackDel.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBackDel.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_back_arrow_32;
             this.btnBackDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBackDel.Location = new System.Drawing.Point(542, 703);
-            this.btnBackDel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBackDel.Location = new System.Drawing.Point(482, 562);
+            this.btnBackDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackDel.Name = "btnBackDel";
             this.btnBackDel.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.btnBackDel.Size = new System.Drawing.Size(166, 65);
+            this.btnBackDel.Size = new System.Drawing.Size(148, 52);
             this.btnBackDel.TabIndex = 26;
             this.btnBackDel.Text = "    Back";
             this.btnBackDel.UseVisualStyleBackColor = false;
@@ -131,34 +133,35 @@
             // LeftPBoxDel
             // 
             this.LeftPBoxDel.Image = global::SwiftShip_WindowApplication.Properties.Resources.Boat2;
-            this.LeftPBoxDel.Location = new System.Drawing.Point(2, 3);
-            this.LeftPBoxDel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.LeftPBoxDel.Location = new System.Drawing.Point(2, 2);
+            this.LeftPBoxDel.Margin = new System.Windows.Forms.Padding(4);
             this.LeftPBoxDel.Name = "LeftPBoxDel";
-            this.LeftPBoxDel.Size = new System.Drawing.Size(490, 872);
+            this.LeftPBoxDel.Size = new System.Drawing.Size(436, 698);
             this.LeftPBoxDel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LeftPBoxDel.TabIndex = 1;
             this.LeftPBoxDel.TabStop = false;
             // 
             // DeleteAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 848);
-            this.Controls.Add(this.btnUpdateAccount);
+            this.ClientSize = new System.Drawing.Size(1383, 756);
+            this.Controls.Add(this.btnDeleteAccount);
             this.Controls.Add(this.btnBackDel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridDelete);
             this.Controls.Add(this.txtBxUserIdDel);
             this.Controls.Add(this.lblUserIdDel);
             this.Controls.Add(this.UpdateBackPanel);
             this.Controls.Add(this.LeftPBoxDel);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DeleteAccount";
             this.Text = "DeleteAccount";
+            this.Load += new System.EventHandler(this.DeleteAccount_Load);
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBoxDel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,8 +175,8 @@
         private System.Windows.Forms.Label lblDeleteAccount;
         private System.Windows.Forms.Label lblUserIdDel;
         private System.Windows.Forms.TextBox txtBxUserIdDel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridDelete;
         private System.Windows.Forms.Button btnBackDel;
-        private System.Windows.Forms.Button btnUpdateAccount;
+        private System.Windows.Forms.Button btnDeleteAccount;
     }
 }

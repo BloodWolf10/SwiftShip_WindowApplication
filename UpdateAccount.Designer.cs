@@ -92,6 +92,7 @@
             this.txtBxUserIdUpd.Location = new System.Drawing.Point(794, 271);
             this.txtBxUserIdUpd.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxUserIdUpd.Name = "txtBxUserIdUpd";
+            this.txtBxUserIdUpd.ReadOnly = true;
             this.txtBxUserIdUpd.Size = new System.Drawing.Size(450, 32);
             this.txtBxUserIdUpd.TabIndex = 15;
             this.txtBxUserIdUpd.TextChanged += new System.EventHandler(this.txtBxUserIdUpd_TextChanged);

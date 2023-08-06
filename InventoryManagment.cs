@@ -19,6 +19,7 @@ namespace SwiftShip_WindowApplication
         }
 
         DBAccess objDbAccess = new DBAccess();
+        SqlConnection connection = new SqlConnection(DBAccess.strConnString);
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
@@ -73,6 +74,10 @@ namespace SwiftShip_WindowApplication
                     txtbxLocation.Clear();
                     numericSelector.Value = 0;
 
+                    InventoryDataGrid.DataSource = null;
+                    InventoryManagment_Load(sender, e); // Reload the data
+
+                    connection.Close();
                 }
 
                 else if (row == 0)
@@ -100,6 +105,16 @@ namespace SwiftShip_WindowApplication
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void InventoryManagment_Load(object sender, EventArgs e)
+        {
+            // Code to Populate DataGrid
+            string query = "SELECT * FROM InventoryManagement;";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            InventoryDataGrid.DataSource = dataTable;
         }
     }
 }

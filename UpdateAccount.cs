@@ -19,8 +19,8 @@ namespace SwiftShip_WindowApplication
         }
 
         DBAccess ObjDbAcess = new DBAccess();
-        static string connectionString = "Data Source=CODEBLACK\\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True";
-        SqlConnection connection = new SqlConnection(connectionString);
+     
+        SqlConnection connection = new SqlConnection(DBAccess.strConnString);
 
 
         private void btnBack_Click(object sender, EventArgs e)

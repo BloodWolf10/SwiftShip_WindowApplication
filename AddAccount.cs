@@ -20,8 +20,13 @@ namespace SwiftShip_WindowApplication
         }
         DBAccess ObjdBAccess = new DBAccess();
 
+        
+        
+        SqlConnection connection = new SqlConnection(DBAccess.strConnString);
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            
             txtBxEmail.Clear();
             txtBxUsername.Clear();
             txtBxPassword.Clear();
@@ -146,8 +151,11 @@ namespace SwiftShip_WindowApplication
                 {
                     MessageBox.Show("Failed to Add account");
                 }
+
+
             }
             
+            connection.Close();
 
         }
 
@@ -196,6 +204,16 @@ namespace SwiftShip_WindowApplication
                 return;
             }
             */
+        }
+
+        private void AddAccount_Load(object sender, EventArgs e)
+        {
+            // Code to Populate DataGrid
+            string query = "SELECT * FROM LoginInfo;";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, DBAccess.strConnString);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            accountsDataGrid.DataSource = dataTable;
         }
     }
 }

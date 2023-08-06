@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Reflection.Emit;
 
 namespace SwiftShip_WindowApplication
 {
@@ -20,11 +21,13 @@ namespace SwiftShip_WindowApplication
 
        
     }
+        DBAccess bAccess = new DBAccess();
+        SqlConnection connection = new SqlConnection(DBAccess.strConnString);
 
 
-       
 
-      class Member:LoggedPerson
+
+        class Member:LoggedPerson
         {
             LoggedPerson loged = new LoggedPerson();
 
@@ -42,7 +45,8 @@ namespace SwiftShip_WindowApplication
         {
             this.Close();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
+
+       // SqlConnection conn = new SqlConnection(@"Data Source=CODEBLACK\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
         //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-82BV177\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True");
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace SwiftShip_WindowApplication
             {
 
                 string query = "SELECT * FROM LoginInfo WHERE Username = '" + txtBxUsername.Text + "' AND UPassword = '" + txtBxPassword.Text+"'";
-                SqlDataAdapter sda = new SqlDataAdapter(query,conn);
+                SqlDataAdapter sda = new SqlDataAdapter(query,connection);
                 DataTable dtable = new DataTable();
 
                 sda.Fill(dtable);
@@ -69,7 +73,7 @@ namespace SwiftShip_WindowApplication
                     password = txtBxPassword.Text;
 
                     this.Hide();
-                    conn.Close();
+                    connection.Close();
                     Dashboard dash = new Dashboard();
                     dash.ShowDialog();
                     mem.Useridentity = User;

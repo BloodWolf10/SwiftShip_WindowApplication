@@ -19,7 +19,7 @@ namespace SwiftShip_WindowApplication
       
       // connectionstring
      
-        private static string strConnString = "Data Source=CODEBLACK\\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True";
+        public static string strConnString = "Data Source=CODEBLACK\\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True";
         //private static string strConnString = "Data Source=DESKTOP-82BV177\SQLEXPRESS;Initial Catalog=SwiftShip;Integrated Security=True";
 
 
