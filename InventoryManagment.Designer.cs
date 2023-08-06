@@ -30,7 +30,6 @@
         {
             this.Inventory = new System.Windows.Forms.Panel();
             this.lblInventoryManagement = new System.Windows.Forms.Label();
-            this.LeftPBox = new System.Windows.Forms.PictureBox();
             this.lbladditem = new System.Windows.Forms.Label();
             this.lblitemname = new System.Windows.Forms.Label();
             this.txtbxItemname = new System.Windows.Forms.TextBox();
@@ -46,10 +45,11 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblLocation = new System.Windows.Forms.Label();
             this.txtbxLocation = new System.Windows.Forms.TextBox();
+            this.LeftPBox = new System.Windows.Forms.PictureBox();
             this.Inventory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             this.SuspendLayout();
             // 
             // Inventory
@@ -73,18 +73,6 @@
             this.lblInventoryManagement.Size = new System.Drawing.Size(381, 57);
             this.lblInventoryManagement.TabIndex = 0;
             this.lblInventoryManagement.Text = "Inventory Management";
-            // 
-            // LeftPBox
-            // 
-            this.LeftPBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LeftPBox.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cool_Ship;
-            this.LeftPBox.Location = new System.Drawing.Point(0, 0);
-            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4);
-            this.LeftPBox.Name = "LeftPBox";
-            this.LeftPBox.Size = new System.Drawing.Size(659, 721);
-            this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LeftPBox.TabIndex = 3;
-            this.LeftPBox.TabStop = false;
             // 
             // lbladditem
             // 
@@ -173,6 +161,7 @@
             this.label3.Size = new System.Drawing.Size(98, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Item Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -184,6 +173,7 @@
             this.label4.Size = new System.Drawing.Size(88, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "Item Type";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -195,6 +185,7 @@
             this.label5.Size = new System.Drawing.Size(80, 29);
             this.label5.TabIndex = 5;
             this.label5.Text = "Quantity";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // InventoryDataGrid
             // 
@@ -207,6 +198,7 @@
             this.InventoryDataGrid.RowTemplate.Height = 28;
             this.InventoryDataGrid.Size = new System.Drawing.Size(464, 211);
             this.InventoryDataGrid.TabIndex = 9;
+            this.InventoryDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.InventoryDataGrid_CellContentClick);
             // 
             // btnBack
             // 
@@ -259,6 +251,18 @@
             this.txtbxLocation.Size = new System.Drawing.Size(290, 35);
             this.txtbxLocation.TabIndex = 13;
             // 
+            // LeftPBox
+            // 
+            this.LeftPBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LeftPBox.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cool_Ship;
+            this.LeftPBox.Location = new System.Drawing.Point(0, 0);
+            this.LeftPBox.Margin = new System.Windows.Forms.Padding(4);
+            this.LeftPBox.Name = "LeftPBox";
+            this.LeftPBox.Size = new System.Drawing.Size(659, 721);
+            this.LeftPBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LeftPBox.TabIndex = 3;
+            this.LeftPBox.TabStop = false;
+            // 
             // InventoryManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -290,9 +294,9 @@
             this.Load += new System.EventHandler(this.InventoryManagment_Load);
             this.Inventory.ResumeLayout(false);
             this.Inventory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSelector)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

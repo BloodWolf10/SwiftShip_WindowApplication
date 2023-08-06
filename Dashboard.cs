@@ -110,49 +110,13 @@ namespace SwiftShip_WindowApplication
 
         private void inventoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["InventoryManagement"] == null)
-            {
-                // Create a new instance of Inventory Management form
-                InventoryManagment inven = new InventoryManagment();
-
-                // Setting  the MDI parent of the form
-                inven.MdiParent = this;
-
-                // Showing  the form
-                inven.Show();
-
-                // Aligning the Form in the MDI Window
-                inven.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                // If the form is already open, activate it
-                Application.OpenForms["InventoryManagement"].Activate();
-            }
+          // Controls Inventory Management Drop Down List
 
         }
 
         private void vesselSchedulingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["VesselScheduling"] == null)
-            {
-                // Create a new instance of Vessel Scheduling Form
-                VesselScheduling vessel = new VesselScheduling();
-
-                // Setting  the MDI parent of the form
-                vessel.MdiParent = this;
-
-                // Showing  the form
-                vessel.Show();
-
-                // Aligning the Form in the MDI Window
-                vessel.Dock = DockStyle.Fill;
-            }
-            else
-            {
-                // If the form is already open, activate it
-                Application.OpenForms["VesselScheduling"].Activate();
-            }
+           // For Vessel Schedule Drop Down list
 
         }
 
@@ -234,6 +198,146 @@ namespace SwiftShip_WindowApplication
         private void lblUserlog_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["InventoryManagement"] == null)
+            {
+                // Create a new instance of Inventory Management form
+                InventoryManagment inven = new InventoryManagment();
+
+                // Setting  the MDI parent of the form
+                inven.MdiParent = this;
+
+                // Showing  the form
+                inven.Show();
+
+                // Aligning the Form in the MDI Window
+                inven.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["InventoryManagement"].Activate();
+            }
+        }
+
+        private void updateItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["InventoryManagementUpdateForm"] == null)
+            {
+                // Create a new instance of Inventory Management form
+                InventoryManagementUpdateForm inven1 = new InventoryManagementUpdateForm();
+
+                // Setting  the MDI parent of the form
+                inven1.MdiParent = this;
+
+                // Showing  the form
+                inven1.Show();
+
+                // Aligning the Form in the MDI Window
+                inven1.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["InventoryManagementUpdateForm"].Activate();
+            }
+        }
+
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["InventoryDelete"] == null)
+            {
+                // Create a new instance of Inventory Management form
+                InventoryDelete inven2 = new InventoryDelete();
+
+                // Setting  the MDI parent of the form
+                inven2.MdiParent = this;
+
+                // Showing  the form
+                inven2.Show();
+
+                // Aligning the Form in the MDI Window
+                inven2.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["InventoryDelete"].Activate();
+            }
+        }
+
+        private void addVesselSceduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["VesselScheduling"] == null)
+            {
+                // Create a new instance of Vessel Scheduling Form
+                VesselScheduling vessel = new VesselScheduling();
+
+                // Setting  the MDI parent of the form
+                vessel.MdiParent = this;
+
+                // Showing  the form
+                vessel.Show();
+
+                // Aligning the Form in the MDI Window
+                vessel.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["VesselScheduling"].Activate();
+            }
+        }
+
+        private void updateVesselScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["VesselSceduleUpdate"] == null)
+            {
+                // Create a new instance of Vessel Scheduling Form
+                VesselSceduleUpdate vesselupd = new VesselSceduleUpdate();
+
+                // Setting  the MDI parent of the form
+                vesselupd.MdiParent = this;
+
+                // Showing  the form
+                vesselupd.Show();
+
+                // Aligning the Form in the MDI Window
+                vesselupd.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["VesselSceduleUpdate"].Activate();
+            }
+
+
+        }
+
+        private void deleteVesselScheduleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["VesselSceduleDelete"] == null)
+            {
+                // Create a new instance of Vessel Scheduling Form
+               VesselScheduleDelete vesseldel = new VesselScheduleDelete();
+
+                // Setting  the MDI parent of the form
+                vesseldel.MdiParent = this;
+
+                // Showing  the form
+                vesseldel.Show();
+
+                // Aligning the Form in the MDI Window
+                vesseldel.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["VesselSceduleDelete"].Activate();
+            }
         }
     }
 }

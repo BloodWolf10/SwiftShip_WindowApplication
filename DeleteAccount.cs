@@ -46,11 +46,12 @@ namespace SwiftShip_WindowApplication
 
         private void btnDeleteAccount_Click(object sender, EventArgs e)
         {
-            string UserId = txtBxUserIdDel.Text;
+            string User= txtBxUserIdDel.Text;
+            int UserId = Int32.Parse(txtBxUserIdDel.Text);
 
             DialogResult dialogbox = MessageBox.Show("Are you sure you want to Delete this Account?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand);
 
-            if (dialogbox==DialogResult.Yes)
+            if (dialogbox==DialogResult.OK)
             {
                 string query = "Delete From LoginInfo Where UserID='" + UserId + "'" ;
 

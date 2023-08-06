@@ -55,7 +55,7 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into InventoryManagement(Itemtype,ItemName,Quantity,Location) Values(@itemType,@itemName,@quantity,@Location)");
+                SqlCommand insertCommand = new SqlCommand("insert into InventoryManagement(ItemType,ItemName,Quantity,Location) Values(@itemType,@itemName,@quantity,@Location)");
 
 
                 insertCommand.Parameters.AddWithValue("@itemType", itemType);
@@ -115,6 +115,26 @@ namespace SwiftShip_WindowApplication
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             InventoryDataGrid.DataSource = dataTable;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InventoryDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

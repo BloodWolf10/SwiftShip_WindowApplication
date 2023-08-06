@@ -29,21 +29,27 @@
         private void InitializeComponent()
         {
             this.HomeMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.UpdateBackPanel = new System.Windows.Forms.Panel();
-            this.lblUserlog = new System.Windows.Forms.Label();
-            this.lblCatchPhrase = new System.Windows.Forms.Label();
-            this.lblUpdateAccount = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoTrackingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vesselSchedulingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UpdateBackPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblUserlog = new System.Windows.Forms.Label();
+            this.lblCatchPhrase = new System.Windows.Forms.Label();
+            this.lblUpdateAccount = new System.Windows.Forms.Label();
+            this.addVesselSceduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,68 +76,6 @@
             this.HomeMenuStrip.Size = new System.Drawing.Size(255, 624);
             this.HomeMenuStrip.TabIndex = 1;
             this.HomeMenuStrip.Text = "HomeMenuStrip";
-            // 
-            // UpdateBackPanel
-            // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.UpdateBackPanel.Controls.Add(this.pictureBox1);
-            this.UpdateBackPanel.Controls.Add(this.lblUserlog);
-            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
-            this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
-            this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
-            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(1456, 92);
-            this.UpdateBackPanel.TabIndex = 4;
-            // 
-            // lblUserlog
-            // 
-            this.lblUserlog.AutoSize = true;
-            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserlog.ForeColor = System.Drawing.Color.White;
-            this.lblUserlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblUserlog.Location = new System.Drawing.Point(1360, 27);
-            this.lblUserlog.Name = "lblUserlog";
-            this.lblUserlog.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
-            this.lblUserlog.Size = new System.Drawing.Size(75, 38);
-            this.lblUserlog.TabIndex = 2;
-            this.lblUserlog.Text = "User";
-            this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
-            // 
-            // lblCatchPhrase
-            // 
-            this.lblCatchPhrase.AutoSize = true;
-            this.lblCatchPhrase.Font = new System.Drawing.Font("Pristina", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
-            this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
-            this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCatchPhrase.Name = "lblCatchPhrase";
-            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
-            this.lblCatchPhrase.TabIndex = 1;
-            this.lblCatchPhrase.Text = "The port management system for you !!";
-            // 
-            // lblUpdateAccount
-            // 
-            this.lblUpdateAccount.AutoSize = true;
-            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateAccount.Location = new System.Drawing.Point(519, 0);
-            this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUpdateAccount.Name = "lblUpdateAccount";
-            this.lblUpdateAccount.Size = new System.Drawing.Size(289, 45);
-            this.lblUpdateAccount.TabIndex = 0;
-            this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_administrator_male_32;
-            this.pictureBox1.Location = new System.Drawing.Point(1318, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // menuToolStripMenuItem
             // 
@@ -175,6 +119,10 @@
             // 
             // inventoryManagementToolStripMenuItem
             // 
+            this.inventoryManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addItemToolStripMenuItem,
+            this.updateItemToolStripMenuItem,
+            this.deleteItemToolStripMenuItem});
             this.inventoryManagementToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.inventoryManagementToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Inventory_Management_icon;
             this.inventoryManagementToolStripMenuItem.Name = "inventoryManagementToolStripMenuItem";
@@ -184,8 +132,36 @@
             this.inventoryManagementToolStripMenuItem.ToolTipText = "Click to open Inventory Manager";
             this.inventoryManagementToolStripMenuItem.Click += new System.EventHandler(this.inventoryManagementToolStripMenuItem_Click);
             // 
+            // addItemToolStripMenuItem
+            // 
+            this.addItemToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addItemToolStripMenuItem.Name = "addItemToolStripMenuItem";
+            this.addItemToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.addItemToolStripMenuItem.Text = "Add Item";
+            this.addItemToolStripMenuItem.Click += new System.EventHandler(this.addItemToolStripMenuItem_Click);
+            // 
+            // updateItemToolStripMenuItem
+            // 
+            this.updateItemToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.updateItemToolStripMenuItem.Name = "updateItemToolStripMenuItem";
+            this.updateItemToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.updateItemToolStripMenuItem.Text = "Update Item";
+            this.updateItemToolStripMenuItem.Click += new System.EventHandler(this.updateItemToolStripMenuItem_Click);
+            // 
+            // deleteItemToolStripMenuItem
+            // 
+            this.deleteItemToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(195, 34);
+            this.deleteItemToolStripMenuItem.Text = "Delete Item";
+            this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
+            // 
             // vesselSchedulingToolStripMenuItem
             // 
+            this.vesselSchedulingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addVesselSceduleToolStripMenuItem,
+            this.updateVesselScheduleToolStripMenuItem,
+            this.deleteVesselScheduleToolStripMenuItem});
             this.vesselSchedulingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.vesselSchedulingToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Vessel_Scheduling_icon;
             this.vesselSchedulingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,6 +234,92 @@
             this.logOutToolStripMenuItem.ToolTipText = "Click to Logout and return to Login Screen";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
+            // UpdateBackPanel
+            // 
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.Controls.Add(this.pictureBox1);
+            this.UpdateBackPanel.Controls.Add(this.lblUserlog);
+            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
+            this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
+            this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
+            this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.UpdateBackPanel.Name = "UpdateBackPanel";
+            this.UpdateBackPanel.Size = new System.Drawing.Size(1456, 92);
+            this.UpdateBackPanel.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_administrator_male_32;
+            this.pictureBox1.Location = new System.Drawing.Point(1318, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblUserlog
+            // 
+            this.lblUserlog.AutoSize = true;
+            this.lblUserlog.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserlog.ForeColor = System.Drawing.Color.White;
+            this.lblUserlog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblUserlog.Location = new System.Drawing.Point(1360, 27);
+            this.lblUserlog.Name = "lblUserlog";
+            this.lblUserlog.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.lblUserlog.Size = new System.Drawing.Size(75, 38);
+            this.lblUserlog.TabIndex = 2;
+            this.lblUserlog.Text = "User";
+            this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
+            // 
+            // lblCatchPhrase
+            // 
+            this.lblCatchPhrase.AutoSize = true;
+            this.lblCatchPhrase.Font = new System.Drawing.Font("Pristina", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
+            this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
+            this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCatchPhrase.Name = "lblCatchPhrase";
+            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
+            this.lblCatchPhrase.TabIndex = 1;
+            this.lblCatchPhrase.Text = "The port management system for you !!";
+            // 
+            // lblUpdateAccount
+            // 
+            this.lblUpdateAccount.AutoSize = true;
+            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
+            this.lblUpdateAccount.Location = new System.Drawing.Point(519, 0);
+            this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUpdateAccount.Name = "lblUpdateAccount";
+            this.lblUpdateAccount.Size = new System.Drawing.Size(289, 45);
+            this.lblUpdateAccount.TabIndex = 0;
+            this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
+            // 
+            // addVesselSceduleToolStripMenuItem
+            // 
+            this.addVesselSceduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addVesselSceduleToolStripMenuItem.Name = "addVesselSceduleToolStripMenuItem";
+            this.addVesselSceduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.addVesselSceduleToolStripMenuItem.Text = "Add Vessel Schedule";
+            this.addVesselSceduleToolStripMenuItem.Click += new System.EventHandler(this.addVesselSceduleToolStripMenuItem_Click);
+            // 
+            // updateVesselScheduleToolStripMenuItem
+            // 
+            this.updateVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.updateVesselScheduleToolStripMenuItem.Name = "updateVesselScheduleToolStripMenuItem";
+            this.updateVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.updateVesselScheduleToolStripMenuItem.Text = "Update Vessel Schedule";
+            this.updateVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.updateVesselScheduleToolStripMenuItem_Click);
+            // 
+            // deleteVesselScheduleToolStripMenuItem
+            // 
+            this.deleteVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteVesselScheduleToolStripMenuItem.Name = "deleteVesselScheduleToolStripMenuItem";
+            this.deleteVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.deleteVesselScheduleToolStripMenuItem.Text = "Delete Vessel Schedule";
+            this.deleteVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.deleteVesselScheduleToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,5 +363,11 @@
         private System.Windows.Forms.Label lblUpdateAccount;
         private System.Windows.Forms.Label lblUserlog;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem addItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addVesselSceduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateVesselScheduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteVesselScheduleToolStripMenuItem;
     }
 }

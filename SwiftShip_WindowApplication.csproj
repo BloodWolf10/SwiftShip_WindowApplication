@@ -134,6 +134,18 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDelete.Designer.cs">
+      <DependentUpon>InventoryDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManagementUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManagementUpdateForm.Designer.cs">
+      <DependentUpon>InventoryManagementUpdateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryManagment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +189,18 @@
     <Compile Include="UpdateAccount.Designer.cs">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="VesselSceduleUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VesselSceduleUpdate.Designer.cs">
+      <DependentUpon>VesselSceduleUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VesselScheduleDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VesselScheduleDelete.Designer.cs">
+      <DependentUpon>VesselScheduleDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="VesselScheduling.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDelete.resx">
+      <DependentUpon>InventoryDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManagementUpdateForm.resx">
+      <DependentUpon>InventoryManagementUpdateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryManagment.resx">
       <DependentUpon>InventoryManagment.cs</DependentUpon>
@@ -222,6 +252,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateAccount.resx">
       <DependentUpon>UpdateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VesselSceduleUpdate.resx">
+      <DependentUpon>VesselSceduleUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VesselScheduleDelete.resx">
+      <DependentUpon>VesselScheduleDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VesselScheduling.resx">
       <DependentUpon>VesselScheduling.cs</DependentUpon>
