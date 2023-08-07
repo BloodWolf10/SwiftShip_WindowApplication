@@ -37,6 +37,9 @@
             this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vesselSchedulingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addVesselSceduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +50,9 @@
             this.lblUserlog = new System.Windows.Forms.Label();
             this.lblCatchPhrase = new System.Windows.Forms.Label();
             this.lblUpdateAccount = new System.Windows.Forms.Label();
-            this.addVesselSceduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteVesselScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,6 +109,10 @@
             // 
             // cargoTrackingToolStripMenuItem
             // 
+            this.cargoTrackingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trackCargoToolStripMenuItem,
+            this.updateListToolStripMenuItem,
+            this.deleteListToolStripMenuItem});
             this.cargoTrackingToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cargoTrackingToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.Cargo_Tracking_icon;
             this.cargoTrackingToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,6 +179,30 @@
             this.vesselSchedulingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.vesselSchedulingToolStripMenuItem.ToolTipText = "Click to Adjust Vessel Schedules";
             this.vesselSchedulingToolStripMenuItem.Click += new System.EventHandler(this.vesselSchedulingToolStripMenuItem_Click);
+            // 
+            // addVesselSceduleToolStripMenuItem
+            // 
+            this.addVesselSceduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.addVesselSceduleToolStripMenuItem.Name = "addVesselSceduleToolStripMenuItem";
+            this.addVesselSceduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.addVesselSceduleToolStripMenuItem.Text = "Add Vessel Schedule";
+            this.addVesselSceduleToolStripMenuItem.Click += new System.EventHandler(this.addVesselSceduleToolStripMenuItem_Click);
+            // 
+            // updateVesselScheduleToolStripMenuItem
+            // 
+            this.updateVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.updateVesselScheduleToolStripMenuItem.Name = "updateVesselScheduleToolStripMenuItem";
+            this.updateVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.updateVesselScheduleToolStripMenuItem.Text = "Update Vessel Schedule";
+            this.updateVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.updateVesselScheduleToolStripMenuItem_Click);
+            // 
+            // deleteVesselScheduleToolStripMenuItem
+            // 
+            this.deleteVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.deleteVesselScheduleToolStripMenuItem.Name = "deleteVesselScheduleToolStripMenuItem";
+            this.deleteVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
+            this.deleteVesselScheduleToolStripMenuItem.Text = "Delete Vessel Schedule";
+            this.deleteVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.deleteVesselScheduleToolStripMenuItem_Click);
             // 
             // accountManagementToolStripMenuItem
             // 
@@ -296,29 +327,29 @@
             this.lblUpdateAccount.TabIndex = 0;
             this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
             // 
-            // addVesselSceduleToolStripMenuItem
+            // trackCargoToolStripMenuItem
             // 
-            this.addVesselSceduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.addVesselSceduleToolStripMenuItem.Name = "addVesselSceduleToolStripMenuItem";
-            this.addVesselSceduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
-            this.addVesselSceduleToolStripMenuItem.Text = "Add Vessel Schedule";
-            this.addVesselSceduleToolStripMenuItem.Click += new System.EventHandler(this.addVesselSceduleToolStripMenuItem_Click);
+            this.trackCargoToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
+            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.trackCargoToolStripMenuItem.Text = "Track Cargo";
+            this.trackCargoToolStripMenuItem.Click += new System.EventHandler(this.trackCargoToolStripMenuItem_Click);
             // 
-            // updateVesselScheduleToolStripMenuItem
+            // updateListToolStripMenuItem
             // 
-            this.updateVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.updateVesselScheduleToolStripMenuItem.Name = "updateVesselScheduleToolStripMenuItem";
-            this.updateVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
-            this.updateVesselScheduleToolStripMenuItem.Text = "Update Vessel Schedule";
-            this.updateVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.updateVesselScheduleToolStripMenuItem_Click);
+            this.updateListToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.updateListToolStripMenuItem.Name = "updateListToolStripMenuItem";
+            this.updateListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.updateListToolStripMenuItem.Text = "Update List";
+            this.updateListToolStripMenuItem.Click += new System.EventHandler(this.updateListToolStripMenuItem_Click);
             // 
-            // deleteVesselScheduleToolStripMenuItem
+            // deleteListToolStripMenuItem
             // 
-            this.deleteVesselScheduleToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.deleteVesselScheduleToolStripMenuItem.Name = "deleteVesselScheduleToolStripMenuItem";
-            this.deleteVesselScheduleToolStripMenuItem.Size = new System.Drawing.Size(288, 34);
-            this.deleteVesselScheduleToolStripMenuItem.Text = "Delete Vessel Schedule";
-            this.deleteVesselScheduleToolStripMenuItem.Click += new System.EventHandler(this.deleteVesselScheduleToolStripMenuItem_Click);
+            this.deleteListToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.deleteListToolStripMenuItem.Name = "deleteListToolStripMenuItem";
+            this.deleteListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.deleteListToolStripMenuItem.Text = "Delete List";
+            this.deleteListToolStripMenuItem.Click += new System.EventHandler(this.deleteListToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -369,5 +400,8 @@
         private System.Windows.Forms.ToolStripMenuItem addVesselSceduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateVesselScheduleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteVesselScheduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trackCargoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteListToolStripMenuItem;
     }
 }

@@ -31,11 +31,8 @@
             this.UpdateBackPanel = new System.Windows.Forms.Panel();
             this.lblCargoTracking = new System.Windows.Forms.Label();
             this.CargoMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateCargoInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblCargoID = new System.Windows.Forms.Label();
             this.lblSenderName = new System.Windows.Forms.Label();
             this.lblReceiverName = new System.Windows.Forms.Label();
@@ -63,6 +60,8 @@
             this.txtBxAddNotes = new System.Windows.Forms.TextBox();
             this.ShippingDatePicker = new System.Windows.Forms.DateTimePicker();
             this.DeliveryDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.UpdateBackPanel.SuspendLayout();
             this.CargoMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
@@ -97,25 +96,13 @@
             this.CargoMenuStrip.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CargoMenuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.CargoMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
             this.closeToolStripMenuItem,
-            this.saveInfoToolStripMenuItem,
-            this.trackCargoToolStripMenuItem,
-            this.updateCargoInfoToolStripMenuItem});
+            this.saveInfoToolStripMenuItem});
             this.CargoMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.CargoMenuStrip.Name = "CargoMenuStrip";
             this.CargoMenuStrip.Padding = new System.Windows.Forms.Padding(8, 12, 0, 12);
             this.CargoMenuStrip.Size = new System.Drawing.Size(1349, 70);
             this.CargoMenuStrip.TabIndex = 1;
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_edit_30;
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 18, 50, 0);
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(163, 46);
-            this.editToolStripMenuItem.Text = "Edit";
             // 
             // closeToolStripMenuItem
             // 
@@ -136,24 +123,6 @@
             this.saveInfoToolStripMenuItem.Size = new System.Drawing.Size(222, 46);
             this.saveInfoToolStripMenuItem.Text = "Save Cargo Info";
             this.saveInfoToolStripMenuItem.Click += new System.EventHandler(this.saveInfoToolStripMenuItem_Click);
-            // 
-            // trackCargoToolStripMenuItem
-            // 
-            this.trackCargoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.trackCargoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_tracking_50__1_;
-            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
-            this.trackCargoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(196, 46);
-            this.trackCargoToolStripMenuItem.Text = "Track Cargo";
-            // 
-            // updateCargoInfoToolStripMenuItem
-            // 
-            this.updateCargoInfoToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.updateCargoInfoToolStripMenuItem.Image = global::SwiftShip_WindowApplication.Properties.Resources.icons8_delivery_tracking_30;
-            this.updateCargoInfoToolStripMenuItem.Name = "updateCargoInfoToolStripMenuItem";
-            this.updateCargoInfoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(40, 18, 40, 0);
-            this.updateCargoInfoToolStripMenuItem.Size = new System.Drawing.Size(234, 46);
-            this.updateCargoInfoToolStripMenuItem.Text = "Update Cargo Info";
             // 
             // lblCargoID
             // 
@@ -432,21 +401,48 @@
             // 
             // ShippingDatePicker
             // 
+            this.ShippingDatePicker.CustomFormat = "yyyy-MM-dd";
             this.ShippingDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShippingDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ShippingDatePicker.Location = new System.Drawing.Point(586, 555);
             this.ShippingDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.ShippingDatePicker.Name = "ShippingDatePicker";
             this.ShippingDatePicker.Size = new System.Drawing.Size(292, 35);
             this.ShippingDatePicker.TabIndex = 34;
+            this.ShippingDatePicker.Value = new System.DateTime(2023, 8, 6, 0, 0, 0, 0);
             // 
             // DeliveryDatePicker
             // 
+            this.DeliveryDatePicker.CustomFormat = "yyyy-MM-dd";
             this.DeliveryDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliveryDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DeliveryDatePicker.Location = new System.Drawing.Point(1056, 553);
             this.DeliveryDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.DeliveryDatePicker.Name = "DeliveryDatePicker";
             this.DeliveryDatePicker.Size = new System.Drawing.Size(292, 35);
             this.DeliveryDatePicker.TabIndex = 35;
+            this.DeliveryDatePicker.Value = new System.DateTime(2023, 8, 6, 0, 0, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(461, 242);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Cargo Id:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DimGray;
+            this.panel3.Location = new System.Drawing.Point(460, 201);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1294, 10);
+            this.panel3.TabIndex = 20;
             // 
             // CargoTracking
             // 
@@ -468,6 +464,7 @@
             this.Controls.Add(this.txtBxReceiverName);
             this.Controls.Add(this.txtBxSenderName);
             this.Controls.Add(this.txtBxCargoId);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblCargoInformation);
             this.Controls.Add(this.lblDimensions);
@@ -478,6 +475,7 @@
             this.Controls.Add(this.lblDeliveryDate);
             this.Controls.Add(this.lblShippingDate);
             this.Controls.Add(this.lblReceiverName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblSenderName);
             this.Controls.Add(this.lblCargoID);
             this.Controls.Add(this.UpdateBackPanel);
@@ -526,14 +524,13 @@
         private System.Windows.Forms.TextBox txtBxLocation;
         private System.Windows.Forms.ComboBox DropListCargoStatus;
         private System.Windows.Forms.MenuStrip CargoMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveInfoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trackCargoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateCargoInfoToolStripMenuItem;
         private System.Windows.Forms.Label lblAddNotes;
         private System.Windows.Forms.TextBox txtBxAddNotes;
         private System.Windows.Forms.DateTimePicker ShippingDatePicker;
         private System.Windows.Forms.DateTimePicker DeliveryDatePicker;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

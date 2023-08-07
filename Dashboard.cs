@@ -87,25 +87,7 @@ namespace SwiftShip_WindowApplication
 
         private void cargoTrackingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms["CargoTracking"] == null)
-            {
-                // Create a new instance of CargoTracking Form
-                CargoTracking tracker = new CargoTracking();
-
-                // Setting  the MDI parent of the form
-                tracker.MdiParent = this;
-
-                // Showing  the form
-                tracker.Show();
-
-                // Aligning the Form in the MDI Window
-                tracker.Dock = DockStyle.Left;
-            }
-            else
-            {
-                // If the form is already open, activate it
-                Application.OpenForms["CargoTracking"].Activate();
-            }
+           // Controls CargoTracking Drop Down List
         }
 
         private void inventoryManagementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -337,6 +319,75 @@ namespace SwiftShip_WindowApplication
             {
                 // If the form is already open, activate it
                 Application.OpenForms["VesselSceduleDelete"].Activate();
+            }
+        }
+
+        private void trackCargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["CargoTracking"] == null)
+            {
+                // Create a new instance of CargoTracking Form
+                CargoTracking tracker = new CargoTracking();
+
+                // Setting  the MDI parent of the form
+                tracker.MdiParent = this;
+
+                // Showing  the form
+                tracker.Show();
+
+                // Aligning the Form in the MDI Window
+                tracker.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["CargoTracking"].Activate();
+            }
+        }
+
+        private void updateListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["CargoDataView"] == null)
+            {
+                // Create a new instance of CargoTracking Form
+                CargoDataView tracker = new CargoDataView();
+
+                // Setting  the MDI parent of the form
+                tracker.MdiParent = this;
+
+                // Showing  the form
+                tracker.Show();
+
+                // Aligning the Form in the MDI Window
+                tracker.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["CargoDataView"].Activate();
+            }
+        }
+
+        private void deleteListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms["CargoTrackingDelete"] == null)
+            {
+                // Create a new instance of CargoTracking Form
+                CargoTrackingDelete tracker = new CargoTrackingDelete();
+
+                // Setting  the MDI parent of the form
+                tracker.MdiParent = this;
+
+                // Showing  the form
+                tracker.Show();
+
+                // Aligning the Form in the MDI Window
+                tracker.Dock = DockStyle.Left;
+            }
+            else
+            {
+                // If the form is already open, activate it
+                Application.OpenForms["CargoTrackingDelete"].Activate();
             }
         }
     }

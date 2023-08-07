@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,17 +29,9 @@ namespace SwiftShip_WindowApplication
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string Vid = txtBxVesselID.Text;
-            int VesselId = Int32.Parse(Vid);
-
-            string newVesselType = txtbxvesseltype.Text;
-            string newVesseName = txtbxVesselName.Text;
-            string newCargoType = CargoTypeList.SelectedItem.ToString();
-            DateTime newDepartureDate = DepartureDatePicker.Value;
-            string newEstimatedtime = txtbxEstimatedTime.Text;
+            
 
 
-          
 
             if (txtbxvesseltype.Text == "")
             {
@@ -58,14 +51,33 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName+ "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType +"', EstimatedTime = '" +@newEstimatedtime + "' Where VesselId = '" + @VesselId + "'";
+
+
+
+                string Vid = txtBxVesselID.Text;
+                int VesselId = Int32.Parse(Vid);
+
+                string newVesselType = txtbxvesseltype.Text;
+                string newVesseName = txtbxVesselName.Text;
+                string newCargoType = CargoTypeList.SelectedItem.ToString();
+
+
+
+                string newEstimatedtime = txtbxEstimatedTime.Text;
+
+
+
+
+                DateTime newDepartureDate = DepartureDatePicker.Value;
+
+                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "' Where VesselId = '" + @VesselId + "'";
 
                 SqlCommand UpdateQuery = new SqlCommand(Query);
 
 
                 UpdateQuery.Parameters.AddWithValue("@VesselName", newVesseName);
                 UpdateQuery.Parameters.AddWithValue("@VesselType", newVesselType);
-                UpdateQuery.Parameters.AddWithValue("@DepartureDate",newDepartureDate);
+                UpdateQuery.Parameters.AddWithValue("@DepartureDate", newDepartureDate);
                 UpdateQuery.Parameters.AddWithValue("@CargoType", newCargoType);
                 UpdateQuery.Parameters.AddWithValue("@Estimatedtime", newEstimatedtime);
 
@@ -89,6 +101,11 @@ namespace SwiftShip_WindowApplication
                 }
 
                 connection.Close();
+            
+
+
+
+                
             }
 
 

@@ -92,7 +92,9 @@
             // 
             // DepartureDatePicker
             // 
+            this.DepartureDatePicker.CustomFormat = "yyyy-MM-dd";
             this.DepartureDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartureDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DepartureDatePicker.Location = new System.Drawing.Point(1006, 454);
             this.DepartureDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.DepartureDatePicker.Name = "DepartureDatePicker";

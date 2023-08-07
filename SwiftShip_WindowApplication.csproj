@@ -115,6 +115,18 @@
     <Compile Include="CargoTracking.Designer.cs">
       <DependentUpon>CargoTracking.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargoTrackingDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargoTrackingDelete.Designer.cs">
+      <DependentUpon>CargoTrackingDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CargoTrackingUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargoTrackingUpdate.Designer.cs">
+      <DependentUpon>CargoTrackingUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,11 +190,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SwiftShipDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SwiftShipDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SwiftShipDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UpdateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +219,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargoTracking.resx">
       <DependentUpon>CargoTracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargoTrackingDelete.resx">
+      <DependentUpon>CargoTrackingDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargoTrackingUpdate.resx">
+      <DependentUpon>CargoTrackingUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -284,17 +297,6 @@
     </None>
     <None Include="SwiftShipDataSet.xss">
       <DependentUpon>SwiftShipDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SwiftShipDataSet1.xsc">
-      <DependentUpon>SwiftShipDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SwiftShipDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SwiftShipDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SwiftShipDataSet1.xss">
-      <DependentUpon>SwiftShipDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

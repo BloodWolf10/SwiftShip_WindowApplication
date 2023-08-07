@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using CefSharp.WinForms;
+using CefSharp;
 
 namespace SwiftShip_WindowApplication
 {
@@ -20,8 +21,11 @@ namespace SwiftShip_WindowApplication
         {
              
             InitializeComponent();
-            
+          
+
         }
+
+
 
 
         private void Home_Load(object sender, EventArgs e)
@@ -45,18 +49,30 @@ namespace SwiftShip_WindowApplication
             webBrowser1.Dock = DockStyle.Fill;
             */
 
+            
+    
             string vesselFinderUrl = "https://www.vesselfinder.com/";
             webBrowser1 = new CefSharp.WinForms.ChromiumWebBrowser(vesselFinderUrl);
 
+            
             // Set the desired location
             int x = 100; // X-coordinate
-            int y = 180; // Y-coordinate
+            int y =180 ; // Y-coordinate
             webBrowser1.Location = new Point(x, y);
+           
 
             // Add the control to the form
             this.Controls.Add(webBrowser1);
-
+            
+            
 
         }
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+       
+        }
+
+        
     }
 }

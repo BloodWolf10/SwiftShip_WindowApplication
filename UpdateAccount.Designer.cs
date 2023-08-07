@@ -47,7 +47,6 @@
             this.lblUserRole = new System.Windows.Forms.Label();
             this.txtBxuserRole = new System.Windows.Forms.TextBox();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBoxUpd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -271,23 +270,11 @@
             this.dataGrid1.TabIndex = 29;
             this.dataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellContentClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(866, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 22);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "UserID must not be changed under any circumstance";
-            // 
             // UpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1881, 789);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.txtBxuserRole);
             this.Controls.Add(this.lblUserRole);
@@ -342,6 +329,5 @@
         private System.Windows.Forms.Label lblUserRole;
         private System.Windows.Forms.TextBox txtBxuserRole;
         private System.Windows.Forms.DataGridView dataGrid1;
-        private System.Windows.Forms.Label label1;
     }
 }

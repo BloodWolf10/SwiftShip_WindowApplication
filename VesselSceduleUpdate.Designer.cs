@@ -46,6 +46,7 @@
             this.lblVesselId = new System.Windows.Forms.Label();
             this.txtBxVesselID = new System.Windows.Forms.TextBox();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VesselDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
@@ -121,12 +122,15 @@
             // 
             // DepartureDatePicker
             // 
+            this.DepartureDatePicker.CustomFormat = "yyyy-MM-dd";
             this.DepartureDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepartureDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DepartureDatePicker.Location = new System.Drawing.Point(1006, 454);
             this.DepartureDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.DepartureDatePicker.Name = "DepartureDatePicker";
             this.DepartureDatePicker.Size = new System.Drawing.Size(292, 35);
             this.DepartureDatePicker.TabIndex = 21;
+            this.DepartureDatePicker.Value = new System.DateTime(2023, 8, 6, 19, 18, 36, 0);
             // 
             // txtbxEstimatedTime
             // 
@@ -248,11 +252,23 @@
             this.LeftPBox.TabIndex = 15;
             this.LeftPBox.TabStop = false;
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.BackColor = System.Drawing.SystemColors.Control;
+            this.lblWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblWarning.Location = new System.Drawing.Point(915, 491);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(387, 16);
+            this.lblWarning.TabIndex = 32;
+            this.lblWarning.Text = "Date Selected can only be between the first 12 days of the month";
+            // 
             // VesselSceduleUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1812, 744);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.txtBxVesselID);
             this.Controls.Add(this.lblVesselId);
             this.Controls.Add(this.VesselDataGrid);
@@ -302,5 +318,6 @@
         private System.Windows.Forms.DataGridView VesselDataGrid;
         private System.Windows.Forms.Label lblVesselId;
         private System.Windows.Forms.TextBox txtBxVesselID;
+        private System.Windows.Forms.Label lblWarning;
     }
 }
