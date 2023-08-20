@@ -59,6 +59,18 @@ namespace SwiftShip_WindowApplication
         private void Dashboard_Load(object sender, EventArgs e)
         {
             lblUserlog.Text = FormLogin.userlog;
+
+            if(FormLogin.role!="admin")
+            {
+                accountManagementToolStripMenuItem.Enabled = false;
+                accountManagementToolStripMenuItem.Visible= false;
+            }
+
+            else
+            {
+                accountManagementToolStripMenuItem.Enabled = true;
+                accountManagementToolStripMenuItem.Visible= true;
+            }
         }
 
         private void homeToolStripMenuItem_Click(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Reflection.Emit;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SwiftShip_WindowApplication
 {
@@ -21,6 +22,7 @@ namespace SwiftShip_WindowApplication
 
        
     }
+        public static string role;
         DBAccess bAccess = new DBAccess();
         SqlConnection connection = new SqlConnection(DBAccess.strConnString);
 
@@ -52,8 +54,9 @@ namespace SwiftShip_WindowApplication
         private void btnLogin_Click(object sender, EventArgs e)
         {
              Member mem = new Member();
-            
 
+
+           
             string User = txtBxUsername.Text;
             string password = txtBxPassword.Text;
 
@@ -71,6 +74,7 @@ namespace SwiftShip_WindowApplication
                     userlog = txtBxUsername.Text.Trim();
                     User = txtBxUsername.Text;
                     password = txtBxPassword.Text;
+                    role = dtable.Rows[0]["UserRole"].ToString();
 
                     this.Hide();
                     connection.Close();

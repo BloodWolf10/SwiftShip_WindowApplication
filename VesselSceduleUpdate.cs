@@ -66,11 +66,13 @@ namespace SwiftShip_WindowApplication
                 string newEstimatedtime = txtbxEstimatedTime.Text;
 
 
+                DateTime newDepartureDate = DepartureDatePicker.Value.ToUniversalTime().Date;
+
+               
 
 
-                DateTime newDepartureDate = DepartureDatePicker.Value;
 
-                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "' Where VesselId = '" + @VesselId + "'";
+                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "' Where VesselId = '" + @VesselId + "'";
 
                 SqlCommand UpdateQuery = new SqlCommand(Query);
 

@@ -122,7 +122,7 @@
             // 
             // DepartureDatePicker
             // 
-            this.DepartureDatePicker.CustomFormat = "yyyy-MM-dd";
+            this.DepartureDatePicker.CustomFormat = "dd/MM/yyyy";
             this.DepartureDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DepartureDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DepartureDatePicker.Location = new System.Drawing.Point(1006, 454);
@@ -130,7 +130,7 @@
             this.DepartureDatePicker.Name = "DepartureDatePicker";
             this.DepartureDatePicker.Size = new System.Drawing.Size(292, 35);
             this.DepartureDatePicker.TabIndex = 21;
-            this.DepartureDatePicker.Value = new System.DateTime(2023, 8, 6, 19, 18, 36, 0);
+            this.DepartureDatePicker.Value = new System.DateTime(2023, 8, 20, 0, 0, 0, 0);
             // 
             // txtbxEstimatedTime
             // 
