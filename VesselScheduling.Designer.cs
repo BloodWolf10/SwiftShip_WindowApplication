@@ -43,8 +43,13 @@
             this.txtbxvesseltype = new System.Windows.Forms.TextBox();
             this.lblcargotype = new System.Windows.Forms.Label();
             this.CargoTypeList = new System.Windows.Forms.ListBox();
+            this.lblSelectVessel = new System.Windows.Forms.Label();
+            this.txtBxSelectedVessel = new System.Windows.Forms.TextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.fieldInfo = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             this.UpdateBackPanel.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftPBox
@@ -75,6 +80,7 @@
             this.txtbxVesselName.Location = new System.Drawing.Point(1006, 323);
             this.txtbxVesselName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbxVesselName.Name = "txtbxVesselName";
+            this.txtbxVesselName.ReadOnly = true;
             this.txtbxVesselName.Size = new System.Drawing.Size(296, 35);
             this.txtbxVesselName.TabIndex = 6;
             this.txtbxVesselName.TextChanged += new System.EventHandler(this.txtbxVesselName_TextChanged);
@@ -150,7 +156,7 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UpdateBackPanel.Location = new System.Drawing.Point(663, 4);
@@ -209,19 +215,63 @@
             this.CargoTypeList.Items.AddRange(new object[] {
             "General Cargo",
             "Bulk Cargo",
-            "Chemical Tanker",
-            "Reefer ship"});
+            "Chemicals / Oil",
+            "Refrigerated Goods ",
+            "Vehicles"});
             this.CargoTypeList.Location = new System.Drawing.Point(1006, 394);
             this.CargoTypeList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CargoTypeList.Name = "CargoTypeList";
             this.CargoTypeList.Size = new System.Drawing.Size(292, 28);
             this.CargoTypeList.TabIndex = 14;
+            this.CargoTypeList.SelectedIndexChanged += new System.EventHandler(this.CargoTypeList_SelectedIndexChanged);
+            // 
+            // lblSelectVessel
+            // 
+            this.lblSelectVessel.AutoSize = true;
+            this.lblSelectVessel.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectVessel.Location = new System.Drawing.Point(807, 182);
+            this.lblSelectVessel.Name = "lblSelectVessel";
+            this.lblSelectVessel.Size = new System.Drawing.Size(173, 29);
+            this.lblSelectVessel.TabIndex = 15;
+            this.lblSelectVessel.Text = "Selected Vessel IMO:";
+            // 
+            // txtBxSelectedVessel
+            // 
+            this.txtBxSelectedVessel.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxSelectedVessel.Location = new System.Drawing.Point(1006, 182);
+            this.txtBxSelectedVessel.Name = "txtBxSelectedVessel";
+            this.txtBxSelectedVessel.ReadOnly = true;
+            this.txtBxSelectedVessel.Size = new System.Drawing.Size(292, 32);
+            this.txtBxSelectedVessel.TabIndex = 16;
+            this.txtBxSelectedVessel.MouseLeave += new System.EventHandler(this.txtBxSelectedVessel_MouseLeave);
+            this.txtBxSelectedVessel.MouseHover += new System.EventHandler(this.txtBxSelectedVessel_MouseHover);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fieldInfo});
+            this.statusStrip1.Location = new System.Drawing.Point(663, 754);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(788, 30);
+            this.statusStrip1.TabIndex = 17;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // fieldInfo
+            // 
+            this.fieldInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fieldInfo.Name = "fieldInfo";
+            this.fieldInfo.Size = new System.Drawing.Size(135, 24);
+            this.fieldInfo.Text = "Infomation on item";
             // 
             // VesselScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 789);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.txtBxSelectedVessel);
+            this.Controls.Add(this.lblSelectVessel);
             this.Controls.Add(this.CargoTypeList);
             this.Controls.Add(this.lblcargotype);
             this.Controls.Add(this.txtbxvesseltype);
@@ -237,8 +287,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LeftPBox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "VesselScheduling";
             this.Padding = new System.Windows.Forms.Padding(4, 4, 4, 5);
             this.Text = "VesselScheduling";
@@ -246,6 +294,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +317,9 @@
         private System.Windows.Forms.TextBox txtbxvesseltype;
         private System.Windows.Forms.Label lblcargotype;
         private System.Windows.Forms.ListBox CargoTypeList;
+        private System.Windows.Forms.Label lblSelectVessel;
+        private System.Windows.Forms.TextBox txtBxSelectedVessel;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel fieldInfo;
     }
 }

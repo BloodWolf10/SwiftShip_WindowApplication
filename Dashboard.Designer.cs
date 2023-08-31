@@ -32,6 +32,9 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargoTrackingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +51,7 @@
             this.UpdateBackPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblUserlog = new System.Windows.Forms.Label();
-            this.lblCatchPhrase = new System.Windows.Forms.Label();
             this.lblUpdateAccount = new System.Windows.Forms.Label();
-            this.trackCargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.HomeMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -119,10 +118,34 @@
             this.cargoTrackingToolStripMenuItem.Name = "cargoTrackingToolStripMenuItem";
             this.cargoTrackingToolStripMenuItem.Padding = new System.Windows.Forms.Padding(4, 8, 4, 8);
             this.cargoTrackingToolStripMenuItem.Size = new System.Drawing.Size(242, 52);
-            this.cargoTrackingToolStripMenuItem.Text = "     Cargo Tracking";
+            this.cargoTrackingToolStripMenuItem.Text = "     Log Shipment";
             this.cargoTrackingToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.cargoTrackingToolStripMenuItem.ToolTipText = "Click to Open Cargo Tracker";
             this.cargoTrackingToolStripMenuItem.Click += new System.EventHandler(this.cargoTrackingToolStripMenuItem_Click);
+            // 
+            // trackCargoToolStripMenuItem
+            // 
+            this.trackCargoToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
+            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.trackCargoToolStripMenuItem.Text = "Create Log";
+            this.trackCargoToolStripMenuItem.Click += new System.EventHandler(this.trackCargoToolStripMenuItem_Click);
+            // 
+            // updateListToolStripMenuItem
+            // 
+            this.updateListToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.updateListToolStripMenuItem.Name = "updateListToolStripMenuItem";
+            this.updateListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.updateListToolStripMenuItem.Text = "Update Log";
+            this.updateListToolStripMenuItem.Click += new System.EventHandler(this.updateListToolStripMenuItem_Click);
+            // 
+            // deleteListToolStripMenuItem
+            // 
+            this.deleteListToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
+            this.deleteListToolStripMenuItem.Name = "deleteListToolStripMenuItem";
+            this.deleteListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.deleteListToolStripMenuItem.Text = "Delete Log";
+            this.deleteListToolStripMenuItem.Click += new System.EventHandler(this.deleteListToolStripMenuItem_Click);
             // 
             // inventoryManagementToolStripMenuItem
             // 
@@ -267,10 +290,9 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.MediumTurquoise;
             this.UpdateBackPanel.Controls.Add(this.pictureBox1);
             this.UpdateBackPanel.Controls.Add(this.lblUserlog);
-            this.UpdateBackPanel.Controls.Add(this.lblCatchPhrase);
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UpdateBackPanel.Location = new System.Drawing.Point(255, 0);
@@ -303,53 +325,17 @@
             this.lblUserlog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblUserlog.Click += new System.EventHandler(this.lblUserlog_Click);
             // 
-            // lblCatchPhrase
-            // 
-            this.lblCatchPhrase.AutoSize = true;
-            this.lblCatchPhrase.Font = new System.Drawing.Font("Pristina", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatchPhrase.ForeColor = System.Drawing.Color.White;
-            this.lblCatchPhrase.Location = new System.Drawing.Point(445, 45);
-            this.lblCatchPhrase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCatchPhrase.Name = "lblCatchPhrase";
-            this.lblCatchPhrase.Size = new System.Drawing.Size(420, 44);
-            this.lblCatchPhrase.TabIndex = 1;
-            this.lblCatchPhrase.Text = "The port management system for you !!";
-            // 
             // lblUpdateAccount
             // 
             this.lblUpdateAccount.AutoSize = true;
-            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdateAccount.Font = new System.Drawing.Font("Bahnschrift Condensed", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdateAccount.ForeColor = System.Drawing.Color.White;
-            this.lblUpdateAccount.Location = new System.Drawing.Point(519, 0);
+            this.lblUpdateAccount.Location = new System.Drawing.Point(576, 27);
             this.lblUpdateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUpdateAccount.Name = "lblUpdateAccount";
-            this.lblUpdateAccount.Size = new System.Drawing.Size(289, 45);
+            this.lblUpdateAccount.Size = new System.Drawing.Size(340, 52);
             this.lblUpdateAccount.TabIndex = 0;
             this.lblUpdateAccount.Text = "Welcome To ShipSwift ";
-            // 
-            // trackCargoToolStripMenuItem
-            // 
-            this.trackCargoToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.trackCargoToolStripMenuItem.Name = "trackCargoToolStripMenuItem";
-            this.trackCargoToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.trackCargoToolStripMenuItem.Text = "Track Cargo";
-            this.trackCargoToolStripMenuItem.Click += new System.EventHandler(this.trackCargoToolStripMenuItem_Click);
-            // 
-            // updateListToolStripMenuItem
-            // 
-            this.updateListToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.updateListToolStripMenuItem.Name = "updateListToolStripMenuItem";
-            this.updateListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.updateListToolStripMenuItem.Text = "Update List";
-            this.updateListToolStripMenuItem.Click += new System.EventHandler(this.updateListToolStripMenuItem_Click);
-            // 
-            // deleteListToolStripMenuItem
-            // 
-            this.deleteListToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.deleteListToolStripMenuItem.Name = "deleteListToolStripMenuItem";
-            this.deleteListToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.deleteListToolStripMenuItem.Text = "Delete List";
-            this.deleteListToolStripMenuItem.Click += new System.EventHandler(this.deleteListToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -390,7 +376,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteAccountToolStripMenuItem;
         private System.Windows.Forms.Panel UpdateBackPanel;
-        private System.Windows.Forms.Label lblCatchPhrase;
         private System.Windows.Forms.Label lblUpdateAccount;
         private System.Windows.Forms.Label lblUserlog;
         private System.Windows.Forms.PictureBox pictureBox1;

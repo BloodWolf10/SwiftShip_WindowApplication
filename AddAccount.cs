@@ -26,12 +26,12 @@ namespace SwiftShip_WindowApplication
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            userrolebox.SelectedIndex = -1;
             txtBxEmail.Clear();
             txtBxUsername.Clear();
             txtBxPassword.Clear();
             txtBxConfirmPassword.Clear();
-            txtBxUserRole.Clear();
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -54,23 +54,17 @@ namespace SwiftShip_WindowApplication
         private void btnCreateAccount_Click(object sender, EventArgs e)
         {
             
-            int userId = Int32.Parse(txtBxUserId.Text);
+            
             string email = txtBxEmail.Text;
             string Username = txtBxUsername.Text;
             string Password = txtBxPassword.Text;
             string ConPassword = txtBxConfirmPassword.Text;
-            string UserRole = txtBxUserRole.Text;
+            string UserRole = userrolebox.SelectedItem.ToString();
 
 
-            if (txtBxUserId.Text == "")
-            {
-                txtBxUserId.BackColor = Color.LightPink;
-                MessageBox.Show("Please Enter User ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtBxUserId.Focus();
-                return;
-            }
+            
 
-           else if (txtBxEmail.Text == "")
+            if (txtBxEmail.Text == "")
             {
                 txtBxEmail.BackColor = Color.LightPink;
                 MessageBox.Show("Please Enter Your Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -111,7 +105,7 @@ namespace SwiftShip_WindowApplication
             }
 
 
-          else  if (txtBxUserRole.Text == "")
+          else  if (userrolebox.SelectedItem.ToString() == "")
             {
                 txtBxConfirmPassword.BackColor = Color.LightPink;
                 MessageBox.Show("Please enter a user role", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -122,10 +116,10 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into LoginInfo(UserId, Email, Username, UPassword,ConfirmPassword, UserRole) Values(@userId,@email,@Username,@Password,@ConPassword,@UserRole)");
+                SqlCommand insertCommand = new SqlCommand("insert into LoginInfo( Email, Username, UPassword,ConfirmPassword, UserRole) Values(@email,@Username,@Password,@ConPassword,@UserRole)");
 
 
-                insertCommand.Parameters.AddWithValue("@userId", userId);
+                
                 insertCommand.Parameters.AddWithValue("@email", email);
                 insertCommand.Parameters.AddWithValue("@Username", Username);
                 insertCommand.Parameters.AddWithValue("@Password", Password);
@@ -137,14 +131,17 @@ namespace SwiftShip_WindowApplication
                 if (row == 1)
                 {
                     MessageBox.Show("User Added", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBxUserId.Clear();
+                   
                     txtBxConfirmPassword.Clear() ; 
                     txtBxEmail.Clear();
-                    txtBxUserRole.Clear();
+                   
                     txtBxPassword.Clear();
                     txtBxUsername.Clear();
 
-
+                    
+                    // Refresh the DataGridView to reflect the changes
+                    accountsDataGrid.DataSource = null;
+                    AddAccount_Load(sender, e); // Reload the data
                 }
 
                 else if (row == 0)
@@ -159,11 +156,7 @@ namespace SwiftShip_WindowApplication
 
         }
 
-        private void txtBxUserId_TextChanged(object sender, EventArgs e)
-        {
-            txtBxUserId.BackColor = Color.White;
-        }
-
+    
         private void txtBxEmail_TextChanged(object sender, EventArgs e)
         {
             txtBxEmail.BackColor = Color.White;

@@ -127,5 +127,10 @@ namespace SwiftShip_WindowApplication
                 txtBxPassword.PasswordChar = '*'; // Set it back to the original masking character.
             }
         }
+
+        private void lblHello_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace SwiftShip_WindowApplication
 
         private void btnUpdateAccount_Click(object sender, EventArgs e)
         {
-            string newRole = txtBxuserRole.Text;
+            string newRole = userrolebox.SelectedItem.ToString();
             string newUsername = txtBxUsernameUpd.Text;
             string newPassword = txtBxPasswordUpd.Text;
             string newConPassword = txtBxConfirmPassword.Text;
@@ -44,7 +44,7 @@ namespace SwiftShip_WindowApplication
             if(newRole.Equals(""))
             {
                 MessageBox.Show("Enter a user role", "Warning",MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtBxuserRole.BackColor = Color.Pink;
+                userrolebox.BackColor = Color.Pink;
                 return;
             }
 
@@ -88,11 +88,11 @@ namespace SwiftShip_WindowApplication
             else
             {
                 
-                string Query = "Update LoginInfo SET UserId= '" + @newUserid + "', Email = '" + @newEmail + "', Username= '" + @newUsername + "', UPassword = '" + @newPassword + "', ConfirmPassword ='" + @newConPassword + "', UserRole= '" + @newRole + "' Where UserId = '" + @newUserid+ "'";
+                string Query = "Update LoginInfo SET Email = '" + @newEmail + "', Username= '" + @newUsername + "', UPassword = '" + @newPassword + "', ConfirmPassword ='" + @newConPassword + "', UserRole= '" + @newRole + "' Where UserId = '" + @newUserid+ "'";
                 SqlCommand UpdateQuery = new SqlCommand(Query);
 
 
-                UpdateQuery.Parameters.AddWithValue("@UserId",newUserid);
+                
                 UpdateQuery.Parameters.AddWithValue("@UserRole",newRole);
                 UpdateQuery.Parameters.AddWithValue("@Username",newUsername);
                 UpdateQuery.Parameters.AddWithValue("@Email",newEmail);
@@ -123,7 +123,7 @@ namespace SwiftShip_WindowApplication
 
         private void txtBxuserRole_TextChanged(object sender, EventArgs e)
         {
-            txtBxuserRole.BackColor = Color.White;
+            userrolebox.BackColor = Color.White;
         }
 
         private void txtBxUserIdUpd_TextChanged(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace SwiftShip_WindowApplication
         private void UpdateAccount_Load(object sender, EventArgs e)
         {
             string query = "SELECT * FROM LoginInfo;";
-            SqlDataAdapter adapter = new SqlDataAdapter(query,connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(query,DBAccess.strConnString);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGrid1.DataSource = dataTable;
@@ -165,7 +165,7 @@ namespace SwiftShip_WindowApplication
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dataGrid1.Rows[e.RowIndex];
-                txtBxuserRole.Text = row.Cells["UserRole"].Value.ToString();
+                userrolebox.SelectedItem= row.Cells["UserRole"].Value.ToString();
                 txtBxUserIdUpd.Text = row.Cells["UserId"].Value.ToString();
                 txtBxEmailUpd.Text = row.Cells["Email"].Value.ToString();
                 txtBxUsernameUpd.Text = row.Cells["Username"].Value.ToString();

@@ -52,7 +52,7 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblCargoTracking);
             this.UpdateBackPanel.Location = new System.Drawing.Point(3, 0);
             this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
@@ -65,12 +65,12 @@
             this.lblCargoTracking.AutoSize = true;
             this.lblCargoTracking.Font = new System.Drawing.Font("Bahnschrift Condensed", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCargoTracking.ForeColor = System.Drawing.Color.White;
-            this.lblCargoTracking.Location = new System.Drawing.Point(483, 75);
+            this.lblCargoTracking.Location = new System.Drawing.Point(624, 59);
             this.lblCargoTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargoTracking.Name = "lblCargoTracking";
-            this.lblCargoTracking.Size = new System.Drawing.Size(364, 57);
+            this.lblCargoTracking.Size = new System.Drawing.Size(341, 57);
             this.lblCargoTracking.TabIndex = 0;
-            this.lblCargoTracking.Text = "Cargo Tracking Delete";
+            this.lblCargoTracking.Text = "Delete Shipment Log";
             // 
             // btnDeleteRecord
             // 

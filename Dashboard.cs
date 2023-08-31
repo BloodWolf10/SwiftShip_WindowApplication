@@ -60,7 +60,7 @@ namespace SwiftShip_WindowApplication
         {
             lblUserlog.Text = FormLogin.userlog;
 
-            if(FormLogin.role!="admin")
+            if(FormLogin.role!="admin" )
             {
                 accountManagementToolStripMenuItem.Enabled = false;
                 accountManagementToolStripMenuItem.Visible= false;

@@ -69,7 +69,7 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblCargoTracking);
             this.UpdateBackPanel.Controls.Add(this.CargoMenuStrip);
             this.UpdateBackPanel.Location = new System.Drawing.Point(424, 0);
@@ -86,9 +86,9 @@
             this.lblCargoTracking.Location = new System.Drawing.Point(483, 75);
             this.lblCargoTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargoTracking.Name = "lblCargoTracking";
-            this.lblCargoTracking.Size = new System.Drawing.Size(258, 57);
+            this.lblCargoTracking.Size = new System.Drawing.Size(346, 57);
             this.lblCargoTracking.TabIndex = 0;
-            this.lblCargoTracking.Text = "Cargo Tracking";
+            this.lblCargoTracking.Text = "Create Shipment Log";
             // 
             // CargoMenuStrip
             // 

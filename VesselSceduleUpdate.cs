@@ -60,7 +60,7 @@ namespace SwiftShip_WindowApplication
                 string newVesselType = txtbxvesseltype.Text;
                 string newVesseName = txtbxVesselName.Text;
                 string newCargoType = CargoTypeList.SelectedItem.ToString();
-
+                string NewSelectedIMO = txtBxSelectedVessel.Text;
 
 
                 string newEstimatedtime = txtbxEstimatedTime.Text;
@@ -72,7 +72,7 @@ namespace SwiftShip_WindowApplication
 
 
 
-                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "' Where VesselId = '" + @VesselId + "'";
+                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "',SelectedIMO= '" +@NewSelectedIMO + "' Where VesselId = '" + @VesselId + "'";
 
                 SqlCommand UpdateQuery = new SqlCommand(Query);
 
@@ -82,6 +82,7 @@ namespace SwiftShip_WindowApplication
                 UpdateQuery.Parameters.AddWithValue("@DepartureDate", newDepartureDate);
                 UpdateQuery.Parameters.AddWithValue("@CargoType", newCargoType);
                 UpdateQuery.Parameters.AddWithValue("@Estimatedtime", newEstimatedtime);
+                UpdateQuery.Parameters.AddWithValue("@SelectedIMO", NewSelectedIMO);
 
                 int row = objDbAccess.executeQuery(UpdateQuery);
 
@@ -89,9 +90,9 @@ namespace SwiftShip_WindowApplication
                 {
                     MessageBox.Show("Vessel Info Updated", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtbxEstimatedTime.Clear();
-                    txtbxVesselName.Clear();
+                    //txtbxVesselName.Clear();
                     txtbxvesseltype.Clear();
-                    CargoTypeList.ClearSelected();
+                    //CargoTypeList.ClearSelected();
                     txtBxVesselID.Clear();
 
                     VesselSceduleUpdate_Load(sender, e); // Reload Datagrid Data
@@ -140,6 +141,43 @@ namespace SwiftShip_WindowApplication
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             VesselDataGrid.DataSource = dataTable;
+        }
+
+        private void CargoTypeList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CargoTypeList.SelectedItem.ToString() == "General Cargo")
+            {
+                txtBxSelectedVessel.Text = "9574860";
+                txtbxVesselName.Text = "FINCH ARROW";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Vehicles")
+            {
+                txtBxSelectedVessel.Text = "9684988";
+                txtbxVesselName.Text = "HOEGH TRIGGER";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Refrigerated Goods")
+            {
+                txtBxSelectedVessel.Text = "9836878";
+                txtbxVesselName.Text = "COOL EXPRESS";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Chemicals / Oil")
+            {
+                txtBxSelectedVessel.Text = "9299111";
+                txtbxVesselName.Text = "ELKA APOLLON";
+
+            }
+
+            if (CargoTypeList.SelectedItem.ToString() == "Bulk Cargo")
+            {
+                txtBxSelectedVessel.Text = "9806873";
+                txtbxVesselName.Text = "YUAN HE HAI";
+            }
         }
     }
 }

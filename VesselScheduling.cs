@@ -42,7 +42,7 @@ namespace SwiftShip_WindowApplication
             string CargoType = CargoTypeList.SelectedItem.ToString();  
             DateTime DepartureDate = DepartureDatePicker.Value;
             string Estimatedtime = txtbxEstimatedTime.Text;
-
+            string SelectedIMO = txtBxSelectedVessel.Text;
 
 
             if (txtbxvesseltype.Text == "")
@@ -63,7 +63,7 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into VesselSchedule(VesselType,VesselName,CargoType,DepartureDate,EstimatedTime) Values(@VesselType,@VesselName,@CargoType,@DepartureDate,@EstimatedTime)");
+                SqlCommand insertCommand = new SqlCommand("insert into VesselSchedule(VesselType,VesselName,CargoType,DepartureDate,EstimatedTime,SelectedIMO) Values(@VesselType,@VesselName,@CargoType,@DepartureDate,@EstimatedTime,@SelectedIMO)");
 
              
                 insertCommand.Parameters.AddWithValue("@VesselType", VesselType);
@@ -71,18 +71,21 @@ namespace SwiftShip_WindowApplication
                 insertCommand.Parameters.AddWithValue("@CargoType", CargoType);
                 insertCommand.Parameters.AddWithValue("@DepartureDate", DepartureDate);
                 insertCommand.Parameters.AddWithValue("@EstimatedTime", Estimatedtime);
-              
+                insertCommand.Parameters.AddWithValue("@SelectedIMO", SelectedIMO);
 
-               int row = ObjdBAccess.executeQuery(insertCommand);
+
+                int row = ObjdBAccess.executeQuery(insertCommand);
 
                 if(row == 1)
                 {
                     MessageBox.Show("Vessel Added","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     txtbxEstimatedTime.Clear();
-                    txtbxVesselName.Clear();
+                    //txtbxVesselName.Clear();
                     txtbxvesseltype.Clear();
-                    CargoTypeList.ClearSelected();
+                    //txtBxSelectedVessel.Clear();
+                    //CargoTypeList.ClearSelected();
                     
+
                 }
 
                 else if(row==0)
@@ -101,6 +104,53 @@ namespace SwiftShip_WindowApplication
         private void txtbxvesseltype_TextChanged(object sender, EventArgs e)
         {
             txtbxvesseltype.BackColor = Color.White;
+        }
+
+        private void CargoTypeList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(CargoTypeList.SelectedItem.ToString() == "General Cargo")
+            {
+                txtBxSelectedVessel.Text = "9574860";
+                txtbxVesselName.Text = "FINCH ARROW";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Vehicles")
+            {
+                txtBxSelectedVessel.Text = "9684988";
+                txtbxVesselName.Text = "HOEGH TRIGGER";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Refrigerated Goods")
+            {
+                txtBxSelectedVessel.Text = "9836878";
+                txtbxVesselName.Text = "COOL EXPRESS";
+            }
+
+
+            if (CargoTypeList.SelectedItem.ToString() == "Chemicals / Oil")
+            {
+                txtBxSelectedVessel.Text = "9299111";
+                txtbxVesselName.Text = "ELKA APOLLON";
+
+            }
+
+            if (CargoTypeList.SelectedItem.ToString() == "Bulk Cargo")
+            {
+                txtBxSelectedVessel.Text = "9806873";
+                txtbxVesselName.Text = "YUAN HE HAI";
+            }
+        }
+
+        private void txtBxSelectedVessel_MouseHover(object sender, EventArgs e)
+        {
+            fieldInfo.Text = "The Selected Vessel IMO can be used to search for the vessel in the LiveTracking Option from the left Navigation";
+        }
+
+        private void txtBxSelectedVessel_MouseLeave(object sender, EventArgs e)
+        {
+            fieldInfo = null;
         }
     }
 }

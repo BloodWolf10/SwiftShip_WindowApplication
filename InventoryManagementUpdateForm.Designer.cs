@@ -79,7 +79,7 @@
             // 
             // Inventory
             // 
-            this.Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Inventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Inventory.Controls.Add(this.lblInventoryManagement);
             this.Inventory.Location = new System.Drawing.Point(660, 0);
             this.Inventory.Margin = new System.Windows.Forms.Padding(4);

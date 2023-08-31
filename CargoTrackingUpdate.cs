@@ -147,5 +147,10 @@ namespace SwiftShip_WindowApplication
             adapter.Fill(dataTable);
             CargoTrackingDataGrid.DataSource = dataTable;
         }
+
+        private void CargoMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

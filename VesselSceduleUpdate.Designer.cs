@@ -46,7 +46,8 @@
             this.lblVesselId = new System.Windows.Forms.Label();
             this.txtBxVesselID = new System.Windows.Forms.TextBox();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
-            this.lblWarning = new System.Windows.Forms.Label();
+            this.txtBxSelectedVessel = new System.Windows.Forms.TextBox();
+            this.lblSelectVessel = new System.Windows.Forms.Label();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VesselDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
@@ -60,19 +61,21 @@
             this.CargoTypeList.Items.AddRange(new object[] {
             "General Cargo",
             "Bulk Cargo",
-            "Chemical Tanker",
-            "Reefer ship"});
-            this.CargoTypeList.Location = new System.Drawing.Point(1006, 394);
+            "Chemicals / Oil",
+            "Refrigerated Goods ",
+            "Vehicles"});
+            this.CargoTypeList.Location = new System.Drawing.Point(1006, 427);
             this.CargoTypeList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CargoTypeList.Name = "CargoTypeList";
             this.CargoTypeList.Size = new System.Drawing.Size(292, 28);
             this.CargoTypeList.TabIndex = 26;
+            this.CargoTypeList.SelectedIndexChanged += new System.EventHandler(this.CargoTypeList_SelectedIndexChanged);
             // 
             // lblcargotype
             // 
             this.lblcargotype.AutoSize = true;
             this.lblcargotype.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcargotype.Location = new System.Drawing.Point(820, 394);
+            this.lblcargotype.Location = new System.Drawing.Point(820, 427);
             this.lblcargotype.Name = "lblcargotype";
             this.lblcargotype.Size = new System.Drawing.Size(104, 29);
             this.lblcargotype.TabIndex = 25;
@@ -81,7 +84,7 @@
             // txtbxvesseltype
             // 
             this.txtbxvesseltype.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxvesseltype.Location = new System.Drawing.Point(1006, 249);
+            this.txtbxvesseltype.Location = new System.Drawing.Point(1006, 302);
             this.txtbxvesseltype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbxvesseltype.Name = "txtbxvesseltype";
             this.txtbxvesseltype.Size = new System.Drawing.Size(296, 35);
@@ -91,7 +94,7 @@
             // 
             this.lblvesseltype.AutoSize = true;
             this.lblvesseltype.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvesseltype.Location = new System.Drawing.Point(816, 249);
+            this.lblvesseltype.Location = new System.Drawing.Point(816, 308);
             this.lblvesseltype.Name = "lblvesseltype";
             this.lblvesseltype.Size = new System.Drawing.Size(107, 29);
             this.lblvesseltype.TabIndex = 23;
@@ -99,7 +102,7 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.UpdateBackPanel.Location = new System.Drawing.Point(659, 0);
@@ -125,7 +128,7 @@
             this.DepartureDatePicker.CustomFormat = "dd/MM/yyyy";
             this.DepartureDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DepartureDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DepartureDatePicker.Location = new System.Drawing.Point(1006, 454);
+            this.DepartureDatePicker.Location = new System.Drawing.Point(1010, 475);
             this.DepartureDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.DepartureDatePicker.Name = "DepartureDatePicker";
             this.DepartureDatePicker.Size = new System.Drawing.Size(292, 35);
@@ -135,7 +138,7 @@
             // txtbxEstimatedTime
             // 
             this.txtbxEstimatedTime.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxEstimatedTime.Location = new System.Drawing.Point(1006, 527);
+            this.txtbxEstimatedTime.Location = new System.Drawing.Point(1006, 548);
             this.txtbxEstimatedTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbxEstimatedTime.Name = "txtbxEstimatedTime";
             this.txtbxEstimatedTime.Size = new System.Drawing.Size(296, 35);
@@ -144,7 +147,7 @@
             // txtbxVesselName
             // 
             this.txtbxVesselName.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxVesselName.Location = new System.Drawing.Point(1006, 323);
+            this.txtbxVesselName.Location = new System.Drawing.Point(1010, 358);
             this.txtbxVesselName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtbxVesselName.Name = "txtbxVesselName";
             this.txtbxVesselName.Size = new System.Drawing.Size(296, 35);
@@ -154,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(795, 454);
+            this.label2.Location = new System.Drawing.Point(795, 481);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 29);
             this.label2.TabIndex = 16;
@@ -164,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(784, 527);
+            this.label3.Location = new System.Drawing.Point(785, 548);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 29);
             this.label3.TabIndex = 17;
@@ -174,7 +177,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(807, 323);
+            this.label1.Location = new System.Drawing.Point(816, 364);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 29);
             this.label1.TabIndex = 18;
@@ -217,7 +220,7 @@
             this.VesselDataGrid.Name = "VesselDataGrid";
             this.VesselDataGrid.RowHeadersWidth = 62;
             this.VesselDataGrid.RowTemplate.Height = 28;
-            this.VesselDataGrid.Size = new System.Drawing.Size(381, 529);
+            this.VesselDataGrid.Size = new System.Drawing.Size(430, 529);
             this.VesselDataGrid.TabIndex = 29;
             this.VesselDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VesselDataGrid_CellContentClick);
             // 
@@ -225,7 +228,7 @@
             // 
             this.lblVesselId.AutoSize = true;
             this.lblVesselId.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVesselId.Location = new System.Drawing.Point(817, 188);
+            this.lblVesselId.Location = new System.Drawing.Point(816, 249);
             this.lblVesselId.Name = "lblVesselId";
             this.lblVesselId.Size = new System.Drawing.Size(87, 29);
             this.lblVesselId.TabIndex = 30;
@@ -234,9 +237,10 @@
             // txtBxVesselID
             // 
             this.txtBxVesselID.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxVesselID.Location = new System.Drawing.Point(1006, 188);
+            this.txtBxVesselID.Location = new System.Drawing.Point(1010, 243);
             this.txtBxVesselID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBxVesselID.Name = "txtBxVesselID";
+            this.txtBxVesselID.ReadOnly = true;
             this.txtBxVesselID.Size = new System.Drawing.Size(296, 35);
             this.txtBxVesselID.TabIndex = 31;
             // 
@@ -252,23 +256,32 @@
             this.LeftPBox.TabIndex = 15;
             this.LeftPBox.TabStop = false;
             // 
-            // lblWarning
+            // txtBxSelectedVessel
             // 
-            this.lblWarning.AutoSize = true;
-            this.lblWarning.BackColor = System.Drawing.SystemColors.Control;
-            this.lblWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblWarning.Location = new System.Drawing.Point(915, 491);
-            this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(387, 16);
-            this.lblWarning.TabIndex = 32;
-            this.lblWarning.Text = "Date Selected can only be between the first 12 days of the month";
+            this.txtBxSelectedVessel.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxSelectedVessel.Location = new System.Drawing.Point(1006, 185);
+            this.txtBxSelectedVessel.Name = "txtBxSelectedVessel";
+            this.txtBxSelectedVessel.ReadOnly = true;
+            this.txtBxSelectedVessel.Size = new System.Drawing.Size(292, 32);
+            this.txtBxSelectedVessel.TabIndex = 32;
+            // 
+            // lblSelectVessel
+            // 
+            this.lblSelectVessel.AutoSize = true;
+            this.lblSelectVessel.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectVessel.Location = new System.Drawing.Point(785, 188);
+            this.lblSelectVessel.Name = "lblSelectVessel";
+            this.lblSelectVessel.Size = new System.Drawing.Size(173, 29);
+            this.lblSelectVessel.TabIndex = 33;
+            this.lblSelectVessel.Text = "Selected Vessel IMO:";
             // 
             // VesselSceduleUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1812, 744);
-            this.Controls.Add(this.lblWarning);
+            this.Controls.Add(this.lblSelectVessel);
+            this.Controls.Add(this.txtBxSelectedVessel);
             this.Controls.Add(this.txtBxVesselID);
             this.Controls.Add(this.lblVesselId);
             this.Controls.Add(this.VesselDataGrid);
@@ -318,6 +331,7 @@
         private System.Windows.Forms.DataGridView VesselDataGrid;
         private System.Windows.Forms.Label lblVesselId;
         private System.Windows.Forms.TextBox txtBxVesselID;
-        private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.TextBox txtBxSelectedVessel;
+        private System.Windows.Forms.Label lblSelectVessel;
     }
 }

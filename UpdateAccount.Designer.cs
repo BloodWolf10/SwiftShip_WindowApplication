@@ -45,8 +45,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.LeftPBoxUpd = new System.Windows.Forms.PictureBox();
             this.lblUserRole = new System.Windows.Forms.Label();
-            this.txtBxuserRole = new System.Windows.Forms.TextBox();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
+            this.userrolebox = new System.Windows.Forms.ComboBox();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBoxUpd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
@@ -54,12 +54,12 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblUpdateAccount);
             this.UpdateBackPanel.Location = new System.Drawing.Point(683, 2);
             this.UpdateBackPanel.Margin = new System.Windows.Forms.Padding(4);
             this.UpdateBackPanel.Name = "UpdateBackPanel";
-            this.UpdateBackPanel.Size = new System.Drawing.Size(702, 114);
+            this.UpdateBackPanel.Size = new System.Drawing.Size(674, 114);
             this.UpdateBackPanel.TabIndex = 1;
             // 
             // lblUpdateAccount
@@ -249,20 +249,10 @@
             this.lblUserRole.TabIndex = 27;
             this.lblUserRole.Text = "User Role:";
             // 
-            // txtBxuserRole
-            // 
-            this.txtBxuserRole.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBxuserRole.Location = new System.Drawing.Point(794, 202);
-            this.txtBxuserRole.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBxuserRole.Name = "txtBxuserRole";
-            this.txtBxuserRole.Size = new System.Drawing.Size(450, 32);
-            this.txtBxuserRole.TabIndex = 28;
-            this.txtBxuserRole.TextChanged += new System.EventHandler(this.txtBxuserRole_TextChanged);
-            // 
             // dataGrid1
             // 
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid1.Location = new System.Drawing.Point(1392, 5);
+            this.dataGrid1.Location = new System.Drawing.Point(1354, 2);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.RowHeadersWidth = 51;
             this.dataGrid1.RowTemplate.Height = 24;
@@ -270,13 +260,25 @@
             this.dataGrid1.TabIndex = 29;
             this.dataGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid1_CellContentClick);
             // 
+            // userrolebox
+            // 
+            this.userrolebox.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userrolebox.FormattingEnabled = true;
+            this.userrolebox.Items.AddRange(new object[] {
+            "admin",
+            "user"});
+            this.userrolebox.Location = new System.Drawing.Point(794, 201);
+            this.userrolebox.Name = "userrolebox";
+            this.userrolebox.Size = new System.Drawing.Size(530, 32);
+            this.userrolebox.TabIndex = 30;
+            // 
             // UpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1881, 789);
+            this.Controls.Add(this.userrolebox);
             this.Controls.Add(this.dataGrid1);
-            this.Controls.Add(this.txtBxuserRole);
             this.Controls.Add(this.lblUserRole);
             this.Controls.Add(this.btnUpdateAccount);
             this.Controls.Add(this.btnBack);
@@ -327,7 +329,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnUpdateAccount;
         private System.Windows.Forms.Label lblUserRole;
-        private System.Windows.Forms.TextBox txtBxuserRole;
         private System.Windows.Forms.DataGridView dataGrid1;
+        private System.Windows.Forms.ComboBox userrolebox;
     }
 }

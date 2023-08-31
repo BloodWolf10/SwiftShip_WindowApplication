@@ -58,7 +58,6 @@
             this.lblShippingDate = new System.Windows.Forms.Label();
             this.CargoTrackingDataGrid = new System.Windows.Forms.DataGridView();
             this.LeftPBox = new System.Windows.Forms.PictureBox();
-            this.lblWarning = new System.Windows.Forms.Label();
             this.CargoMenuStrip.SuspendLayout();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CargoTrackingDataGrid)).BeginInit();
@@ -78,6 +77,7 @@
             this.CargoMenuStrip.Padding = new System.Windows.Forms.Padding(8, 12, 0, 12);
             this.CargoMenuStrip.Size = new System.Drawing.Size(1349, 70);
             this.CargoMenuStrip.TabIndex = 1;
+            this.CargoMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.CargoMenuStrip_ItemClicked);
             // 
             // closeToolStripMenuItem
             // 
@@ -101,7 +101,7 @@
             // 
             // UpdateBackPanel
             // 
-            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UpdateBackPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.UpdateBackPanel.Controls.Add(this.lblCargoTracking);
             this.UpdateBackPanel.Controls.Add(this.CargoMenuStrip);
             this.UpdateBackPanel.Location = new System.Drawing.Point(371, 3);
@@ -118,9 +118,9 @@
             this.lblCargoTracking.Location = new System.Drawing.Point(483, 75);
             this.lblCargoTracking.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargoTracking.Name = "lblCargoTracking";
-            this.lblCargoTracking.Size = new System.Drawing.Size(373, 57);
+            this.lblCargoTracking.Size = new System.Drawing.Size(350, 57);
             this.lblCargoTracking.TabIndex = 0;
-            this.lblCargoTracking.Text = "Cargo Tracking Update";
+            this.lblCargoTracking.Text = "Update Shipment Log";
             // 
             // lblCargoInformation
             // 
@@ -402,23 +402,11 @@
             this.LeftPBox.TabIndex = 7;
             this.LeftPBox.TabStop = false;
             // 
-            // lblWarning
-            // 
-            this.lblWarning.AutoSize = true;
-            this.lblWarning.BackColor = System.Drawing.SystemColors.Control;
-            this.lblWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblWarning.Location = new System.Drawing.Point(714, 456);
-            this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(387, 16);
-            this.lblWarning.TabIndex = 50;
-            this.lblWarning.Text = "Date Selected can only be between the first 12 days of the month";
-            // 
             // CargoDataView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1680, 795);
-            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.CargoTrackingDataGrid);
             this.Controls.Add(this.DeliveryDatePicker);
             this.Controls.Add(this.ShippingDatePicker);
@@ -491,6 +479,5 @@
         private System.Windows.Forms.Label lblDeliveryDate;
         private System.Windows.Forms.Label lblShippingDate;
         private System.Windows.Forms.DataGridView CargoTrackingDataGrid;
-        private System.Windows.Forms.Label lblWarning;
     }
 }
