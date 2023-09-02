@@ -61,7 +61,7 @@ namespace SwiftShip_WindowApplication
                 string newVesseName = txtbxVesselName.Text;
                 string newCargoType = CargoTypeList.SelectedItem.ToString();
                 string NewSelectedIMO = txtBxSelectedVessel.Text;
-
+                string newItemName = txtBxitemname.Text;
 
                 string newEstimatedtime = txtbxEstimatedTime.Text;
 
@@ -72,7 +72,7 @@ namespace SwiftShip_WindowApplication
 
 
 
-                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "',SelectedIMO= '" +@NewSelectedIMO + "' Where VesselId = '" + @VesselId + "'";
+                string Query = "Update VesselSchedule SET VesselName= '" + @newVesseName + "', VesselType = '" + @newVesselType + "', DepartureDate= '" + @newDepartureDate + "', CargoType = '" + @newCargoType + "', EstimatedTime = '" + @newEstimatedtime + "',SelectedIMO= '" +@NewSelectedIMO + "',ItemName= '" + newItemName+ "' Where VesselId = '" + @VesselId + "'";
 
                 SqlCommand UpdateQuery = new SqlCommand(Query);
 
@@ -83,6 +83,7 @@ namespace SwiftShip_WindowApplication
                 UpdateQuery.Parameters.AddWithValue("@CargoType", newCargoType);
                 UpdateQuery.Parameters.AddWithValue("@Estimatedtime", newEstimatedtime);
                 UpdateQuery.Parameters.AddWithValue("@SelectedIMO", NewSelectedIMO);
+                UpdateQuery.Parameters.AddWithValue("@ItemName", newItemName);
 
                 int row = objDbAccess.executeQuery(UpdateQuery);
 
@@ -94,6 +95,7 @@ namespace SwiftShip_WindowApplication
                     txtbxvesseltype.Clear();
                     //CargoTypeList.ClearSelected();
                     txtBxVesselID.Clear();
+                    txtBxitemname.Clear();
 
                     VesselSceduleUpdate_Load(sender, e); // Reload Datagrid Data
                 }
@@ -126,7 +128,7 @@ namespace SwiftShip_WindowApplication
                 CargoTypeList.Text = row.Cells["CargoType"].Value.ToString();
                 DepartureDatePicker.Text = row.Cells["DepartureDate"].Value.ToString();
                 txtbxEstimatedTime.Text = row.Cells["EstimatedTime"].Value.ToString();
-
+                txtBxitemname.Text = row.Cells["ItemName"].Value.ToString();
 
 
                 // Populate other TextBoxes with respective columns from the database table.

@@ -40,6 +40,7 @@ namespace SwiftShip_WindowApplication
             DateTime ShippingDate = ShippingDatePicker.Value;
             DateTime DeliveryDate = DeliveryDatePicker.Value;
             string Notes = txtBxAddNotes.Text;
+            string ItemName = ItemNameComboBox.SelectedItem.ToString();
 
 
             if (txtBxCargoId.Text == "")
@@ -60,7 +61,7 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                string Query = "Update CargoTracking SET CargoWeight = '" + @CargoWeight + "', SenderName = '" + @SenderName + "', TrackingNumber = '" + @TrackingNumber + "', ReceiverName = '" + @ReceiverName + "', Dimensions = '" + @Dimensions + "', CargoLocation = '" + @CargoLocation + "', CargoStatus = '" + @CargoStatus + "', ShippingDate = '" + @ShippingDate + "', DeliveryDate = '" + @DeliveryDate + "', Notes = '" + @Notes + "' Where CargoId = '" + @CargoId + "'";
+                string Query = "Update CargoTracking SET CargoWeight = '" + @CargoWeight + "', SenderName = '" + @SenderName + "', TrackingNumber = '" + @TrackingNumber + "', ReceiverName = '" + @ReceiverName + "', Dimensions = '" + @Dimensions + "', CargoLocation = '" + @CargoLocation + "', CargoStatus = '" + @CargoStatus + "', ShippingDate = '" + @ShippingDate + "', DeliveryDate = '" + @DeliveryDate + "', Notes = '" + @Notes + "',ItemName = '" +ItemName + "' Where CargoId = '" + @CargoId + "'";
 
                 //string Query = "Update CargoTracking SET CargoWeight= '" + @CargoWeight + "', SenderName = '" + @SenderName + "', TrackingNumber= '" + @TrackingNumber + "', ReceiverName = '" + @ReceiverName + "', Dimensions = '" + @Dimensions + "',CargoLocation= '"+ @CargoLocation+"',CargoStatus= '"+@CargoStatus +"',ShippingDate = '" +@ShippingDate+ "',DeliveryDate= " +@DeliveryDate + "',Notes =" + @Notes+ "' Where CargoId = '" + @CargoId + "'";
 
@@ -78,6 +79,7 @@ namespace SwiftShip_WindowApplication
                 UpdateQuery.Parameters.AddWithValue("@ShippingDate", ShippingDate);
                 UpdateQuery.Parameters.AddWithValue("@DeliveryDate", DeliveryDate);
                 UpdateQuery.Parameters.AddWithValue("@Notes", Notes);
+                UpdateQuery.Parameters.AddWithValue("@ItemName", ItemName);
 
                 int row = ObjdBAccess.executeQuery(UpdateQuery);
 
@@ -131,7 +133,7 @@ namespace SwiftShip_WindowApplication
                 ShippingDatePicker.Text = row.Cells["ShippingDate"].Value.ToString();
                 DeliveryDatePicker.Text = row.Cells["DeliveryDate"].Value.ToString();
                 txtBxAddNotes.Text = row.Cells["Notes"].Value.ToString();
-
+                ItemNameComboBox.Text = row.Cells["ItemName"].Value.ToString();
 
 
                 // Populate other TextBoxes with respective columns from the database table.
@@ -146,6 +148,26 @@ namespace SwiftShip_WindowApplication
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             CargoTrackingDataGrid.DataSource = dataTable;
+
+
+            // Populating ComboBox
+
+            string Boxquery = "SELECT ItemName FROM VesselSchedule";
+
+            using (SqlConnection connection = new SqlConnection(DBAccess.strConnString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(Boxquery, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ItemNameComboBox.Items.Add(reader["ItemName"].ToString()); // To Pull day from Vessel Scedule data table into combo box
+                        }
+                    }
+                }
+            }
         }
 
         private void CargoMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

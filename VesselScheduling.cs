@@ -43,6 +43,7 @@ namespace SwiftShip_WindowApplication
             DateTime DepartureDate = DepartureDatePicker.Value;
             string Estimatedtime = txtbxEstimatedTime.Text;
             string SelectedIMO = txtBxSelectedVessel.Text;
+            string ItemName = txtBxitemname.Text;
 
 
             if (txtbxvesseltype.Text == "")
@@ -63,7 +64,7 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into VesselSchedule(VesselType,VesselName,CargoType,DepartureDate,EstimatedTime,SelectedIMO) Values(@VesselType,@VesselName,@CargoType,@DepartureDate,@EstimatedTime,@SelectedIMO)");
+                SqlCommand insertCommand = new SqlCommand("insert into VesselSchedule(VesselType,VesselName,CargoType,DepartureDate,EstimatedTime,SelectedIMO,ItemName) Values(@VesselType,@VesselName,@CargoType,@DepartureDate,@EstimatedTime,@SelectedIMO,@ItemName)");
 
              
                 insertCommand.Parameters.AddWithValue("@VesselType", VesselType);
@@ -72,6 +73,7 @@ namespace SwiftShip_WindowApplication
                 insertCommand.Parameters.AddWithValue("@DepartureDate", DepartureDate);
                 insertCommand.Parameters.AddWithValue("@EstimatedTime", Estimatedtime);
                 insertCommand.Parameters.AddWithValue("@SelectedIMO", SelectedIMO);
+                insertCommand.Parameters.AddWithValue("@ItemName", ItemName);
 
 
                 int row = ObjdBAccess.executeQuery(insertCommand);

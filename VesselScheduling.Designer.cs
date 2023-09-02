@@ -45,11 +45,13 @@
             this.CargoTypeList = new System.Windows.Forms.ListBox();
             this.lblSelectVessel = new System.Windows.Forms.Label();
             this.txtBxSelectedVessel = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.InformationStrip = new System.Windows.Forms.StatusStrip();
             this.fieldInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblItemName = new System.Windows.Forms.Label();
+            this.txtBxitemname = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
             this.UpdateBackPanel.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.InformationStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // LeftPBox
@@ -131,7 +133,7 @@
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSubmit.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmit.Location = new System.Drawing.Point(1254, 618);
+            this.btnSubmit.Location = new System.Drawing.Point(1218, 667);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(115, 52);
@@ -145,7 +147,7 @@
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBack.Location = new System.Drawing.Point(1080, 618);
+            this.btnBack.Location = new System.Drawing.Point(852, 667);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 52);
@@ -246,30 +248,51 @@
             this.txtBxSelectedVessel.MouseLeave += new System.EventHandler(this.txtBxSelectedVessel_MouseLeave);
             this.txtBxSelectedVessel.MouseHover += new System.EventHandler(this.txtBxSelectedVessel_MouseHover);
             // 
-            // statusStrip1
+            // InformationStrip
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.InformationStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.InformationStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fieldInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(663, 754);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(788, 30);
-            this.statusStrip1.TabIndex = 17;
-            this.statusStrip1.Text = "statusStrip1";
+            this.InformationStrip.Location = new System.Drawing.Point(663, 754);
+            this.InformationStrip.Name = "InformationStrip";
+            this.InformationStrip.Size = new System.Drawing.Size(788, 30);
+            this.InformationStrip.TabIndex = 17;
+            this.InformationStrip.Text = "statusStrip1";
             // 
             // fieldInfo
             // 
             this.fieldInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fieldInfo.Name = "fieldInfo";
-            this.fieldInfo.Size = new System.Drawing.Size(135, 24);
-            this.fieldInfo.Text = "Infomation on item";
+            this.fieldInfo.Size = new System.Drawing.Size(141, 24);
+            this.fieldInfo.Text = "Information on item";
+            // 
+            // lblItemName
+            // 
+            this.lblItemName.AutoSize = true;
+            this.lblItemName.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemName.Location = new System.Drawing.Point(786, 602);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(102, 29);
+            this.lblItemName.TabIndex = 18;
+            this.lblItemName.Text = "Item Name:";
+            // 
+            // txtBxitemname
+            // 
+            this.txtBxitemname.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxitemname.Location = new System.Drawing.Point(1006, 602);
+            this.txtBxitemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBxitemname.Name = "txtBxitemname";
+            this.txtBxitemname.Size = new System.Drawing.Size(296, 35);
+            this.txtBxitemname.TabIndex = 19;
             // 
             // VesselScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1455, 789);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.txtBxitemname);
+            this.Controls.Add(this.lblItemName);
+            this.Controls.Add(this.InformationStrip);
             this.Controls.Add(this.txtBxSelectedVessel);
             this.Controls.Add(this.lblSelectVessel);
             this.Controls.Add(this.CargoTypeList);
@@ -294,8 +317,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).EndInit();
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.InformationStrip.ResumeLayout(false);
+            this.InformationStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,7 +342,9 @@
         private System.Windows.Forms.ListBox CargoTypeList;
         private System.Windows.Forms.Label lblSelectVessel;
         private System.Windows.Forms.TextBox txtBxSelectedVessel;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip InformationStrip;
         private System.Windows.Forms.ToolStripStatusLabel fieldInfo;
+        private System.Windows.Forms.Label lblItemName;
+        private System.Windows.Forms.TextBox txtBxitemname;
     }
 }

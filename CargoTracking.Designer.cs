@@ -62,6 +62,8 @@
             this.DeliveryDatePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblItemname = new System.Windows.Forms.Label();
+            this.ItemNameComboBox = new System.Windows.Forms.ComboBox();
             this.UpdateBackPanel.SuspendLayout();
             this.CargoMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
@@ -165,7 +167,7 @@
             this.lblShippingDate.AutoSize = true;
             this.lblShippingDate.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblShippingDate.ForeColor = System.Drawing.Color.Black;
-            this.lblShippingDate.Location = new System.Drawing.Point(449, 555);
+            this.lblShippingDate.Location = new System.Drawing.Point(504, 608);
             this.lblShippingDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblShippingDate.Name = "lblShippingDate";
             this.lblShippingDate.Size = new System.Drawing.Size(127, 29);
@@ -177,7 +179,7 @@
             this.lblDeliveryDate.AutoSize = true;
             this.lblDeliveryDate.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeliveryDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDeliveryDate.Location = new System.Drawing.Point(924, 559);
+            this.lblDeliveryDate.Location = new System.Drawing.Point(989, 606);
             this.lblDeliveryDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDeliveryDate.Name = "lblDeliveryDate";
             this.lblDeliveryDate.Size = new System.Drawing.Size(122, 29);
@@ -248,7 +250,7 @@
             // 
             this.lblCargoInformation.AutoSize = true;
             this.lblCargoInformation.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargoInformation.Location = new System.Drawing.Point(956, 165);
+            this.lblCargoInformation.Location = new System.Drawing.Point(947, 164);
             this.lblCargoInformation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCargoInformation.Name = "lblCargoInformation";
             this.lblCargoInformation.Size = new System.Drawing.Size(173, 33);
@@ -322,7 +324,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(923, 469);
+            this.label1.Location = new System.Drawing.Point(857, 517);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 33);
@@ -332,7 +334,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(461, 505);
+            this.panel2.Location = new System.Drawing.Point(466, 556);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(937, 10);
@@ -396,7 +398,7 @@
             this.txtBxAddNotes.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxAddNotes.Multiline = true;
             this.txtBxAddNotes.Name = "txtBxAddNotes";
-            this.txtBxAddNotes.Size = new System.Drawing.Size(309, 296);
+            this.txtBxAddNotes.Size = new System.Drawing.Size(309, 422);
             this.txtBxAddNotes.TabIndex = 33;
             // 
             // ShippingDatePicker
@@ -404,7 +406,7 @@
             this.ShippingDatePicker.CustomFormat = "yyyy-MM-dd";
             this.ShippingDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShippingDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ShippingDatePicker.Location = new System.Drawing.Point(586, 555);
+            this.ShippingDatePicker.Location = new System.Drawing.Point(660, 606);
             this.ShippingDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.ShippingDatePicker.Name = "ShippingDatePicker";
             this.ShippingDatePicker.Size = new System.Drawing.Size(292, 35);
@@ -416,7 +418,7 @@
             this.DeliveryDatePicker.CustomFormat = "yyyy-MM-dd";
             this.DeliveryDatePicker.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliveryDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DeliveryDatePicker.Location = new System.Drawing.Point(1056, 553);
+            this.DeliveryDatePicker.Location = new System.Drawing.Point(1121, 600);
             this.DeliveryDatePicker.Margin = new System.Windows.Forms.Padding(6, 2, 3, 2);
             this.DeliveryDatePicker.Name = "DeliveryDatePicker";
             this.DeliveryDatePicker.Size = new System.Drawing.Size(292, 35);
@@ -444,12 +446,35 @@
             this.panel3.Size = new System.Drawing.Size(1294, 10);
             this.panel3.TabIndex = 20;
             // 
+            // lblItemname
+            // 
+            this.lblItemname.AutoSize = true;
+            this.lblItemname.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemname.ForeColor = System.Drawing.Color.Black;
+            this.lblItemname.Location = new System.Drawing.Point(461, 467);
+            this.lblItemname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblItemname.Name = "lblItemname";
+            this.lblItemname.Size = new System.Drawing.Size(102, 29);
+            this.lblItemname.TabIndex = 36;
+            this.lblItemname.Text = "Item Name:";
+            // 
+            // ItemNameComboBox
+            // 
+            this.ItemNameComboBox.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemNameComboBox.FormattingEnabled = true;
+            this.ItemNameComboBox.Location = new System.Drawing.Point(611, 468);
+            this.ItemNameComboBox.Name = "ItemNameComboBox";
+            this.ItemNameComboBox.Size = new System.Drawing.Size(289, 32);
+            this.ItemNameComboBox.TabIndex = 37;
+            // 
             // CargoTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1764, 751);
+            this.Controls.Add(this.ItemNameComboBox);
+            this.Controls.Add(this.lblItemname);
             this.Controls.Add(this.DeliveryDatePicker);
             this.Controls.Add(this.ShippingDatePicker);
             this.Controls.Add(this.txtBxAddNotes);
@@ -485,7 +510,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CargoTracking";
-            this.Text = "z";
+            this.Text = "Cargo Shipment Log";
+            this.Load += new System.EventHandler(this.CargoTracking_Load);
             this.UpdateBackPanel.ResumeLayout(false);
             this.UpdateBackPanel.PerformLayout();
             this.CargoMenuStrip.ResumeLayout(false);
@@ -532,5 +558,7 @@
         private System.Windows.Forms.DateTimePicker DeliveryDatePicker;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblItemname;
+        private System.Windows.Forms.ComboBox ItemNameComboBox;
     }
 }

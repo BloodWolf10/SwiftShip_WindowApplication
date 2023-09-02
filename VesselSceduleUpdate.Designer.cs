@@ -48,6 +48,8 @@
             this.LeftPBox = new System.Windows.Forms.PictureBox();
             this.txtBxSelectedVessel = new System.Windows.Forms.TextBox();
             this.lblSelectVessel = new System.Windows.Forms.Label();
+            this.lblItemName = new System.Windows.Forms.Label();
+            this.txtBxitemname = new System.Windows.Forms.TextBox();
             this.UpdateBackPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VesselDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LeftPBox)).BeginInit();
@@ -188,7 +190,7 @@
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBack.Location = new System.Drawing.Point(907, 638);
+            this.btnBack.Location = new System.Drawing.Point(903, 669);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(115, 52);
@@ -202,7 +204,7 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnUpdate.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnUpdate.Location = new System.Drawing.Point(1173, 638);
+            this.btnUpdate.Location = new System.Drawing.Point(1166, 669);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(115, 52);
@@ -275,11 +277,32 @@
             this.lblSelectVessel.TabIndex = 33;
             this.lblSelectVessel.Text = "Selected Vessel IMO:";
             // 
+            // lblItemName
+            // 
+            this.lblItemName.AutoSize = true;
+            this.lblItemName.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemName.Location = new System.Drawing.Point(795, 606);
+            this.lblItemName.Name = "lblItemName";
+            this.lblItemName.Size = new System.Drawing.Size(102, 29);
+            this.lblItemName.TabIndex = 34;
+            this.lblItemName.Text = "Item Name:";
+            // 
+            // txtBxitemname
+            // 
+            this.txtBxitemname.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBxitemname.Location = new System.Drawing.Point(1006, 606);
+            this.txtBxitemname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBxitemname.Name = "txtBxitemname";
+            this.txtBxitemname.Size = new System.Drawing.Size(296, 35);
+            this.txtBxitemname.TabIndex = 35;
+            // 
             // VesselSceduleUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1812, 744);
+            this.Controls.Add(this.txtBxitemname);
+            this.Controls.Add(this.lblItemName);
             this.Controls.Add(this.lblSelectVessel);
             this.Controls.Add(this.txtBxSelectedVessel);
             this.Controls.Add(this.txtBxVesselID);
@@ -333,5 +356,7 @@
         private System.Windows.Forms.TextBox txtBxVesselID;
         private System.Windows.Forms.TextBox txtBxSelectedVessel;
         private System.Windows.Forms.Label lblSelectVessel;
+        private System.Windows.Forms.Label lblItemName;
+        private System.Windows.Forms.TextBox txtBxitemname;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CefSharp.DevTools.DOM;
+using LINQPad.ObjectModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
@@ -22,6 +24,7 @@ namespace SwiftShip_WindowApplication
         }
 
         DBAccess ObjdBAccess = new DBAccess();
+        
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -43,6 +46,7 @@ namespace SwiftShip_WindowApplication
             DateTime ShippingDate = ShippingDatePicker.Value;
             DateTime DeliveryDate = DeliveryDatePicker.Value;
             string Notes = txtBxAddNotes.Text;
+            string ItemName = ItemNameComboBox.SelectedItem.ToString();
 
 
 
@@ -133,7 +137,7 @@ namespace SwiftShip_WindowApplication
 
             else
             {
-                SqlCommand insertCommand = new SqlCommand("insert into CargoTracking (CargoId,CargoWeight,SenderName,TrackingNumber,ReceiverName,Dimensions,CargoLocation,CargoStatus,ShippingDate,DeliveryDate,Notes) Values(@CargoId,@CargoWeight,@SenderName,@TrackingNumber,@ReceiverName,@Dimensions,@CargoLocation,@CargoStatus,@ShippingDate,@DeliveryDate,@Notes)");
+                SqlCommand insertCommand = new SqlCommand("insert into CargoTracking (CargoId,CargoWeight,SenderName,TrackingNumber,ReceiverName,Dimensions,CargoLocation,CargoStatus,ShippingDate,DeliveryDate,Notes,ItemName) Values(@CargoId,@CargoWeight,@SenderName,@TrackingNumber,@ReceiverName,@Dimensions,@CargoLocation,@CargoStatus,@ShippingDate,@DeliveryDate,@Notes,@ItemName)");
 
 
                 insertCommand.Parameters.AddWithValue("@CargoId", CargoId);
@@ -147,6 +151,7 @@ namespace SwiftShip_WindowApplication
                 insertCommand.Parameters.AddWithValue("@ShippingDate", ShippingDate);
                 insertCommand.Parameters.AddWithValue("@DeliveryDate", DeliveryDate);
                 insertCommand.Parameters.AddWithValue("@Notes", Notes);
+                insertCommand.Parameters.AddWithValue("@ItemName", ItemName);
 
                 int row = ObjdBAccess.executeQuery(insertCommand);
 
@@ -208,6 +213,24 @@ namespace SwiftShip_WindowApplication
 
         }
 
-        
+        private void CargoTracking_Load(object sender, EventArgs e)
+        {
+            string query = "SELECT ItemName FROM VesselSchedule";
+
+            using (SqlConnection connection = new SqlConnection(DBAccess.strConnString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            ItemNameComboBox.Items.Add(reader["ItemName"].ToString()); // To Pull day from Vessel Scedule data table into combo box
+                        }
+                    }
+                }
+            }
+        }
     }
 }
