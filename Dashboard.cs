@@ -348,7 +348,7 @@ namespace SwiftShip_WindowApplication
                 tracker.Show();
 
                 // Aligning the Form in the MDI Window
-                tracker.Dock = DockStyle.Left;
+                tracker.Dock = DockStyle.Fill;
             }
             else
             {
@@ -371,7 +371,7 @@ namespace SwiftShip_WindowApplication
                 tracker.Show();
 
                 // Aligning the Form in the MDI Window
-                tracker.Dock = DockStyle.Left;
+                tracker.Dock = DockStyle.Fill;
             }
             else
             {
